@@ -189,19 +189,6 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
               </select>
             </div>
 
-            {/* Live WhatsApp message preview */}
-            <div className="p-3.5 bg-travertine/50 border border-hairline font-mono text-[10px] text-espresso leading-relaxed rounded-2xl">
-              <span className="text-terra font-bold uppercase block mb-1">
-                💬 LIVE WHATSAPP MESSAGE PREVIEW:
-              </span>
-              <p className="italic text-espresso/90 font-sans text-xs">
-                &ldquo;Hi Anupriya! I&apos;d like to claim my FREE first class at Anohga Yoga Studio.{' '}
-                {name ? `Name: ${name}. ` : ''}
-                {discipline ? `Discipline: ${discipline}. ` : ''}
-                Please confirm my slot.&rdquo;
-              </p>
-            </div>
-
             {errorMessage && (
               <p className="font-mono text-[11px] text-terra font-bold">{errorMessage}</p>
             )}
