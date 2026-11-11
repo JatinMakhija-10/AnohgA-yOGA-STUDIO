@@ -1,11 +1,13 @@
 import { useState, type FC } from 'react'
 import { PRICING, FAQ } from '../data'
+import { TuitionCalculator } from '../components/TuitionCalculator'
 
 interface PricingProps {
   onSelectPlan: (planString: string) => void
+  onToast: (msg: string) => void
 }
 
-export const Pricing: FC<PricingProps> = ({ onSelectPlan }) => {
+export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'quarterly'>('monthly')
   const [openFaq, setOpenFaq] = useState<number | null>(0)
 
@@ -210,6 +212,11 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan }) => {
               </div>
             )
           })}
+        </div>
+
+        {/* ── Custom Tuition Calculator ── */}
+        <div className="p-6 sm:p-10 lg:p-14 border-t border-hairline bg-linen">
+          <TuitionCalculator onToast={onToast} />
         </div>
 
         {/* ── FAQ Section (Accordion with Bold Typography) ── */}

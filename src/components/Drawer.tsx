@@ -189,15 +189,28 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
               </select>
             </div>
 
+            {/* Live WhatsApp message preview */}
+            <div className="p-3 bg-travertine/60 border border-hairline font-mono text-[10px] text-espresso leading-relaxed">
+              <span className="text-umber font-bold uppercase block mb-1">
+                💬 LIVE WHATSAPP MESSAGE PREVIEW:
+              </span>
+              <p className="italic text-espresso/90">
+                &ldquo;Hi Anupriya! I&apos;d like to claim my FREE first class at Anohga Yoga Studio.{' '}
+                {name ? `Name: ${name}. ` : ''}
+                {discipline ? `Discipline: ${discipline}. ` : ''}
+                Please confirm my slot.&rdquo;
+              </p>
+            </div>
+
             {errorMessage && (
               <p className="font-mono text-[11px] text-terra">{errorMessage}</p>
             )}
 
             <button
               type="submit"
-              className="btn-terra w-full justify-center mt-3 py-3"
+              className="btn-terra w-full justify-center mt-1 py-3.5 font-bold shadow-sm"
             >
-              <span>Claim my free class</span>
+              <span>Claim my free class on WhatsApp</span>
               <span>↗</span>
             </button>
           </form>

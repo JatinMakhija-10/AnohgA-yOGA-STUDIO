@@ -15,7 +15,8 @@ export default {
         hairline:   '#DAD1C0',
       },
       fontFamily: {
-        serif:  ['"Cormorant Garamond"', 'serif'],
+        serif:  ['"Playfair Display"', '"Cormorant Garamond"', 'serif'],
+        display: ['"Playfair Display"', 'serif'],
         sans:   ['"Plus Jakarta Sans"', 'sans-serif'],
         mono:   ['"JetBrains Mono"', '"Space Mono"', 'monospace'],
       },

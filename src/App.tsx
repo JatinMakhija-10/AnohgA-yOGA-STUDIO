@@ -6,11 +6,15 @@ import { Drawer } from './components/Drawer'
 import { LegalModal, type LegalModalType } from './components/LegalModal'
 import { Toast } from './components/Toast'
 import { Footer } from './components/Footer'
+import { ClassMatcher } from './components/ClassMatcher'
+import { TrustBlueprint } from './components/TrustBlueprint'
+import { StickyConversionBar } from './components/StickyConversionBar'
 
 import { Hero } from './sections/Hero'
 import { Disciplines } from './sections/Disciplines'
 import { Schedule } from './sections/Schedule'
 import { Pricing } from './sections/Pricing'
+import { Testimonials } from './sections/Testimonials'
 import { Gallery } from './sections/Gallery'
 import { Corporate } from './sections/Corporate'
 import { Forms } from './sections/Forms'
@@ -63,7 +67,6 @@ export function App() {
   // Auto-open drawer after 30 seconds of browsing (as specified)
   useEffect(() => {
     const timer = setTimeout(() => {
-      // Only open if the drawer isn't already active and user hasn't opened legal modal
       setDrawerContext((current) => {
         if (!current.open) {
           return {
@@ -79,7 +82,7 @@ export function App() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-linen text-espresso font-sans selection:bg-travertine selection:text-terra relative">
+    <div className="min-h-screen bg-linen text-espresso font-sans selection:bg-travertine selection:text-terra relative pb-16 lg:pb-0">
       {/* Tactile paper grain overlay */}
       <div id="grain" aria-hidden="true" />
 
@@ -91,19 +94,28 @@ export function App() {
 
       {/* Main Architectural Sections */}
       <main>
-        {/* Section A: Asymmetric Hero */}
+        {/* Section A: Asymmetric Hero with Visual Switcher */}
         <Hero onOpenDrawer={handleOpenDrawer} />
 
-        {/* Section B: Methodology & 6 Disciplines */}
+        {/* Section B: Methodology & 6 Disciplines Showcase Cards */}
         <Disciplines onOpenDrawer={handleOpenDrawer} />
 
-        {/* Section C: Timetable & Workshops */}
+        {/* High-Converting 15-Second Class Matcher Quiz */}
+        <ClassMatcher onOpenDrawer={handleOpenDrawer} onToast={showToast} />
+
+        {/* Section C: Timetable & Workshops (with Day Cards & Table Toggle) */}
         <Schedule onOpenDrawer={handleOpenDrawer} onToast={showToast} />
 
-        {/* Section D: Pricing Ledger & FAQ */}
-        <Pricing onSelectPlan={setSelectedPlan} />
+        {/* Trust Architecture: Aerial Rigging & Safety Blueprint */}
+        <TrustBlueprint />
 
-        {/* Section E: Visual Archive */}
+        {/* Section D: Pricing Ledger & Live Custom Package Calculator */}
+        <Pricing onSelectPlan={setSelectedPlan} onToast={showToast} />
+
+        {/* Social Proof: Real Practitioner Transformations & Reviews */}
+        <Testimonials />
+
+        {/* Section E: Visual Archive with Lightbox Modal */}
         <Gallery />
 
         {/* Section F: Corporate Wellness (Dark Bark Contrast) */}
@@ -119,6 +131,9 @@ export function App() {
 
       {/* Studio Architectural Footer */}
       <Footer onOpenLegal={setLegalModal} />
+
+      {/* Floating Mobile Sticky Conversion Bar */}
+      <StickyConversionBar onOpenDrawer={handleOpenDrawer} />
 
       {/* Right-Hand Architectural Slide-Over Drawer */}
       <Drawer

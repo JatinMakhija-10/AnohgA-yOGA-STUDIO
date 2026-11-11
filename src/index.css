@@ -44,7 +44,7 @@ body {
 }
 
 /* ── Typography helpers ─────────────────────────────────────────── */
-.font-serif   { font-family: 'Cormorant Garamond', serif; }
+.font-serif   { font-family: 'Playfair Display', 'Cormorant Garamond', serif; }
 .font-mono    { font-family: 'JetBrains Mono', 'Space Mono', monospace; }
 .font-sans    { font-family: 'Plus Jakarta Sans', sans-serif; }
 
