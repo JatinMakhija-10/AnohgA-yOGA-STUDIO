@@ -31,16 +31,16 @@ export const Header: FC<HeaderProps> = ({ onOpenDrawer }) => {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
         {/* Left: Brand Wordmark */}
         <a href="#" className="flex flex-col group no-underline text-espresso">
-          <span className="font-serif text-2xl sm:text-3xl tracking-[0.18em] uppercase leading-none font-normal">
+          <span className="font-serif text-3xl sm:text-4xl tracking-[0.16em] uppercase leading-none font-bold">
             ANOHGA
           </span>
-          <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-umber mt-1">
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-espresso font-bold mt-1">
             Yoga Studio · Breathe. Balance. Elevate.
           </span>
         </a>
 
         {/* Center: Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-8 text-[13px] font-medium tracking-wide">
+        <nav className="hidden lg:flex items-center gap-8 text-sm font-semibold tracking-wide">
           {navLinks.map((link) => (
             <a
               key={link.label}

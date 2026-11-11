@@ -7,126 +7,174 @@ interface DisciplinesProps {
 }
 
 export const Disciplines: FC<DisciplinesProps> = ({ onOpenDrawer }) => {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(0)
-
-  const toggleExpand = (index: number) => {
-    setExpandedIndex(expandedIndex === index ? null : index)
-  }
+  const [selectedDiscipline, setSelectedDiscipline] = useState<number | null>(null)
 
   return (
     <section id="disciplines" className="border-b border-hairline bg-linen scroll-mt-20">
-      <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12">
-        {/* Left 4-Column Sticky Header */}
-        <div className="lg:col-span-4 p-6 sm:p-10 lg:p-16 lg:sticky lg:top-20 self-start border-b lg:border-b-0 lg:border-r border-hairline">
-          <div className="flex items-center gap-2">
-            <span className="font-mono text-xs uppercase tracking-widest text-terra font-semibold">
-              01
-            </span>
-            <span className="font-mono text-xs uppercase tracking-widest text-umber">
-              / METHODOLOGY
-            </span>
+      <div className="max-w-[1440px] mx-auto">
+        {/* Section Header with Bold Contrast & Visual Stats */}
+        <div className="p-6 sm:p-10 lg:p-14 border-b border-hairline flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2">
+              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-2 py-0.5 bg-terra/10 border border-terra/30">
+                01
+              </span>
+              <span className="font-mono text-xs uppercase tracking-widest text-espresso font-semibold">
+                / DISCIPLINES &amp; METHODOLOGY
+              </span>
+            </div>
+
+            <h2 className="mt-4 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium sm:font-semibold text-espresso leading-tight tracking-tight">
+              Six Pathways to{' '}
+              <span className="italic text-terra underline decoration-terra/30 decoration-wavy underline-offset-8">
+                Alignment &amp; Flight
+              </span>
+            </h2>
+
+            <p className="mt-4 text-base sm:text-lg text-espresso/90 leading-relaxed font-sans font-medium max-w-[58ch]">
+              Every session centres on deliberate anatomical themes—backbending for spinal
+              decompression, hip opening, visceral twist detox, or suspended silk inversions.
+            </p>
           </div>
 
-          <h2 className="mt-6 font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-espresso leading-tight tracking-tightest">
-            Structured Weekly Themes.{' '}
-            <span className="italic font-normal">Never Random Postures.</span>
-          </h2>
-
-          <p className="mt-6 text-sm text-umber leading-relaxed font-sans max-w-[42ch]">
-            Each week centres on a deliberate physiological or energetic focus—backbending for spinal
-            decompression, hip opening, twisting for visceral detox, or inversions for the endocrine
-            system. Your practice builds progressively over months.
-          </p>
-
-          <div className="mt-10 pt-6 border-t border-hairline">
-            <span className="font-mono text-[10px] uppercase tracking-wider text-umber block">
-              Teaching Integrity
+          {/* Quick Studio Visual Badges */}
+          <div className="flex flex-wrap lg:flex-col items-start lg:items-end gap-2 font-mono text-xs text-espresso font-semibold">
+            <span className="px-3 py-1.5 bg-travertine border border-hairline">
+              ✓ CAPPED AT 8 PRACTITIONERS
             </span>
-            <p className="mt-2 text-xs text-espresso font-sans">
-              Batches are strictly capped at 8–10 practitioners to guarantee hands-on anatomical
-              attention and safe aerial rigging.
-            </p>
+            <span className="px-3 py-1.5 bg-travertine border border-hairline">
+              ✓ 100% PERSONAL TEACHING
+            </span>
+            <span className="px-3 py-1.5 bg-travertine border border-hairline">
+              ✓ IN-STUDIO + VIRTUAL STREAMS
+            </span>
           </div>
         </div>
 
-        {/* Right 8-Column Stacked Architectural List */}
-        <div className="lg:col-span-8 divide-y divide-hairline">
+        {/* 6 Rich Visual Image Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-hairline border-b border-hairline bg-travertine/10">
           {DISCIPLINES.map((discipline, index) => {
-            const isExpanded = expandedIndex === index
+            const isModalOpen = selectedDiscipline === index
+
             return (
-              <article
+              <div
                 key={discipline.name}
-                className={`p-6 sm:p-10 transition-colors ${
-                  isExpanded ? 'bg-travertine/40' : 'bg-transparent hover:bg-travertine/20'
-                }`}
+                className="group flex flex-col justify-between bg-linen hover:bg-travertine/30 transition-all border-b lg:border-b-0 border-hairline overflow-hidden"
               >
-                <div
-                  onClick={() => toggleExpand(index)}
-                  className="cursor-pointer flex items-start justify-between gap-4 group"
-                >
-                  <div className="flex items-baseline gap-4 sm:gap-6">
-                    <span className="font-serif text-xl sm:text-2xl text-terra font-normal w-8 shrink-0">
+                <div>
+                  {/* Photo Container with Visual Watermark & Roman Stamp */}
+                  <div className="relative aspect-[16/11] overflow-hidden bg-travertine border-b border-hairline">
+                    <img
+                      src={discipline.image}
+                      alt={discipline.name}
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-bark/70 via-bark/20 to-transparent pointer-events-none" />
+
+                    {/* Top Roman Stamp */}
+                    <div className="absolute top-3 left-3 bg-linen/95 px-2.5 py-1 font-serif text-lg font-bold text-terra border border-hairline">
                       {discipline.roman}
-                    </span>
-                    <div>
-                      <h3 className="font-serif text-2xl sm:text-3xl font-light text-espresso group-hover:text-terra transition-colors leading-snug">
+                    </div>
+
+                    {/* Top Discipline Category Badge */}
+                    <div className="absolute top-3 right-3 bg-bark/85 text-linen px-2.5 py-1 font-mono text-[9px] uppercase tracking-wider font-semibold border border-linen/20">
+                      {discipline.badge}
+                    </div>
+
+                    {/* Title over photo */}
+                    <div className="absolute bottom-3 left-3 right-3">
+                      <h3 className="font-serif text-2xl font-semibold text-linen leading-snug drop-shadow-sm">
                         {discipline.name}
                       </h3>
-                      {/* Monospace tags */}
-                      <div className="mt-2 flex flex-wrap gap-2">
-                        {discipline.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 border border-hairline bg-linen text-umber"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
                     </div>
                   </div>
 
-                  {/* Clean +/- toggle trigger */}
-                  <div className="text-espresso p-1.5 border border-hairline bg-linen shrink-0 mt-1">
-                    <span className="font-mono text-sm leading-none block w-3 text-center">
-                      {isExpanded ? '−' : '+'}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Expanded Details */}
-                {isExpanded && (
-                  <div className="mt-6 pl-12 sm:pl-14 pt-4 border-t border-hairline/60">
-                    <p className="text-sm text-umber leading-relaxed font-sans max-w-[62ch]">
+                  {/* Card Content & Tags */}
+                  <div className="p-6">
+                    <p className="text-xs sm:text-sm text-espresso/90 font-sans font-medium leading-relaxed line-clamp-3">
                       {discipline.desc}
                     </p>
 
-                    <div className="mt-6 flex flex-wrap items-center gap-4">
-                      <button
-                        type="button"
-                        onClick={() =>
-                          onOpenDrawer({
-                            cls: discipline.name,
-                            source: 'book',
-                          })
-                        }
-                        className="btn-terra text-[10px] py-2 px-4"
-                      >
-                        <span>Reserve this discipline</span>
-                        <span>↗</span>
-                      </button>
-                      <a
-                        href="#schedule"
-                        className="font-mono text-[10px] uppercase tracking-wider text-umber hover:text-espresso underline"
-                      >
-                        Check slot times in timetable
-                      </a>
+                    {/* Visual Monospace Tags */}
+                    <div className="mt-4 flex flex-wrap gap-1.5">
+                      {discipline.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 bg-travertine text-espresso border border-hairline font-bold"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card Action Row */}
+                <div className="p-6 pt-0 mt-2 flex items-center justify-between gap-3 border-t border-hairline/60">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      onOpenDrawer({
+                        cls: discipline.name,
+                        source: 'book',
+                      })
+                    }
+                    className="btn-terra text-[10px] py-2 px-3.5 font-bold w-full justify-center"
+                  >
+                    <span>Reserve Practice</span>
+                    <span>↗</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setSelectedDiscipline(isModalOpen ? null : index)}
+                    className="btn-outline text-[10px] py-2 px-3 font-semibold whitespace-nowrap"
+                    title="View details"
+                  >
+                    <span>{isModalOpen ? 'Hide' : 'Info'}</span>
+                  </button>
+                </div>
+
+                {/* Inline Expandable Details Panel if user clicks Info */}
+                {isModalOpen && (
+                  <div className="p-6 pt-3 bg-travertine/50 border-t border-hairline text-xs font-sans text-espresso font-medium leading-relaxed">
+                    <p>{discipline.desc}</p>
+                    <div className="mt-3 font-mono text-[10px] text-terra font-bold">
+                      ✓ Conducted at ECR Studio · Equipment &amp; Silks Sanitized Before Every Class
                     </div>
                   </div>
                 )}
-              </article>
+              </div>
             )
           })}
+        </div>
+
+        {/* Visual Studio Equipment & Atmosphere Banner Strip */}
+        <div className="p-6 sm:p-10 bg-travertine/40 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center divide-x divide-hairline">
+          <div className="px-2">
+            <span className="font-serif text-2xl font-bold text-espresso block">100% Cotton</span>
+            <span className="font-mono text-[10px] uppercase tracking-wider text-umber font-semibold mt-1 block">
+              Tested Aerial Silks
+            </span>
+          </div>
+          <div className="px-2">
+            <span className="font-serif text-2xl font-bold text-espresso block">Natural Air</span>
+            <span className="font-mono text-[10px] uppercase tracking-wider text-umber font-semibold mt-1 block">
+              Cross-Ventilated ECR Breeze
+            </span>
+          </div>
+          <div className="px-2">
+            <span className="font-serif text-2xl font-bold text-espresso block">Non-Slip</span>
+            <span className="font-mono text-[10px] uppercase tracking-wider text-umber font-semibold mt-1 block">
+              Cork &amp; Rubber Mats
+            </span>
+          </div>
+          <div className="px-2">
+            <span className="font-serif text-2xl font-bold text-espresso block">2-Hr Slot</span>
+            <span className="font-mono text-[10px] uppercase tracking-wider text-umber font-semibold mt-1 block">
+              WhatsApp Confirmation
+            </span>
+          </div>
         </div>
       </div>
     </section>

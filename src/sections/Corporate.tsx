@@ -11,7 +11,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
     contactName: '',
     email: '',
     phone: '',
-    teamSize: '10–25',
+    teamSize: '10–25 employees',
     programme: 'Weekly On-Site Sessions',
     notes: '',
     website: '', // honeypot
@@ -28,9 +28,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
     e.preventDefault()
 
     // Honeypot check
-    if (formData.website.trim() !== '') {
-      return
-    }
+    if (formData.website.trim() !== '') return
 
     if (!formData.company || !formData.contactName || !formData.phone) {
       alert('Please fill out the required corporate fields.')
@@ -58,7 +56,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
       contactName: '',
       email: '',
       phone: '',
-      teamSize: '10–25',
+      teamSize: '10–25 employees',
       programme: 'Weekly On-Site Sessions',
       notes: '',
       website: '',
@@ -69,207 +67,214 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
     <section id="corporate" className="bg-bark text-linen border-b border-[#343E34] scroll-mt-20">
       <div className="max-w-[1440px] mx-auto">
         {/* Section Header */}
-        <div className="p-6 sm:p-10 lg:p-16 border-b border-[#343E34]">
+        <div className="p-6 sm:p-10 lg:p-14 border-b border-[#343E34]">
           <div className="flex items-center gap-2">
-            <span className="font-mono text-xs uppercase tracking-widest text-terra font-semibold">
+            <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-2 py-0.5 bg-terra/20 border border-terra/40">
               05
             </span>
-            <span className="font-mono text-xs uppercase tracking-widest text-linen/70">
-              / CORPORATE WELLNESS
+            <span className="font-mono text-xs uppercase tracking-widest text-linen font-semibold">
+              / CORPORATE RESILIENCE
             </span>
           </div>
 
-          <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-linen leading-tight tracking-tightest">
-            Ergonomic Resilience &amp;{' '}
-            <span className="italic font-normal text-terra">Executive Mindfulness</span>
+          <h2 className="mt-4 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium sm:font-semibold text-linen leading-tight tracking-tight">
+            Desk Ergonomics &amp;{' '}
+            <span className="italic text-terra underline decoration-terra/30 decoration-wavy underline-offset-8">
+              Executive Focus
+            </span>
           </h2>
 
-          <p className="mt-4 text-sm text-linen/80 leading-relaxed font-sans max-w-[62ch]">
-            Counteract prolonged desk posture, screen fatigue, and cognitive stress. Anupriya
-            designs bespoke corporate programmes for Chennai enterprises, IT hubs along OMR/ECR,
-            and executive teams.
+          <p className="mt-4 text-base sm:text-lg text-linen/90 leading-relaxed font-sans font-medium max-w-[62ch]">
+            Counteract prolonged desk posture, screen fatigue, and cognitive stress with structured
+            anatomical sessions designed for Chennai tech hubs along OMR, ECR, and central business districts.
           </p>
         </div>
 
-        {/* 3-Column Architectural Programme Grid */}
+        {/* 3-Column Visual Programme Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#343E34] border-b border-[#343E34]">
           {/* Programme 01 */}
-          <div className="p-6 sm:p-10 flex flex-col justify-between">
+          <div className="p-6 sm:p-10 flex flex-col justify-between hover:bg-white/5 transition-colors">
             <div>
-              <span className="font-mono text-xs uppercase tracking-widest text-terra">
-                01 / WEEKLY ON-SITE
-              </span>
-              <h3 className="font-serif text-2xl font-light text-linen mt-3">
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
+                  01 / ON-SITE
+                </span>
+                <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 px-2 py-0.5 border border-[#343E34]">
+                  WEEKLY
+                </span>
+              </div>
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-linen mt-3">
                 Desk Ergonomics &amp; Spinal Release
               </h3>
-              <p className="mt-4 text-xs font-sans text-linen/75 leading-relaxed">
-                Regular 45 to 60-minute sessions conducted at your office or campus. Targets
-                cervical spine tension, shoulder mobility, hip flexor tightness, and conscious
-                pranayama techniques to reset autonomic nervous system tone.
+              <p className="mt-4 text-sm font-sans text-linen/80 font-medium leading-relaxed">
+                45 to 60-minute sessions at your office. Targets neck stiffness, shoulder impingement,
+                lower-back compression, and guided breathing to reset stress tone.
               </p>
             </div>
-            <div className="mt-8 pt-4 border-t border-[#343E34]">
-              <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60">
-                Format: 1–2 Sessions Weekly
-              </span>
+            <div className="mt-8 pt-4 border-t border-[#343E34] font-mono text-xs text-terra font-bold">
+              ✓ Recommended for Engineering &amp; Operations Teams
             </div>
           </div>
 
           {/* Programme 02 */}
-          <div className="p-6 sm:p-10 flex flex-col justify-between">
+          <div className="p-6 sm:p-10 flex flex-col justify-between hover:bg-white/5 transition-colors">
             <div>
-              <span className="font-mono text-xs uppercase tracking-widest text-terra">
-                02 / INTENSIVE WORKSHOPS
-              </span>
-              <h3 className="font-serif text-2xl font-light text-linen mt-3">
-                Half-Day Executive Offsites
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
+                  02 / OFFSITES
+                </span>
+                <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 px-2 py-0.5 border border-[#343E34]">
+                  INTENSIVE
+                </span>
+              </div>
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-linen mt-3">
+                Executive Retreats &amp; Sound Calm
               </h3>
-              <p className="mt-4 text-xs font-sans text-linen/75 leading-relaxed">
-                Structured retreats combining restorative yoga, somatic unwinding, guided breathwork
-                cycles, and practical postural awareness tools that employees can integrate into
-                everyday workstation routines.
+              <p className="mt-4 text-sm font-sans text-linen/80 font-medium leading-relaxed">
+                Half-day or full-day structured offsites combining restorative somatic release,
+                deep breath regulation, and actionable posture hygiene drills.
               </p>
             </div>
-            <div className="mt-8 pt-4 border-t border-[#343E34]">
-              <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60">
-                Format: Half-Day or Full-Day Offsite
-              </span>
+            <div className="mt-8 pt-4 border-t border-[#343E34] font-mono text-xs text-terra font-bold">
+              ✓ Leadership Offsites &amp; Quarterly Wellness
             </div>
           </div>
 
           {/* Programme 03 */}
-          <div className="p-6 sm:p-10 flex flex-col justify-between">
+          <div className="p-6 sm:p-10 flex flex-col justify-between hover:bg-white/5 transition-colors">
             <div>
-              <span className="font-mono text-xs uppercase tracking-widest text-terra">
-                03 / HYBRID MEMBERSHIP
-              </span>
-              <h3 className="font-serif text-2xl font-light text-linen mt-3">
-                Subsidised Studio Pass
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
+                  03 / HYBRID PASS
+                </span>
+                <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 px-2 py-0.5 border border-[#343E34]">
+                  FLEXIBLE
+                </span>
+              </div>
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-linen mt-3">
+                Subsidised Studio &amp; Virtual Pass
               </h3>
-              <p className="mt-4 text-xs font-sans text-linen/75 leading-relaxed">
-                Provide employees with corporate wellness subsidies for Anohga studio batches on
-                ECR, supplemented with live interactive Google Meet sessions on weekends for remote
-                and hybrid team members.
+              <p className="mt-4 text-sm font-sans text-linen/80 font-medium leading-relaxed">
+                Offer employees subsidised studio passes for in-person Hatha and Aerial classes,
+                plus live weekend virtual streams for remote team members.
               </p>
             </div>
-            <div className="mt-8 pt-4 border-t border-[#343E34]">
-              <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60">
-                Format: Studio + Remote Virtual Access
-              </span>
+            <div className="mt-8 pt-4 border-t border-[#343E34] font-mono text-xs text-terra font-bold">
+              ✓ Ideal for Distributed &amp; Hybrid Companies
             </div>
           </div>
         </div>
 
-        {/* Logistics & Benchmark Strip */}
-        <div className="p-6 sm:p-10 border-b border-[#343E34] bg-linen/5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Logistics & Benchmark Strip with Bold Visual Highlights */}
+        <div className="p-6 sm:p-10 border-b border-[#343E34] bg-white/5 grid grid-cols-2 sm:grid-cols-4 gap-6">
           <div>
-            <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 block">
-              Investment Benchmark
+            <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 block font-semibold">
+              Tuition Benchmark
             </span>
-            <span className="font-serif text-xl font-light text-linen mt-1 block">
+            <span className="font-serif text-2xl font-bold text-terra mt-1 block">
               ₹8,000 – ₹25,000 / mo
             </span>
-            <span className="font-mono text-[9px] text-linen/50 mt-1 block">
-              Based on frequency &amp; headcount
+            <span className="font-mono text-[10px] text-linen/70 mt-1 block">
+              Customized by cadence
             </span>
           </div>
 
           <div>
-            <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 block">
-              Instructor Credentials
+            <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 block font-semibold">
+              Instructor Integrity
             </span>
-            <span className="font-serif text-xl font-light text-linen mt-1 block">
-              RYT-500 Lead
+            <span className="font-serif text-2xl font-bold text-linen mt-1 block">
+              Anupriya (RYT-500)
             </span>
-            <span className="font-mono text-[9px] text-linen/50 mt-1 block">
-              Direct guidance by Anupriya
-            </span>
-          </div>
-
-          <div>
-            <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 block">
-              Coverage Radius
-            </span>
-            <span className="font-serif text-xl font-light text-linen mt-1 block">
-              ECR, OMR &amp; Central Chennai
-            </span>
-            <span className="font-mono text-[9px] text-linen/50 mt-1 block">
-              On-site equipment support
+            <span className="font-mono text-[10px] text-linen/70 mt-1 block">
+              100% direct instruction
             </span>
           </div>
 
           <div>
-            <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 block">
-              Pilot Class Availability
+            <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 block font-semibold">
+              Coverage Range
             </span>
-            <span className="font-serif text-xl font-light text-linen mt-1 block">
-              1-Session Demonstration
+            <span className="font-serif text-2xl font-bold text-linen mt-1 block">
+              ECR, OMR &amp; City
             </span>
-            <span className="font-mono text-[9px] text-linen/50 mt-1 block">
-              Assesses team receptivity
+            <span className="font-mono text-[10px] text-linen/70 mt-1 block">
+              Equipment brought on-site
+            </span>
+          </div>
+
+          <div>
+            <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 block font-semibold">
+              Trial Demonstration
+            </span>
+            <span className="font-serif text-2xl font-bold text-terra mt-1 block">
+              1-Session Pilot
+            </span>
+            <span className="font-mono text-[10px] text-linen/70 mt-1 block">
+              Test team engagement
             </span>
           </div>
         </div>
 
-        {/* 4-Step Process Ledger & Proposal Form */}
+        {/* 4-Step Process & Form Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 divide-y lg:divide-y-0 lg:divide-x divide-[#343E34]">
-          {/* Left: 4-Step Process */}
-          <div className="lg:col-span-5 p-6 sm:p-10 lg:p-16">
-            <span className="font-mono text-xs uppercase tracking-widest text-linen/70 block mb-6">
-              ENGAGEMENT CADENCE
+          {/* Left: 4-Step Process Visual Cards */}
+          <div className="lg:col-span-5 p-6 sm:p-10 lg:p-14">
+            <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold block mb-6">
+              FOUR STEPS TO ON-SITE WELLNESS
             </span>
 
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <span className="font-mono text-xs text-terra font-semibold">01.</span>
+            <div className="space-y-4">
+              <div className="p-4 border border-[#343E34] bg-white/5 flex items-start gap-4">
+                <span className="font-mono text-lg text-terra font-bold">01</span>
                 <div>
-                  <h4 className="font-serif text-lg text-linen">Discovery &amp; Ergonomic Assessment</h4>
-                  <p className="text-xs text-linen/70 font-sans mt-1">
-                    We review team size, work conditions, common physical complaints, and facility layout.
+                  <h4 className="font-serif text-lg font-bold text-linen">Assessment Call</h4>
+                  <p className="text-xs text-linen/80 font-sans mt-0.5">
+                    We evaluate employee work postures, shift timings, and space logistics.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <span className="font-mono text-xs text-terra font-semibold">02.</span>
+              <div className="p-4 border border-[#343E34] bg-white/5 flex items-start gap-4">
+                <span className="font-mono text-lg text-terra font-bold">02</span>
                 <div>
-                  <h4 className="font-serif text-lg text-linen">Custom Proposal</h4>
-                  <p className="text-xs text-linen/70 font-sans mt-1">
-                    Structured syllabus matching your operational schedule and wellness budget.
+                  <h4 className="font-serif text-lg font-bold text-linen">Tailored Curriculum</h4>
+                  <p className="text-xs text-linen/80 font-sans mt-0.5">
+                    Structured syllabus addressing specific repetitive strain risks.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <span className="font-mono text-xs text-terra font-semibold">03.</span>
+              <div className="p-4 border border-[#343E34] bg-white/5 flex items-start gap-4">
+                <span className="font-mono text-lg text-terra font-bold">03</span>
                 <div>
-                  <h4 className="font-serif text-lg text-linen">On-Site Demonstration</h4>
-                  <p className="text-xs text-linen/70 font-sans mt-1">
-                    A test pilot class to gauge team participation and align difficulty levels.
+                  <h4 className="font-serif text-lg font-bold text-linen">On-Site Demonstration</h4>
+                  <p className="text-xs text-linen/80 font-sans mt-0.5">
+                    A test session to evaluate employee participation and enthusiasm.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <span className="font-mono text-xs text-terra font-semibold">04.</span>
+              <div className="p-4 border border-[#343E34] bg-white/5 flex items-start gap-4">
+                <span className="font-mono text-lg text-terra font-bold">04</span>
                 <div>
-                  <h4 className="font-serif text-lg text-linen">Ongoing Cadence</h4>
-                  <p className="text-xs text-linen/70 font-sans mt-1">
-                    Consistent weekly sessions with progressive anatomical milestones.
+                  <h4 className="font-serif text-lg font-bold text-linen">Consistent Weekly Cadence</h4>
+                  <p className="text-xs text-linen/80 font-sans mt-0.5">
+                    Ongoing practice with progressive anatomical milestones.
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right: Proposal Request Form */}
-          <div className="lg:col-span-7 p-6 sm:p-10 lg:p-16 bg-[#252E25]">
-            <span className="font-mono text-xs uppercase tracking-widest text-terra block mb-2">
+          {/* Right: Proposal Form */}
+          <div className="lg:col-span-7 p-6 sm:p-10 lg:p-14 bg-[#232B23]">
+            <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold block mb-2">
               REQUEST A CUSTOM PROPOSAL
             </span>
-            <p className="text-xs font-sans text-linen/80 mb-6">
-              Direct dispatch to Anupriya. We will review your organization&apos;s requirements and
-              respond within 24 hours.
+            <p className="text-xs font-sans text-linen/80 font-medium mb-6">
+              Routes directly to Anupriya on WhatsApp. We will evaluate your facility requirements
+              and share a proposal within 24 hours.
             </p>
 
             <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -286,7 +291,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
               />
 
               <div>
-                <label className="block font-mono text-[9px] uppercase tracking-wider text-linen/70 mb-1">
+                <label className="block font-mono text-[10px] uppercase tracking-wider text-linen/80 font-bold mb-1">
                   Company / Organization *
                 </label>
                 <input
@@ -295,13 +300,13 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   required
                   value={formData.company}
                   onChange={handleChange}
-                  placeholder="e.g. Acme Tech Solutions"
-                  className="w-full bg-[#1E251E] border border-[#343E34] text-linen px-3 py-2 text-xs font-sans placeholder:text-linen/30 focus:border-terra"
+                  placeholder="e.g. Zoho / Freshworks / OMR Tech"
+                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans placeholder:text-linen/30 focus:border-terra"
                 />
               </div>
 
               <div>
-                <label className="block font-mono text-[9px] uppercase tracking-wider text-linen/70 mb-1">
+                <label className="block font-mono text-[10px] uppercase tracking-wider text-linen/80 font-bold mb-1">
                   Contact Person *
                 </label>
                 <input
@@ -310,27 +315,27 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   required
                   value={formData.contactName}
                   onChange={handleChange}
-                  placeholder="e.g. Priya Natarajan"
-                  className="w-full bg-[#1E251E] border border-[#343E34] text-linen px-3 py-2 text-xs font-sans placeholder:text-linen/30 focus:border-terra"
+                  placeholder="e.g. Vikram Sundaram"
+                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans placeholder:text-linen/30 focus:border-terra"
                 />
               </div>
 
               <div>
-                <label className="block font-mono text-[9px] uppercase tracking-wider text-linen/70 mb-1">
-                  Work Email
+                <label className="block font-mono text-[10px] uppercase tracking-wider text-linen/80 font-bold mb-1">
+                  Corporate Email
                 </label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="priya@acme.com"
-                  className="w-full bg-[#1E251E] border border-[#343E34] text-linen px-3 py-2 text-xs font-sans placeholder:text-linen/30 focus:border-terra"
+                  placeholder="vikram@company.com"
+                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans placeholder:text-linen/30 focus:border-terra"
                 />
               </div>
 
               <div>
-                <label className="block font-mono text-[9px] uppercase tracking-wider text-linen/70 mb-1">
+                <label className="block font-mono text-[10px] uppercase tracking-wider text-linen/80 font-bold mb-1">
                   Phone / WhatsApp *
                 </label>
                 <input
@@ -340,36 +345,36 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="+91 98765 43210"
-                  className="w-full bg-[#1E251E] border border-[#343E34] text-linen px-3 py-2 text-xs font-sans placeholder:text-linen/30 focus:border-terra"
+                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans placeholder:text-linen/30 focus:border-terra"
                 />
               </div>
 
               <div>
-                <label className="block font-mono text-[9px] uppercase tracking-wider text-linen/70 mb-1">
+                <label className="block font-mono text-[10px] uppercase tracking-wider text-linen/80 font-bold mb-1">
                   Team Size
                 </label>
                 <select
                   name="teamSize"
                   value={formData.teamSize}
                   onChange={handleChange}
-                  className="w-full bg-[#1E251E] border border-[#343E34] text-linen px-3 py-2 text-xs font-sans focus:border-terra"
+                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans focus:border-terra"
                 >
-                  <option value="1–10 employees">1–10 employees (Intimate)</option>
-                  <option value="10–25 employees">10–25 employees (Mid-team)</option>
-                  <option value="25–50 employees">25–50 employees (Department)</option>
+                  <option value="1–10 employees">1–10 employees (Core Team)</option>
+                  <option value="10–25 employees">10–25 employees (Department)</option>
+                  <option value="25–50 employees">25–50 employees (Mid-sized)</option>
                   <option value="50+ employees">50+ employees (Enterprise)</option>
                 </select>
               </div>
 
               <div>
-                <label className="block font-mono text-[9px] uppercase tracking-wider text-linen/70 mb-1">
+                <label className="block font-mono text-[10px] uppercase tracking-wider text-linen/80 font-bold mb-1">
                   Programme Focus
                 </label>
                 <select
                   name="programme"
                   value={formData.programme}
                   onChange={handleChange}
-                  className="w-full bg-[#1E251E] border border-[#343E34] text-linen px-3 py-2 text-xs font-sans focus:border-terra"
+                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans focus:border-terra"
                 >
                   <option value="Weekly On-Site Sessions">Weekly On-Site Sessions</option>
                   <option value="Executive Offsite Workshop">Executive Offsite Workshop</option>
@@ -379,7 +384,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
               </div>
 
               <div className="sm:col-span-2">
-                <label className="block font-mono text-[9px] uppercase tracking-wider text-linen/70 mb-1">
+                <label className="block font-mono text-[10px] uppercase tracking-wider text-linen/80 font-bold mb-1">
                   Specific Physical Goals or Notes
                 </label>
                 <textarea
@@ -387,15 +392,15 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   rows={2}
                   value={formData.notes}
                   onChange={handleChange}
-                  placeholder="e.g. Ergonomics focus for engineering team, prefer Friday afternoons..."
-                  className="w-full bg-[#1E251E] border border-[#343E34] text-linen px-3 py-2 text-xs font-sans placeholder:text-linen/30 focus:border-terra"
+                  placeholder="e.g. Ergonomic focus for software engineers, prefer Thursday afternoons..."
+                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans placeholder:text-linen/30 focus:border-terra"
                 />
               </div>
 
               <div className="sm:col-span-2 mt-2">
                 <button
                   type="submit"
-                  className="btn-outline-linen w-full justify-center py-3"
+                  className="btn-terra w-full justify-center py-3.5 font-bold"
                 >
                   <span>Submit Corporate Proposal Request</span>
                   <span>↗</span>

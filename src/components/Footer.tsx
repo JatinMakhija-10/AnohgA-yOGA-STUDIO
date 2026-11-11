@@ -14,13 +14,13 @@ export const Footer: FC<FooterProps> = ({ onOpenLegal }) => {
           {/* Brand & Studio Philosophy (Cols 1-4) */}
           <div className="lg:col-span-4 flex flex-col justify-between">
             <div>
-              <span className="font-serif text-3xl tracking-[0.18em] uppercase leading-none font-normal">
+              <span className="font-serif text-3xl sm:text-4xl tracking-[0.16em] uppercase leading-none font-bold">
                 ANOHGA
               </span>
-              <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-umber block mt-1.5">
+              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-espresso font-bold block mt-1.5">
                 Yoga Studio · ECR Thiruvanmiyur, Chennai
               </span>
-              <p className="mt-5 text-xs text-umber leading-relaxed max-w-[38ch]">
+              <p className="mt-5 text-xs sm:text-sm text-espresso/90 font-medium leading-relaxed max-w-[38ch]">
                 An intimate sanctuary dedicated to deliberate, anatomically grounded practice.
                 Led personally by founder Anupriya (RYT-500), bringing 10+ years of personal sadhana
                 and 6+ years of specialized teaching across classical Hatha, suspended Aerial silks,

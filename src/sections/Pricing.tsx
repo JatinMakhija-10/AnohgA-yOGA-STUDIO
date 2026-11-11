@@ -7,10 +7,10 @@ interface PricingProps {
 
 export const Pricing: FC<PricingProps> = ({ onSelectPlan }) => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'quarterly'>('monthly')
-  const [openFaq, setOpenFaq] = useState<number | null>(null)
+  const [openFaq, setOpenFaq] = useState<number | null>(0)
 
   // Group plans
-  const groups = ['Hatha & Kids', 'Aerial Yoga', 'Combo Packs', 'Specialised']
+  const groups = ['Combo Packs', 'Aerial Yoga', 'Hatha & Kids', 'Specialised']
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index)
@@ -28,100 +28,166 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan }) => {
   return (
     <section id="pricing" className="border-b border-hairline bg-linen scroll-mt-20">
       <div className="max-w-[1440px] mx-auto">
-        {/* Section Header & Billing Toggle */}
-        <div className="p-6 sm:p-10 lg:p-16 border-b border-hairline flex flex-col md:flex-row md:items-end justify-between gap-6">
+        {/* Section Header & Billing Cadence Toggle */}
+        <div className="p-6 sm:p-10 lg:p-14 border-b border-hairline flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-mono text-xs uppercase tracking-widest text-terra font-semibold">
+              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-2 py-0.5 bg-terra/10 border border-terra/30">
                 03
               </span>
-              <span className="font-mono text-xs uppercase tracking-widest text-umber">
-                / PRICING LEDGER
+              <span className="font-mono text-xs uppercase tracking-widest text-espresso font-semibold">
+                / PRICING &amp; MEMBERSHIPS
               </span>
             </div>
-            <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-espresso leading-tight tracking-tightest">
-              Simple, Transparent{' '}
-              <span className="italic font-normal">Studio Tuition</span>
+            <h2 className="mt-4 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium sm:font-semibold text-espresso leading-tight tracking-tight">
+              Honest, Transparent{' '}
+              <span className="italic text-terra underline decoration-terra/30 decoration-wavy underline-offset-8">
+                Tuition Ledger
+              </span>
             </h2>
-            <p className="mt-3 text-sm text-umber leading-relaxed font-sans max-w-[54ch]">
-              No sign-up dues or registration fees. Choose month-to-month flexibility or save with
-              our 3-month quarterly commitment.
+            <p className="mt-3 text-base text-espresso/90 font-sans font-medium max-w-[56ch]">
+              No sign-up dues or registration traps. Choose month-to-month flexibility or save up
+              to ₹1,900 with quarterly commitment.
             </p>
           </div>
 
-          {/* Billing Cadence Toggle */}
-          <div className="flex items-center gap-2 border border-hairline p-1 bg-travertine/40 self-start md:self-auto">
+          {/* Billing Cadence Toggle - Bold & Playful */}
+          <div className="flex items-center gap-2 border-2 border-hairline p-1.5 bg-travertine self-start md:self-auto">
             <button
               type="button"
               onClick={() => setBillingCycle('monthly')}
-              className={`toggle-btn ${billingCycle === 'monthly' ? 'active' : ''}`}
+              className={`toggle-btn font-bold cursor-pointer ${
+                billingCycle === 'monthly' ? 'active shadow-sm' : ''
+              }`}
             >
               MONTHLY CADENCE
             </button>
             <button
               type="button"
               onClick={() => setBillingCycle('quarterly')}
-              className={`toggle-btn ${billingCycle === 'quarterly' ? 'active' : ''}`}
+              className={`toggle-btn font-bold cursor-pointer ${
+                billingCycle === 'quarterly' ? 'active shadow-sm' : ''
+              }`}
             >
-              QUARTERLY (3 MO)
+              QUARTERLY (SAVE ₹)
             </button>
           </div>
         </div>
 
-        {/* ── 4 Pricing Groups Ledger ── */}
+        {/* ── Visual Studio Tuition Guarantee Banner ── */}
+        <div className="p-6 sm:p-8 bg-travertine/40 border-b border-hairline grid grid-cols-2 sm:grid-cols-4 gap-4 text-center divide-x divide-hairline">
+          <div>
+            <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold block">
+              ₹0 ADMISSION FEE
+            </span>
+            <span className="font-mono text-[10px] text-umber block mt-0.5">
+              Only class tuition applies
+            </span>
+          </div>
+          <div>
+            <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold block">
+              FLEXIBLE MAKE-UPS
+            </span>
+            <span className="font-mono text-[10px] text-umber block mt-0.5">
+              Roll slots within the month
+            </span>
+          </div>
+          <div>
+            <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold block">
+              DIRECT UPI SETTLEMENT
+            </span>
+            <span className="font-mono text-[10px] text-umber block mt-0.5">
+              GPay / PhonePe / Cash
+            </span>
+          </div>
+          <div>
+            <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold block">
+              AERIAL TRIAL REFUND
+            </span>
+            <span className="font-mono text-[10px] text-umber block mt-0.5">
+              ₹700 credited on sign-up
+            </span>
+          </div>
+        </div>
+
+        {/* ── 4 Pricing Groups Ledger with Visual Cards ── */}
         <div className="divide-y divide-hairline">
           {groups.map((groupName) => {
             const groupPlans = PRICING.filter((p) => p.group === groupName)
             return (
-              <div key={groupName} className="p-6 sm:p-10 lg:p-16">
+              <div key={groupName} className="p-6 sm:p-10 lg:p-14">
                 <div className="flex items-center justify-between pb-4 border-b border-hairline mb-6">
-                  <span className="font-mono text-xs uppercase tracking-widest text-espresso font-semibold">
-                    {groupName}
-                  </span>
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-umber">
-                    {billingCycle === 'monthly' ? 'MONTHLY BILLING' : '3-MONTH UPFRONT (SAVE UP TO ₹1,900)'}
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-terra"></span>
+                    <span className="font-mono text-xs uppercase tracking-widest text-espresso font-bold">
+                      {groupName}
+                    </span>
+                  </div>
+                  <span className="font-mono text-[11px] uppercase tracking-wider text-terra font-bold px-2 py-0.5 bg-terra/10 border border-terra/30">
+                    {billingCycle === 'monthly' ? 'MONTHLY CADENCE' : 'QUARTERLY UPFRONT (SAVE UP TO ₹1,900)'}
                   </span>
                 </div>
 
-                <div className="divide-y divide-hairline border border-hairline bg-travertine/10">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {groupPlans.map((plan) => {
                     const price = billingCycle === 'monthly' ? plan.monthly : plan.quarterly
                     const unit = billingCycle === 'monthly' ? '/ month' : ' / 3 months'
+                    const isPopular = plan.tag === 'MOST POPULAR'
+                    const isBestValue = plan.tag === 'BEST VALUE'
 
                     return (
                       <div
                         key={plan.name}
-                        className="p-5 sm:p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 bg-linen hover:bg-travertine/30 transition-colors"
+                        className={`p-6 border-2 flex flex-col justify-between transition-all bg-linen ${
+                          isPopular || isBestValue
+                            ? 'border-terra shadow-md bg-travertine/10'
+                            : 'border-hairline hover:border-espresso'
+                        }`}
                       >
-                        <div className="flex-1">
-                          <div className="flex flex-wrap items-center gap-3">
-                            <span className="font-serif text-lg sm:text-xl text-espresso font-light">
-                              {plan.name}
-                            </span>
-                            {plan.tag && (
-                              <span className="font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 bg-moss/10 text-moss border border-moss/20">
+                        <div>
+                          {/* Tag row */}
+                          <div className="flex items-center justify-between min-h-[26px] mb-3">
+                            {plan.tag ? (
+                              <span
+                                className={`font-mono text-[9px] uppercase tracking-widest px-2.5 py-1 font-bold ${
+                                  isPopular
+                                    ? 'bg-terra text-linen'
+                                    : 'bg-moss text-linen'
+                                }`}
+                              >
                                 {plan.tag}
+                              </span>
+                            ) : (
+                              <span className="font-mono text-[9px] uppercase tracking-wider text-umber">
+                                STANDARD TIER
+                              </span>
+                            )}
+                            {billingCycle === 'quarterly' && plan.quarterlySave > 0 && (
+                              <span className="font-mono text-[10px] text-moss font-bold">
+                                Save ₹{plan.quarterlySave}
                               </span>
                             )}
                           </div>
+
+                          {/* Plan Title */}
+                          <h3 className="font-serif text-2xl font-bold text-espresso leading-snug">
+                            {plan.name}
+                          </h3>
+
                           {plan.note && (
-                            <p className="mt-1 font-mono text-[11px] text-umber">
+                            <p className="mt-2 font-mono text-[11px] text-umber font-semibold">
                               {plan.note}
                             </p>
                           )}
-                          {billingCycle === 'quarterly' && plan.quarterlySave > 0 && (
-                            <span className="font-mono text-[10px] text-moss block mt-1">
-                              ✓ Includes ₹{plan.quarterlySave} quarterly savings
-                            </span>
-                          )}
                         </div>
 
-                        <div className="flex items-center justify-between md:justify-end gap-6 shrink-0 pt-3 md:pt-0 border-t md:border-t-0 border-hairline/60">
-                          <div className="text-right">
-                            <span className="font-serif text-2xl sm:text-3xl font-light text-espresso leading-none">
+                        {/* Price & Action Button */}
+                        <div className="mt-8 pt-4 border-t border-hairline">
+                          <div className="mb-4">
+                            <span className="font-serif text-3xl sm:text-4xl font-bold text-espresso leading-none">
                               ₹{price.toLocaleString('en-IN')}
                             </span>
-                            <span className="font-mono text-[10px] text-umber block mt-0.5">
+                            <span className="font-mono text-xs text-umber font-semibold block mt-1">
                               {unit}
                             </span>
                           </div>
@@ -129,9 +195,11 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan }) => {
                           <button
                             type="button"
                             onClick={() => handlePlanReserve(plan.name, plan.monthly)}
-                            className="btn-outline text-[10px] py-2 px-3 whitespace-nowrap"
+                            className={`w-full justify-center py-3 text-[11px] font-bold ${
+                              isPopular || isBestValue ? 'btn-terra' : 'btn-outline'
+                            }`}
                           >
-                            <span>Reserve Plan</span>
+                            <span>Reserve This Plan</span>
                             <span>→</span>
                           </button>
                         </div>
@@ -144,19 +212,19 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan }) => {
           })}
         </div>
 
-        {/* ── FAQ Section (Accordion) ── */}
-        <div className="p-6 sm:p-10 lg:p-16 border-t border-hairline bg-travertine/20">
+        {/* ── FAQ Section (Accordion with Bold Typography) ── */}
+        <div className="p-6 sm:p-10 lg:p-14 border-t border-hairline bg-travertine/20">
           <div className="max-w-3xl">
             <div className="flex items-center gap-2">
-              <span className="font-mono text-xs uppercase tracking-widest text-terra font-semibold">
+              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-2 py-0.5 bg-terra/10 border border-terra/30">
                 FAQ
               </span>
-              <span className="font-mono text-xs uppercase tracking-widest text-umber">
+              <span className="font-mono text-xs uppercase tracking-widest text-espresso font-semibold">
                 / CLARIFICATIONS &amp; POLICIES
               </span>
             </div>
-            <h3 className="mt-4 font-serif text-3xl font-light text-espresso">
-              Frequently Discussed Questions
+            <h3 className="mt-4 font-serif text-3xl sm:text-4xl font-bold text-espresso">
+              Common Questions Before Your First Class
             </h3>
           </div>
 
@@ -170,16 +238,16 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan }) => {
                     onClick={() => toggleFaq(index)}
                     className="w-full flex items-start justify-between gap-4 text-left group bg-transparent border-0 p-0 cursor-pointer"
                   >
-                    <span className="font-serif text-xl sm:text-2xl font-light text-espresso group-hover:text-terra transition-colors">
+                    <span className="font-serif text-xl sm:text-2xl font-bold text-espresso group-hover:text-terra transition-colors">
                       {faq.q}
                     </span>
-                    <span className="font-mono text-sm text-umber p-1 border border-hairline shrink-0 mt-1">
+                    <span className="font-mono text-sm text-espresso font-bold p-1 px-2 border-2 border-hairline shrink-0 mt-1">
                       {isOpen ? '−' : '+'}
                     </span>
                   </button>
 
                   <div className={`accordion-body ${isOpen ? 'open' : ''}`}>
-                    <p className="mt-4 text-xs sm:text-sm text-umber leading-relaxed font-sans max-w-[65ch]">
+                    <p className="mt-4 text-sm text-espresso/90 leading-relaxed font-sans font-medium max-w-[65ch]">
                       {faq.a}
                     </p>
                   </div>

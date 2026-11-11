@@ -81,45 +81,55 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
     <section id="contact" className="border-b border-hairline bg-linen scroll-mt-20">
       <div className="max-w-[1440px] mx-auto">
         {/* Section Header */}
-        <div className="p-6 sm:p-10 lg:p-16 border-b border-hairline">
-          <div className="flex items-center gap-2">
-            <span className="font-mono text-xs uppercase tracking-widest text-terra font-semibold">
-              06
-            </span>
-            <span className="font-mono text-xs uppercase tracking-widest text-umber">
-              / DIRECT DISPATCH &amp; RESERVATIONS
-            </span>
+        <div className="p-6 sm:p-10 lg:p-14 border-b border-hairline flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-2 py-0.5 bg-terra/10 border border-terra/30">
+                06
+              </span>
+              <span className="font-mono text-xs uppercase tracking-widest text-espresso font-semibold">
+                / DIRECT WHATSAPP RESERVATIONS
+              </span>
+            </div>
+
+            <h2 className="mt-4 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium sm:font-semibold text-espresso leading-tight tracking-tight">
+              Reserve Your Place on the Mat{' '}
+              <span className="italic text-terra underline decoration-terra/30 decoration-wavy underline-offset-8">
+                or in the Silks
+              </span>
+            </h2>
+
+            <p className="mt-4 text-base text-espresso/90 font-sans font-medium max-w-[62ch]">
+              Select either membership lock-in or book your complimentary first class.
+              All submissions route directly to Anupriya for personal slot confirmation.
+            </p>
           </div>
 
-          <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-espresso leading-tight tracking-tightest">
-            Reserve Your Place on the Mat{' '}
-            <span className="italic font-normal">or in the Silks</span>
-          </h2>
-
-          <p className="mt-4 text-sm text-umber leading-relaxed font-sans max-w-[62ch]">
-            Submit your details below. Each request routes directly to Anupriya on WhatsApp for
-            personalized confirmation and schedule coordination.
-          </p>
+          <div className="flex items-center gap-3 font-mono text-xs text-espresso font-bold">
+            <span className="px-3 py-1.5 bg-travertine border border-hairline">
+              ⚡ 2-HOUR WHATSAPP CONFIRMATION
+            </span>
+          </div>
         </div>
 
-        {/* Dual Form Architectural Grid */}
+        {/* Dual Form Architectural Grid with High Contrast */}
         <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-hairline">
           {/* Form 01: Lock in Your Plan */}
-          <div className="p-6 sm:p-10 lg:p-16 flex flex-col justify-between bg-linen">
+          <div className="p-6 sm:p-10 lg:p-14 flex flex-col justify-between bg-linen">
             <div>
               <div className="flex items-center justify-between pb-4 border-b border-hairline">
-                <span className="font-mono text-xs uppercase tracking-widest text-terra font-semibold">
+                <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
                   OPTION A
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-umber">
-                  MEMBERSHIP RESERVATION
+                <span className="font-mono text-xs uppercase tracking-wider text-espresso font-semibold px-2 py-0.5 bg-travertine border border-hairline">
+                  MEMBERSHIP LOCK-IN
                 </span>
               </div>
 
-              <h3 className="font-serif text-2xl sm:text-3xl font-light text-espresso mt-6">
+              <h3 className="font-serif text-3xl font-bold text-espresso mt-6">
                 Lock In Your Plan
               </h3>
-              <p className="mt-3 text-xs text-umber font-sans leading-relaxed">
+              <p className="mt-2 text-sm text-espresso/80 font-sans font-medium leading-relaxed">
                 Choose your tuition tier. We will confirm batch availability and share UPI details
                 directly via WhatsApp.
               </p>
@@ -138,8 +148,8 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                 />
 
                 <div>
-                  <label className="block font-mono text-[10px] uppercase tracking-wider text-umber mb-1">
-                    Your Name *
+                  <label className="block font-mono text-[10px] uppercase tracking-wider text-espresso font-bold mb-1">
+                    Your Full Name *
                   </label>
                   <input
                     type="text"
@@ -147,12 +157,12 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     value={planName}
                     onChange={(e) => setPlanName(e.target.value)}
                     placeholder="e.g. Radhika Raman"
-                    className="w-full bg-travertine/60 border border-hairline px-3.5 py-2.5 text-xs font-sans text-espresso placeholder:text-umber/50"
+                    className="w-full bg-travertine/50 border-2 border-hairline px-3.5 py-2.5 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 focus:border-terra"
                   />
                 </div>
 
                 <div>
-                  <label className="block font-mono text-[10px] uppercase tracking-wider text-umber mb-1">
+                  <label className="block font-mono text-[10px] uppercase tracking-wider text-espresso font-bold mb-1">
                     Phone or WhatsApp *
                   </label>
                   <input
@@ -161,13 +171,13 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     value={planPhone}
                     onChange={(e) => setPlanPhone(e.target.value)}
                     placeholder="+91 98765 43210"
-                    className="w-full bg-travertine/60 border border-hairline px-3.5 py-2.5 text-xs font-sans text-espresso placeholder:text-umber/50"
+                    className="w-full bg-travertine/50 border-2 border-hairline px-3.5 py-2.5 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 focus:border-terra"
                   />
                 </div>
 
                 <div>
-                  <label className="block font-mono text-[10px] uppercase tracking-wider text-umber mb-1">
-                    Select Plan *
+                  <label className="block font-mono text-[10px] uppercase tracking-wider text-espresso font-bold mb-1">
+                    Selected Tuition Tier *
                   </label>
                   <select
                     value={planChoice}
@@ -175,7 +185,7 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                       setPlanChoice(e.target.value)
                       onPlanChange(e.target.value)
                     }}
-                    className="w-full bg-travertine/60 border border-hairline px-3.5 py-2.5 text-xs font-sans text-espresso"
+                    className="w-full bg-travertine/50 border-2 border-hairline px-3.5 py-2.5 text-sm font-sans text-espresso font-semibold focus:border-terra"
                   >
                     {PLAN_NAMES.map((p) => (
                       <option key={p} value={p}>
@@ -186,54 +196,54 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                 </div>
 
                 <div>
-                  <label className="block font-mono text-[10px] uppercase tracking-wider text-umber mb-1">
-                    Notes or Questions (Optional)
+                  <label className="block font-mono text-[10px] uppercase tracking-wider text-espresso font-bold mb-1">
+                    Notes or Schedule Preference (Optional)
                   </label>
                   <textarea
                     rows={2}
                     value={planNotes}
                     onChange={(e) => setPlanNotes(e.target.value)}
-                    placeholder="e.g. Prefer 07:30 AM slot, beginner in aerial..."
-                    className="w-full bg-travertine/60 border border-hairline px-3.5 py-2.5 text-xs font-sans text-espresso placeholder:text-umber/50"
+                    placeholder="e.g. Prefer 07:30 AM slot, beginner in aerial silks..."
+                    className="w-full bg-travertine/50 border-2 border-hairline px-3.5 py-2.5 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 focus:border-terra"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="btn-terra w-full justify-center py-3.5 mt-2"
+                  className="btn-terra w-full justify-center py-3.5 font-bold text-xs mt-2"
                 >
-                  <span>Lock in membership</span>
+                  <span>Lock In Membership on WhatsApp</span>
                   <span>↗</span>
                 </button>
               </form>
             </div>
 
             <div className="pt-6 border-t border-hairline mt-8 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-moss rounded-full"></span>
-              <span className="font-mono text-[10px] uppercase tracking-wider text-umber">
+              <span className="w-2 h-2 bg-moss rounded-full"></span>
+              <span className="font-mono text-[10px] uppercase tracking-wider text-espresso font-bold">
                 Payment settled after confirmation · UPI / Cash accepted
               </span>
             </div>
           </div>
 
           {/* Form 02: Book First Class Free */}
-          <div className="p-6 sm:p-10 lg:p-16 flex flex-col justify-between bg-travertine/20">
+          <div className="p-6 sm:p-10 lg:p-14 flex flex-col justify-between bg-travertine/30">
             <div>
               <div className="flex items-center justify-between pb-4 border-b border-hairline">
-                <span className="font-mono text-xs uppercase tracking-widest text-terra font-semibold">
+                <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
                   OPTION B
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-umber">
+                <span className="font-mono text-xs uppercase tracking-wider text-espresso font-semibold px-2 py-0.5 bg-linen border border-hairline">
                   COMPLIMENTARY FIRST CLASS
                 </span>
               </div>
 
-              <h3 className="font-serif text-2xl sm:text-3xl font-light text-espresso mt-6">
+              <h3 className="font-serif text-3xl font-bold text-espresso mt-6">
                 Book Your First Class Free
               </h3>
-              <p className="mt-3 text-xs text-umber font-sans leading-relaxed">
-                Experience the atmosphere and teaching philosophy before making any commitment.
-                Hatha trials are completely free; Aerial drop-ins are ₹700 (refundable).
+              <p className="mt-2 text-sm text-espresso/80 font-sans font-medium leading-relaxed">
+                Experience the studio atmosphere before making any commitment.
+                Hatha trials are 100% free; Aerial drop-ins are ₹700 (refundable).
               </p>
 
               <form onSubmit={handleTrialSubmit} className="mt-8 flex flex-col gap-4">
@@ -250,8 +260,8 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                 />
 
                 <div>
-                  <label className="block font-mono text-[10px] uppercase tracking-wider text-umber mb-1">
-                    Your Name *
+                  <label className="block font-mono text-[10px] uppercase tracking-wider text-espresso font-bold mb-1">
+                    Your Full Name *
                   </label>
                   <input
                     type="text"
@@ -259,12 +269,12 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     value={trialName}
                     onChange={(e) => setTrialName(e.target.value)}
                     placeholder="e.g. Siddharth Menon"
-                    className="w-full bg-linen border border-hairline px-3.5 py-2.5 text-xs font-sans text-espresso placeholder:text-umber/50"
+                    className="w-full bg-linen border-2 border-hairline px-3.5 py-2.5 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 focus:border-terra"
                   />
                 </div>
 
                 <div>
-                  <label className="block font-mono text-[10px] uppercase tracking-wider text-umber mb-1">
+                  <label className="block font-mono text-[10px] uppercase tracking-wider text-espresso font-bold mb-1">
                     Phone or WhatsApp *
                   </label>
                   <input
@@ -273,24 +283,24 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     value={trialPhone}
                     onChange={(e) => setTrialPhone(e.target.value)}
                     placeholder="+91 98765 43210"
-                    className="w-full bg-linen border border-hairline px-3.5 py-2.5 text-xs font-sans text-espresso placeholder:text-umber/50"
+                    className="w-full bg-linen border-2 border-hairline px-3.5 py-2.5 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 focus:border-terra"
                   />
                 </div>
 
                 <div>
-                  <label className="block font-mono text-[10px] uppercase tracking-wider text-umber mb-1">
+                  <label className="block font-mono text-[10px] uppercase tracking-wider text-espresso font-bold mb-1">
                     Preferred Practice *
                   </label>
                   <select
                     value={trialDiscipline}
                     onChange={(e) => setTrialDiscipline(e.target.value)}
-                    className="w-full bg-linen border border-hairline px-3.5 py-2.5 text-xs font-sans text-espresso"
+                    className="w-full bg-linen border-2 border-hairline px-3.5 py-2.5 text-sm font-sans text-espresso font-semibold focus:border-terra"
                   >
                     <option value="Hatha Yoga (Free First Class)">
-                      Hatha Yoga (Studio) — 100% Free Trial
+                      Hatha Yoga (Studio) — 100% Free First Class
                     </option>
                     <option value="Aerial Yoga (Drop-In Trial ₹700 Refundable)">
-                      Aerial Yoga — ₹700 Drop-In (Refundable on Monthly)
+                      Aerial Yoga — ₹700 Drop-In (Refunded on Monthly)
                     </option>
                     <option value="Weekend Online Hatha (Google Meet)">
                       Weekend Online Hatha — Free Trial
@@ -308,7 +318,7 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                 </div>
 
                 <div>
-                  <label className="block font-mono text-[10px] uppercase tracking-wider text-umber mb-1">
+                  <label className="block font-mono text-[10px] uppercase tracking-wider text-espresso font-bold mb-1">
                     Preferred Day / Time (Optional)
                   </label>
                   <input
@@ -316,15 +326,15 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     value={trialSlot}
                     onChange={(e) => setTrialSlot(e.target.value)}
                     placeholder="e.g. Tuesday morning 7:30 AM"
-                    className="w-full bg-linen border border-hairline px-3.5 py-2.5 text-xs font-sans text-espresso placeholder:text-umber/50"
+                    className="w-full bg-linen border-2 border-hairline px-3.5 py-2.5 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 focus:border-terra"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="btn-outline w-full justify-center py-3.5 mt-2"
+                  className="btn-terra w-full justify-center py-3.5 font-bold text-xs mt-2"
                 >
-                  <span>Claim free class slot</span>
+                  <span>Claim Free Class Slot on WhatsApp</span>
                   <span>↗</span>
                 </button>
               </form>
@@ -333,14 +343,14 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
             {/* Studio Guarantees */}
             <div className="pt-6 border-t border-hairline mt-8 space-y-2">
               <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-moss rounded-full"></span>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-espresso">
-                  No automated bots: Anupriya confirms all messages personally.
+                <span className="w-2 h-2 bg-moss rounded-full"></span>
+                <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold">
+                  Direct personal communication with Anupriya. No bots.
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-moss rounded-full"></span>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-espresso">
+                <span className="w-2 h-2 bg-moss rounded-full"></span>
+                <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold">
                   2-hour average response time during studio hours (6 AM – 8 PM).
                 </span>
               </div>

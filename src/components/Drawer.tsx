@@ -104,10 +104,10 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
 
           {/* Heading & Copy */}
           <div className="mt-8">
-            <h2 className="font-serif text-3xl sm:text-4xl font-light leading-tight text-espresso">
-              Your first class <span className="italic font-normal">is free.</span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold leading-tight text-espresso">
+              Your first class <span className="italic font-bold text-terra">is free.</span>
             </h2>
-            <p className="mt-4 text-[13px] text-umber leading-relaxed">
+            <p className="mt-4 text-sm text-espresso font-medium leading-relaxed">
               No commitment. Drop in, meet Anupriya, and decide after. Leave your number and
               we&apos;ll confirm a slot within 2 hours.
             </p>
