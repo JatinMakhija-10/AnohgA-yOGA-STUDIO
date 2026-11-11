@@ -68,11 +68,12 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.14em;
   border: none;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.2s;
   text-decoration: none;
 }
-.btn-terra:hover { background: var(--terra-h); }
+.btn-terra:hover { background: var(--terra-h); transform: translateY(-1px); }
 
 .btn-outline {
   display: inline-flex;
@@ -86,11 +87,12 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.14em;
   border: 1px solid var(--espresso);
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s;
   text-decoration: none;
 }
-.btn-outline:hover { background: var(--espresso); color: var(--linen); }
+.btn-outline:hover { background: var(--espresso); color: var(--linen); transform: translateY(-1px); }
 
 .btn-outline-linen {
   display: inline-flex;
@@ -104,11 +106,12 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.14em;
   border: 1px solid var(--linen);
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s;
   text-decoration: none;
 }
-.btn-outline-linen:hover { background: var(--linen); color: var(--bark); }
+.btn-outline-linen:hover { background: var(--linen); color: var(--bark); transform: translateY(-1px); }
 
 /* ── Timetable cell hover ───────────────────────────────────────── */
 .tt-cell-active {
@@ -151,10 +154,12 @@ body {
 .modal-box {
   background: var(--linen);
   border: 1px solid var(--hairline);
+  border-radius: 10px;
   max-width: 600px; width: 90%;
   max-height: 80vh; overflow-y: auto;
   padding: 2.5rem;
   position: relative;
+  box-shadow: 0 10px 30px rgba(24, 22, 20, 0.15);
 }
 
 /* ── Accordion ──────────────────────────────────────────────────── */
@@ -176,9 +181,11 @@ body {
   letter-spacing: 0.08em;
   padding: 0.9rem 2rem;
   border: 1px solid #343E34;
+  border-radius: 8px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
 }
 .toast.show { opacity: 1; pointer-events: all; }
 
@@ -188,8 +195,9 @@ body {
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  padding: 0.4rem 1rem;
+  padding: 0.45rem 1.1rem;
   border: 1px solid var(--hairline);
+  border-radius: 9999px;
   background: transparent;
   color: var(--umber);
   cursor: pointer;
@@ -209,6 +217,7 @@ body {
   letter-spacing: 0.12em;
   padding: 0.5rem 1.2rem;
   border: 1px solid var(--hairline);
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.15s;
   background: transparent;
@@ -227,7 +236,10 @@ body {
   padding-top: 1rem;
 }
 
-/* ── Input focus ────────────────────────────────────────────────── */
+/* ── Input focus & soft corners ─────────────────────────────────── */
+input, select, textarea {
+  border-radius: 6px;
+}
 input:focus, select:focus, textarea:focus {
   outline: 1px solid var(--terra);
   outline-offset: 1px;

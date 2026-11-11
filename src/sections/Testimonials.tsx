@@ -77,7 +77,7 @@ export const Testimonials: FC = () => {
           {reviews.map((rev) => (
             <div
               key={rev.name}
-              className="bg-linen border-2 border-hairline p-6 sm:p-8 flex flex-col justify-between hover:border-espresso transition-all shadow-sm"
+              className="bg-linen border-2 border-hairline p-6 sm:p-8 flex flex-col justify-between hover:border-espresso transition-all shadow-sm rounded-[10px] overflow-hidden"
             >
               <div>
                 {/* Meta Header */}
@@ -90,7 +90,7 @@ export const Testimonials: FC = () => {
                       {rev.role}
                     </span>
                   </div>
-                  <span className="font-mono text-[9px] uppercase tracking-wider text-terra font-bold px-2 py-0.5 bg-terra/10 border border-terra/20">
+                  <span className="font-mono text-[9px] uppercase tracking-wider text-terra font-bold px-2 py-0.5 bg-terra/10 border border-terra/20 rounded-[4px]">
                     {rev.discipline}
                   </span>
                 </div>

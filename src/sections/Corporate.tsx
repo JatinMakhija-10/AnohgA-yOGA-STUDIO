@@ -91,15 +91,15 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
         </div>
 
         {/* 3-Column Visual Programme Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#343E34] border-b border-[#343E34]">
+        <div className="p-6 sm:p-10 lg:p-14 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 border-b border-[#343E34]">
           {/* Programme 01 */}
-          <div className="p-6 sm:p-10 flex flex-col justify-between hover:bg-white/5 transition-colors">
+          <div className="p-6 sm:p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border border-[#343E34] bg-white/[0.02] rounded-[8px]">
             <div>
               <div className="flex items-center justify-between">
                 <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
                   01 / ON-SITE
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 px-2 py-0.5 border border-[#343E34]">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 px-2 py-0.5 border border-[#343E34] rounded-[4px]">
                   WEEKLY
                 </span>
               </div>
@@ -117,13 +117,13 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
           </div>
 
           {/* Programme 02 */}
-          <div className="p-6 sm:p-10 flex flex-col justify-between hover:bg-white/5 transition-colors">
+          <div className="p-6 sm:p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border border-[#343E34] bg-white/[0.02] rounded-[8px]">
             <div>
               <div className="flex items-center justify-between">
                 <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
                   02 / OFFSITES
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 px-2 py-0.5 border border-[#343E34]">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 px-2 py-0.5 border border-[#343E34] rounded-[4px]">
                   INTENSIVE
                 </span>
               </div>
@@ -141,13 +141,13 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
           </div>
 
           {/* Programme 03 */}
-          <div className="p-6 sm:p-10 flex flex-col justify-between hover:bg-white/5 transition-colors">
+          <div className="p-6 sm:p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border border-[#343E34] bg-white/[0.02] rounded-[8px]">
             <div>
               <div className="flex items-center justify-between">
                 <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
                   03 / HYBRID PASS
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 px-2 py-0.5 border border-[#343E34]">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 px-2 py-0.5 border border-[#343E34] rounded-[4px]">
                   FLEXIBLE
                 </span>
               </div>
@@ -225,7 +225,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
             </span>
 
             <div className="space-y-4">
-              <div className="p-4 border border-[#343E34] bg-white/5 flex items-start gap-4">
+              <div className="p-4 border border-[#343E34] bg-white/5 flex items-start gap-4 rounded-[8px]">
                 <span className="font-mono text-lg text-terra font-bold">01</span>
                 <div>
                   <h4 className="font-serif text-lg font-bold text-linen">Assessment Call</h4>
@@ -235,7 +235,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                 </div>
               </div>
 
-              <div className="p-4 border border-[#343E34] bg-white/5 flex items-start gap-4">
+              <div className="p-4 border border-[#343E34] bg-white/5 flex items-start gap-4 rounded-[8px]">
                 <span className="font-mono text-lg text-terra font-bold">02</span>
                 <div>
                   <h4 className="font-serif text-lg font-bold text-linen">Tailored Curriculum</h4>
@@ -245,7 +245,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                 </div>
               </div>
 
-              <div className="p-4 border border-[#343E34] bg-white/5 flex items-start gap-4">
+              <div className="p-4 border border-[#343E34] bg-white/5 flex items-start gap-4 rounded-[8px]">
                 <span className="font-mono text-lg text-terra font-bold">03</span>
                 <div>
                   <h4 className="font-serif text-lg font-bold text-linen">On-Site Demonstration</h4>
@@ -255,7 +255,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                 </div>
               </div>
 
-              <div className="p-4 border border-[#343E34] bg-white/5 flex items-start gap-4">
+              <div className="p-4 border border-[#343E34] bg-white/5 flex items-start gap-4 rounded-[8px]">
                 <span className="font-mono text-lg text-terra font-bold">04</span>
                 <div>
                   <h4 className="font-serif text-lg font-bold text-linen">Consistent Weekly Cadence</h4>

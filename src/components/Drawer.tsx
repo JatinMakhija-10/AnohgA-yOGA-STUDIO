@@ -71,7 +71,7 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
 
       {/* Slide-over panel */}
       <aside
-        className={`drawer-panel p-6 sm:p-10 flex flex-col justify-between ${
+        className={`drawer-panel p-6 sm:p-10 flex flex-col justify-between rounded-l-[12px] shadow-2xl ${
           context.open ? 'open' : ''
         }`}
         aria-label="Class Reservation Drawer"
@@ -115,7 +115,7 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
 
           {/* Slot summary badge if triggered from Timetable */}
           {context.day && context.time && (
-            <div className="mt-6 p-4 bg-travertine border border-hairline">
+            <div className="mt-6 p-4 bg-travertine border border-hairline rounded-[6px]">
               <span className="font-mono text-[9px] uppercase tracking-wider text-umber block">
                 Selected Timetable Session
               </span>
@@ -190,7 +190,7 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
             </div>
 
             {/* Live WhatsApp message preview */}
-            <div className="p-3 bg-travertine/60 border border-hairline font-mono text-[10px] text-espresso leading-relaxed">
+            <div className="p-3 bg-travertine/60 border border-hairline font-mono text-[10px] text-espresso leading-relaxed rounded-[6px]">
               <span className="text-umber font-bold uppercase block mb-1">
                 💬 LIVE WHATSAPP MESSAGE PREVIEW:
               </span>

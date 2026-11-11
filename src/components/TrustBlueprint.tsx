@@ -24,7 +24,7 @@ export const TrustBlueprint: FC = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="p-5 border border-[#343E34] bg-white/5 flex flex-col justify-between">
+          <div className="p-5 border border-[#343E34] bg-white/5 flex flex-col justify-between rounded-[8px]">
             <div>
               <span className="font-mono text-xs text-terra font-bold block mb-2">01 / LOAD SPEC</span>
               <h4 className="font-serif text-2xl font-bold text-linen">500 kg Rated</h4>
@@ -37,7 +37,7 @@ export const TrustBlueprint: FC = () => {
             </span>
           </div>
 
-          <div className="p-5 border border-[#343E34] bg-white/5 flex flex-col justify-between">
+          <div className="p-5 border border-[#343E34] bg-white/5 flex flex-col justify-between rounded-[8px]">
             <div>
               <span className="font-mono text-xs text-terra font-bold block mb-2">02 / FABRIC</span>
               <h4 className="font-serif text-2xl font-bold text-linen">Skin-Grade Silks</h4>
@@ -50,7 +50,7 @@ export const TrustBlueprint: FC = () => {
             </span>
           </div>
 
-          <div className="p-5 border border-[#343E34] bg-white/5 flex flex-col justify-between">
+          <div className="p-5 border border-[#343E34] bg-white/5 flex flex-col justify-between rounded-[8px]">
             <div>
               <span className="font-mono text-xs text-terra font-bold block mb-2">03 / INTIMACY</span>
               <h4 className="font-serif text-2xl font-bold text-linen">Max 8 Hammocks</h4>
@@ -63,7 +63,7 @@ export const TrustBlueprint: FC = () => {
             </span>
           </div>
 
-          <div className="p-5 border border-[#343E34] bg-white/5 flex flex-col justify-between">
+          <div className="p-5 border border-[#343E34] bg-white/5 flex flex-col justify-between rounded-[8px]">
             <div>
               <span className="font-mono text-xs text-terra font-bold block mb-2">04 / HEALTH CHECK</span>
               <h4 className="font-serif text-2xl font-bold text-linen">Pre-Class Intake</h4>

@@ -39,27 +39,27 @@ export const Disciplines: FC<DisciplinesProps> = ({ onOpenDrawer }) => {
 
           {/* Quick Studio Visual Badges */}
           <div className="flex flex-wrap lg:flex-col items-start lg:items-end gap-2 font-mono text-xs text-espresso font-semibold">
-            <span className="px-3 py-1.5 bg-travertine border border-hairline">
+            <span className="px-3 py-1.5 bg-travertine border border-hairline rounded-[6px]">
               ✓ CAPPED AT 8 PRACTITIONERS
             </span>
-            <span className="px-3 py-1.5 bg-travertine border border-hairline">
+            <span className="px-3 py-1.5 bg-travertine border border-hairline rounded-[6px]">
               ✓ 100% PERSONAL TEACHING
             </span>
-            <span className="px-3 py-1.5 bg-travertine border border-hairline">
+            <span className="px-3 py-1.5 bg-travertine border border-hairline rounded-[6px]">
               ✓ IN-STUDIO + VIRTUAL STREAMS
             </span>
           </div>
         </div>
 
-        {/* 6 Rich Visual Image Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-hairline border-b border-hairline bg-travertine/10">
+        {/* 6 Rich Visual Image Cards Grid - Soft Micro-Rounded Corners */}
+        <div className="p-6 sm:p-10 lg:p-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 bg-travertine/10 border-b border-hairline">
           {DISCIPLINES.map((discipline, index) => {
             const isModalOpen = selectedDiscipline === index
 
             return (
               <div
                 key={discipline.name}
-                className="group flex flex-col justify-between bg-linen hover:bg-travertine/30 transition-all border-b lg:border-b-0 border-hairline overflow-hidden"
+                className="group flex flex-col justify-between bg-linen hover:bg-travertine/30 transition-all border border-hairline hover:border-espresso rounded-[8px] overflow-hidden shadow-xs hover:shadow-md"
               >
                 <div>
                   {/* Photo Container with Visual Watermark & Roman Stamp */}
@@ -73,12 +73,12 @@ export const Disciplines: FC<DisciplinesProps> = ({ onOpenDrawer }) => {
                     <div className="absolute inset-0 bg-gradient-to-t from-bark/70 via-bark/20 to-transparent pointer-events-none" />
 
                     {/* Top Roman Stamp */}
-                    <div className="absolute top-3 left-3 bg-linen/95 px-2.5 py-1 font-serif text-lg font-bold text-terra border border-hairline">
+                    <div className="absolute top-3 left-3 bg-linen/95 px-2.5 py-1 font-serif text-lg font-bold text-terra border border-hairline rounded-[4px]">
                       {discipline.roman}
                     </div>
 
                     {/* Top Discipline Category Badge */}
-                    <div className="absolute top-3 right-3 bg-bark/85 text-linen px-2.5 py-1 font-mono text-[9px] uppercase tracking-wider font-semibold border border-linen/20">
+                    <div className="absolute top-3 right-3 bg-bark/85 text-linen px-2.5 py-1 font-mono text-[9px] uppercase tracking-wider font-semibold border border-linen/20 rounded-[4px]">
                       {discipline.badge}
                     </div>
 
@@ -101,7 +101,7 @@ export const Disciplines: FC<DisciplinesProps> = ({ onOpenDrawer }) => {
                       {discipline.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 bg-travertine text-espresso border border-hairline font-bold"
+                          className="font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 bg-travertine text-espresso border border-hairline font-bold rounded-[4px]"
                         >
                           {tag}
                         </span>
@@ -137,7 +137,7 @@ export const Disciplines: FC<DisciplinesProps> = ({ onOpenDrawer }) => {
 
                 {/* Inline Expandable Details Panel if user clicks Info */}
                 {isModalOpen && (
-                  <div className="p-6 pt-3 bg-travertine/50 border-t border-hairline text-xs font-sans text-espresso font-medium leading-relaxed">
+                  <div className="p-6 pt-3 bg-travertine/50 border-t border-hairline text-xs font-sans text-espresso font-medium leading-relaxed rounded-b-[8px]">
                     <p>{discipline.desc}</p>
                     <div className="mt-3 font-mono text-[10px] text-terra font-bold">
                       ✓ Conducted at ECR Studio · Equipment &amp; Silks Sanitized Before Every Class

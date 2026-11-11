@@ -54,11 +54,11 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
           </div>
 
           {/* Billing Cadence Toggle - Bold & Playful */}
-          <div className="flex items-center gap-2 border-2 border-hairline p-1.5 bg-travertine self-start md:self-auto">
+          <div className="flex items-center gap-2 border-2 border-hairline p-1.5 bg-travertine self-start md:self-auto rounded-[8px]">
             <button
               type="button"
               onClick={() => setBillingCycle('monthly')}
-              className={`toggle-btn font-bold cursor-pointer ${
+              className={`toggle-btn font-bold cursor-pointer rounded-[6px] ${
                 billingCycle === 'monthly' ? 'active shadow-sm' : ''
               }`}
             >
@@ -67,7 +67,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
             <button
               type="button"
               onClick={() => setBillingCycle('quarterly')}
-              className={`toggle-btn font-bold cursor-pointer ${
+              className={`toggle-btn font-bold cursor-pointer rounded-[6px] ${
                 billingCycle === 'quarterly' ? 'active shadow-sm' : ''
               }`}
             >
@@ -140,7 +140,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
                     return (
                       <div
                         key={plan.name}
-                        className={`p-6 border-2 flex flex-col justify-between transition-all bg-linen ${
+                        className={`p-6 border-2 flex flex-col justify-between transition-all bg-linen rounded-[10px] ${
                           isPopular || isBestValue
                             ? 'border-terra shadow-md bg-travertine/10'
                             : 'border-hairline hover:border-espresso'
@@ -151,7 +151,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
                           <div className="flex items-center justify-between min-h-[26px] mb-3">
                             {plan.tag ? (
                               <span
-                                className={`font-mono text-[9px] uppercase tracking-widest px-2.5 py-1 font-bold ${
+                                className={`font-mono text-[9px] uppercase tracking-widest px-2.5 py-1 font-bold rounded-[4px] ${
                                   isPopular
                                     ? 'bg-terra text-linen'
                                     : 'bg-moss text-linen'

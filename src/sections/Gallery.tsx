@@ -69,7 +69,7 @@ export const Gallery: FC = () => {
               <figure
                 key={item.idx}
                 onClick={() => setActiveModalImage(item)}
-                className="group border-2 border-hairline bg-linen overflow-hidden flex flex-col justify-between hover:border-espresso transition-all shadow-sm cursor-pointer"
+                className="group border-2 border-hairline bg-linen overflow-hidden flex flex-col justify-between hover:border-espresso transition-all shadow-sm cursor-pointer rounded-[8px]"
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-travertine">
                   <img
@@ -82,7 +82,7 @@ export const Gallery: FC = () => {
 
                   {item.category === 'choreo' && (
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-12 h-12 border-2 border-linen bg-bark/60 backdrop-blur-xs flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <div className="w-12 h-12 border-2 border-linen bg-bark/60 backdrop-blur-xs flex items-center justify-center group-hover:scale-110 transition-transform rounded-[6px]">
                         {/* Architectural play trigger */}
                         <svg className="w-5 h-5 text-linen translate-x-0.5" viewBox="0 0 24 24" fill="currentColor">
                           <polygon points="5 3 19 12 5 21 5 3" />
@@ -92,7 +92,7 @@ export const Gallery: FC = () => {
                   )}
 
                   {/* Top Category Badge */}
-                  <div className="absolute top-3 right-3 bg-linen/95 px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-espresso font-bold border border-hairline">
+                  <div className="absolute top-3 right-3 bg-linen/95 px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-espresso font-bold border border-hairline rounded-[4px]">
                     {item.category}
                   </div>
 
@@ -150,7 +150,7 @@ export const Gallery: FC = () => {
           onClick={() => setActiveModalImage(null)}
         >
           <div
-            className="bg-linen border-2 border-hairline max-w-2xl w-full p-4 relative"
+            className="bg-linen border-2 border-hairline max-w-2xl w-full p-4 relative rounded-[10px] shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between pb-3 border-b border-hairline mb-3">
@@ -166,7 +166,7 @@ export const Gallery: FC = () => {
               </button>
             </div>
 
-            <div className="aspect-[4/3] overflow-hidden bg-travertine border border-hairline">
+            <div className="aspect-[4/3] overflow-hidden bg-travertine border border-hairline rounded-[8px]">
               <img
                 src={activeModalImage.src}
                 alt={activeModalImage.label}

@@ -112,16 +112,16 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
           </div>
         </div>
 
-        {/* Dual Form Architectural Grid with High Contrast */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-hairline">
+        {/* Dual Form Architectural Grid with High Contrast & Soft Edges */}
+        <div className="p-6 sm:p-10 lg:p-14 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
           {/* Form 01: Lock in Your Plan */}
-          <div className="p-6 sm:p-10 lg:p-14 flex flex-col justify-between bg-linen">
+          <div className="p-6 sm:p-10 flex flex-col justify-between bg-linen border-2 border-hairline rounded-[10px] shadow-xs">
             <div>
               <div className="flex items-center justify-between pb-4 border-b border-hairline">
                 <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
                   OPTION A
                 </span>
-                <span className="font-mono text-xs uppercase tracking-wider text-espresso font-semibold px-2 py-0.5 bg-travertine border border-hairline">
+                <span className="font-mono text-xs uppercase tracking-wider text-espresso font-semibold px-2.5 py-1 bg-travertine border border-hairline rounded-[4px]">
                   MEMBERSHIP LOCK-IN
                 </span>
               </div>
@@ -227,13 +227,13 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
           </div>
 
           {/* Form 02: Book First Class Free */}
-          <div className="p-6 sm:p-10 lg:p-14 flex flex-col justify-between bg-travertine/30">
+          <div className="p-6 sm:p-10 flex flex-col justify-between bg-travertine/30 border-2 border-hairline rounded-[10px] shadow-xs">
             <div>
               <div className="flex items-center justify-between pb-4 border-b border-hairline">
                 <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
                   OPTION B
                 </span>
-                <span className="font-mono text-xs uppercase tracking-wider text-espresso font-semibold px-2 py-0.5 bg-linen border border-hairline">
+                <span className="font-mono text-xs uppercase tracking-wider text-espresso font-semibold px-2.5 py-1 bg-linen border border-hairline rounded-[4px]">
                   COMPLIMENTARY FIRST CLASS
                 </span>
               </div>

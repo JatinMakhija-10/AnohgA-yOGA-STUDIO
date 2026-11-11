@@ -81,7 +81,7 @@ export const TuitionCalculator: FC<TuitionCalculatorProps> = ({ onToast }) => {
   }
 
   return (
-    <div className="bg-linen border-2 border-hairline p-6 sm:p-10 my-8 shadow-sm">
+    <div className="bg-linen border-2 border-hairline p-6 sm:p-10 my-8 shadow-sm rounded-[10px]">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-hairline mb-6">
         <div>
           <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
@@ -96,11 +96,11 @@ export const TuitionCalculator: FC<TuitionCalculatorProps> = ({ onToast }) => {
         </div>
 
         {/* Cadence switch */}
-        <div className="flex items-center gap-2 border border-hairline p-1 bg-travertine self-start md:self-auto font-mono text-xs">
+        <div className="flex items-center gap-2 border border-hairline p-1 bg-travertine self-start md:self-auto font-mono text-xs rounded-[6px]">
           <button
             type="button"
             onClick={() => setIsQuarterly(false)}
-            className={`px-3 py-1.5 font-bold cursor-pointer transition-all ${
+            className={`px-3 py-1.5 font-bold cursor-pointer transition-all rounded-[4px] ${
               !isQuarterly ? 'bg-espresso text-linen' : 'text-umber hover:text-espresso'
             }`}
           >
@@ -109,7 +109,7 @@ export const TuitionCalculator: FC<TuitionCalculatorProps> = ({ onToast }) => {
           <button
             type="button"
             onClick={() => setIsQuarterly(true)}
-            className={`px-3 py-1.5 font-bold cursor-pointer transition-all ${
+            className={`px-3 py-1.5 font-bold cursor-pointer transition-all rounded-[4px] ${
               isQuarterly ? 'bg-terra text-linen' : 'text-umber hover:text-espresso'
             }`}
           >
@@ -133,9 +133,9 @@ export const TuitionCalculator: FC<TuitionCalculatorProps> = ({ onToast }) => {
                   key={num}
                   type="button"
                   onClick={() => setHathaDays(num)}
-                  className={`py-2.5 border transition-all cursor-pointer ${
+                  className={`py-2.5 border transition-all cursor-pointer rounded-[6px] ${
                     hathaDays === num
-                      ? 'bg-espresso text-linen border-espresso'
+                      ? 'bg-espresso text-linen border-espresso shadow-xs'
                       : 'bg-travertine/40 text-espresso border-hairline hover:bg-travertine'
                   }`}
                 >
@@ -157,9 +157,9 @@ export const TuitionCalculator: FC<TuitionCalculatorProps> = ({ onToast }) => {
                   key={num}
                   type="button"
                   onClick={() => setAerialDays(num)}
-                  className={`py-2.5 border transition-all cursor-pointer ${
+                  className={`py-2.5 border transition-all cursor-pointer rounded-[6px] ${
                     aerialDays === num
-                      ? 'bg-espresso text-linen border-espresso'
+                      ? 'bg-espresso text-linen border-espresso shadow-xs'
                       : 'bg-travertine/40 text-espresso border-hairline hover:bg-travertine'
                   }`}
                 >
@@ -169,14 +169,14 @@ export const TuitionCalculator: FC<TuitionCalculatorProps> = ({ onToast }) => {
             </div>
           </div>
 
-          <div className="p-3 bg-travertine/40 border border-hairline font-mono text-[11px] text-espresso font-semibold flex items-center justify-between">
+          <div className="p-3 bg-travertine/40 border border-hairline font-mono text-[11px] text-espresso font-semibold flex items-center justify-between rounded-[6px]">
             <span>SELECTED: {calc.name}</span>
             <span className="text-terra font-bold">~{calc.totalClassesPerMonth} classes/mo</span>
           </div>
         </div>
 
         {/* Price Output & CTA */}
-        <div className="lg:col-span-5 bg-travertine/60 border-2 border-hairline p-6 flex flex-col justify-between">
+        <div className="lg:col-span-5 bg-travertine/60 border-2 border-hairline p-6 flex flex-col justify-between rounded-[8px]">
           <div>
             <span className="font-mono text-[10px] uppercase tracking-wider text-umber font-bold block">
               TOTAL ESTIMATED TUITION

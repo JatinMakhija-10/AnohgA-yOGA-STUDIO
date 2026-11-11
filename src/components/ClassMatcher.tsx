@@ -153,10 +153,10 @@ export const ClassMatcher: FC<ClassMatcherProps> = ({ onOpenDrawer, onToast }) =
                   key={item.label}
                   type="button"
                   onClick={() => handleSelectGoal(item.label)}
-                  className="p-5 border-2 border-hairline bg-linen hover:border-terra hover:shadow-md text-left transition-all cursor-pointer group flex flex-col justify-between"
+                  className="p-5 border-2 border-hairline bg-linen hover:border-terra hover:shadow-md text-left transition-all cursor-pointer group flex flex-col justify-between rounded-[8px]"
                 >
                   <div>
-                    <span className="font-mono text-[9px] uppercase tracking-wider text-terra font-bold px-2 py-0.5 bg-terra/10 border border-terra/20 inline-block mb-3">
+                    <span className="font-mono text-[9px] uppercase tracking-wider text-terra font-bold px-2 py-0.5 bg-terra/10 border border-terra/20 inline-block mb-3 rounded-[4px]">
                       {item.badge}
                     </span>
                     <h4 className="font-serif text-xl font-bold text-espresso group-hover:text-terra transition-colors leading-snug">
@@ -209,7 +209,7 @@ export const ClassMatcher: FC<ClassMatcherProps> = ({ onOpenDrawer, onToast }) =
                   key={item.label}
                   type="button"
                   onClick={() => handleSelectExperience(item.label)}
-                  className="p-6 border-2 border-hairline bg-linen hover:border-terra hover:shadow-md text-left transition-all cursor-pointer group flex flex-col justify-between"
+                  className="p-6 border-2 border-hairline bg-linen hover:border-terra hover:shadow-md text-left transition-all cursor-pointer group flex flex-col justify-between rounded-[8px]"
                 >
                   <div>
                     <h4 className="font-serif text-2xl font-bold text-espresso group-hover:text-terra transition-colors">
@@ -266,7 +266,7 @@ export const ClassMatcher: FC<ClassMatcherProps> = ({ onOpenDrawer, onToast }) =
                   key={item.label}
                   type="button"
                   onClick={() => handleSelectTiming(item.label)}
-                  className="p-5 border-2 border-hairline bg-linen hover:border-terra hover:shadow-md text-left transition-all cursor-pointer group flex flex-col justify-between"
+                  className="p-5 border-2 border-hairline bg-linen hover:border-terra hover:shadow-md text-left transition-all cursor-pointer group flex flex-col justify-between rounded-[8px]"
                 >
                   <div>
                     <h4 className="font-serif text-xl font-bold text-espresso group-hover:text-terra transition-colors">
@@ -287,7 +287,7 @@ export const ClassMatcher: FC<ClassMatcherProps> = ({ onOpenDrawer, onToast }) =
 
         {/* Step 4: Result Card */}
         {step === 4 && (
-          <div className="border-2 border-terra bg-linen p-6 sm:p-10 shadow-lg">
+          <div className="border-2 border-terra bg-linen p-6 sm:p-10 shadow-lg rounded-[10px]">
             <div className="flex items-center justify-between pb-4 border-b border-hairline mb-6">
               <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
                 ✓ YOUR MATCHED PRACTICE RECOMMENDATION
@@ -302,7 +302,7 @@ export const ClassMatcher: FC<ClassMatcherProps> = ({ onOpenDrawer, onToast }) =
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-5 aspect-[16/11] overflow-hidden border border-hairline bg-travertine">
+              <div className="lg:col-span-5 aspect-[16/11] overflow-hidden border border-hairline bg-travertine rounded-[8px]">
                 <img
                   src={rec.image}
                   alt={rec.title}
@@ -322,7 +322,7 @@ export const ClassMatcher: FC<ClassMatcherProps> = ({ onOpenDrawer, onToast }) =
                     {rec.why}
                   </p>
 
-                  <div className="mt-4 p-4 bg-travertine/40 border border-hairline font-mono text-xs space-y-1.5 text-espresso">
+                  <div className="mt-4 p-4 bg-travertine/40 border border-hairline font-mono text-xs space-y-1.5 text-espresso rounded-[6px]">
                     <div>
                       <span className="text-umber font-semibold">Optimal Schedule:</span>{' '}
                       <span className="font-bold">{rec.bestFor}</span>

@@ -77,13 +77,13 @@ export const Schedule: FC<ScheduleProps> = ({ onOpenDrawer, onToast }) => {
           </div>
 
           {/* Quick View Mode Switcher: Cards vs Table */}
-          <div className="flex items-center gap-2 bg-travertine p-1 border border-hairline self-start md:self-auto font-mono text-xs">
+          <div className="flex items-center gap-2 bg-travertine p-1.5 border border-hairline self-start md:self-auto font-mono text-xs rounded-[6px]">
             <button
               type="button"
               onClick={() => setViewMode('cards')}
-              className={`px-3 py-1.5 font-bold transition-all cursor-pointer ${
+              className={`px-3 py-1.5 font-bold transition-all cursor-pointer rounded-[4px] ${
                 viewMode === 'cards'
-                  ? 'bg-espresso text-linen'
+                  ? 'bg-espresso text-linen shadow-xs'
                   : 'text-umber hover:text-espresso'
               }`}
             >
@@ -92,9 +92,9 @@ export const Schedule: FC<ScheduleProps> = ({ onOpenDrawer, onToast }) => {
             <button
               type="button"
               onClick={() => setViewMode('table')}
-              className={`px-3 py-1.5 font-bold transition-all cursor-pointer ${
+              className={`px-3 py-1.5 font-bold transition-all cursor-pointer rounded-[4px] ${
                 viewMode === 'table'
-                  ? 'bg-espresso text-linen'
+                  ? 'bg-espresso text-linen shadow-xs'
                   : 'text-umber hover:text-espresso'
               }`}
             >
@@ -112,7 +112,7 @@ export const Schedule: FC<ScheduleProps> = ({ onOpenDrawer, onToast }) => {
                 BEYOND THE MAT · UPCOMING IMMERSIONS
               </span>
             </div>
-            <span className="font-mono text-xs uppercase tracking-wider text-terra font-bold px-2 py-0.5 bg-terra/10 border border-terra/30">
+            <span className="font-mono text-xs uppercase tracking-wider text-terra font-bold px-2 py-0.5 bg-terra/10 border border-terra/30 rounded-[4px]">
               STRICTLY 10 SEATS EACH
             </span>
           </div>
@@ -121,7 +121,7 @@ export const Schedule: FC<ScheduleProps> = ({ onOpenDrawer, onToast }) => {
             {WORKSHOPS.map((workshop) => (
               <div
                 key={workshop.index}
-                className="bg-linen border-2 border-hairline overflow-hidden flex flex-col justify-between group hover:border-espresso transition-all shadow-sm"
+                className="bg-linen border-2 border-hairline overflow-hidden flex flex-col justify-between group hover:border-espresso transition-all shadow-sm rounded-[10px]"
               >
                 <div>
                   {/* Photo Header with Visual Badges */}
@@ -134,11 +134,11 @@ export const Schedule: FC<ScheduleProps> = ({ onOpenDrawer, onToast }) => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-bark/80 via-bark/30 to-transparent pointer-events-none" />
 
-                    <div className="absolute top-3 left-3 bg-linen px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-terra font-bold border border-hairline">
+                    <div className="absolute top-3 left-3 bg-linen px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-terra font-bold border border-hairline rounded-[4px]">
                       WORKSHOP {workshop.index}
                     </div>
 
-                    <div className="absolute top-3 right-3 bg-terra text-linen px-3 py-1 font-mono text-xs font-bold shadow-sm">
+                    <div className="absolute top-3 right-3 bg-terra text-linen px-3 py-1 font-mono text-xs font-bold shadow-sm rounded-[4px]">
                       {workshop.fee}
                     </div>
 
@@ -219,9 +219,9 @@ export const Schedule: FC<ScheduleProps> = ({ onOpenDrawer, onToast }) => {
                   key={day}
                   type="button"
                   onClick={() => setSelectedDayTab(day)}
-                  className={`font-mono text-xs font-bold px-4 py-2 border transition-all cursor-pointer whitespace-nowrap ${
+                  className={`font-mono text-xs font-bold px-4 py-2 border transition-all cursor-pointer whitespace-nowrap rounded-[6px] ${
                     selectedDayTab === day
-                      ? 'bg-espresso text-linen border-espresso'
+                      ? 'bg-espresso text-linen border-espresso shadow-xs'
                       : 'bg-travertine/40 text-espresso border-hairline hover:bg-travertine'
                   }`}
                 >
@@ -235,15 +235,15 @@ export const Schedule: FC<ScheduleProps> = ({ onOpenDrawer, onToast }) => {
               {dayClasses.map((item, idx) => (
                 <div
                   key={idx}
-                  className={`border-2 p-6 flex flex-col justify-between transition-all ${
+                  className={`border-2 p-6 flex flex-col justify-between transition-all rounded-[8px] ${
                     item.highlighted
-                      ? 'bg-travertine/20 border-hairline hover:border-espresso'
+                      ? 'bg-travertine/20 border-hairline hover:border-espresso shadow-xs'
                       : 'opacity-40 bg-travertine/5 border-hairline/40'
                   }`}
                 >
                   <div>
                     <div className="flex items-center justify-between border-b border-hairline pb-3 mb-4">
-                      <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold bg-linen px-2 py-1 border border-hairline">
+                      <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold bg-linen px-2 py-1 border border-hairline rounded-[4px]">
                         ⏰ {item.time}
                       </span>
                       <span className="font-mono text-[10px] uppercase tracking-wider text-terra font-bold">
@@ -366,7 +366,7 @@ export const Schedule: FC<ScheduleProps> = ({ onOpenDrawer, onToast }) => {
         <div className="p-6 sm:p-10 lg:p-14 bg-travertine/30 border-t border-hairline">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {SCHEDULE_NOTES.map((item, idx) => (
-              <div key={idx} className="border-l-4 border-terra pl-4 bg-linen p-4 border border-hairline">
+              <div key={idx} className="border-l-4 border-terra pl-4 bg-linen p-4 border border-hairline rounded-[6px] shadow-xs">
                 <span className="font-mono text-xs uppercase tracking-widest text-espresso font-bold block">
                   {item.label}
                 </span>
