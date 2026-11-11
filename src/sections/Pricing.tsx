@@ -34,7 +34,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
         <div className="p-6 sm:p-10 lg:p-14 border-b border-hairline flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-2 py-0.5 bg-terra/10 border border-terra/30">
+              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full">
                 03
               </span>
               <span className="font-mono text-xs uppercase tracking-widest text-espresso font-semibold">
@@ -53,12 +53,12 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
             </p>
           </div>
 
-          {/* Billing Cadence Toggle - Bold & Playful */}
-          <div className="flex items-center gap-2 border-2 border-hairline p-1.5 bg-travertine self-start md:self-auto rounded-[8px]">
+          {/* Billing Cadence Toggle - Organic Pill Switcher */}
+          <div className="flex items-center gap-1.5 border border-hairline p-1 bg-travertine/80 self-start md:self-auto rounded-full shadow-inner">
             <button
               type="button"
               onClick={() => setBillingCycle('monthly')}
-              className={`toggle-btn font-bold cursor-pointer rounded-[6px] ${
+              className={`toggle-btn font-bold cursor-pointer rounded-full px-4 py-2 ${
                 billingCycle === 'monthly' ? 'active shadow-sm' : ''
               }`}
             >
@@ -67,7 +67,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
             <button
               type="button"
               onClick={() => setBillingCycle('quarterly')}
-              className={`toggle-btn font-bold cursor-pointer rounded-[6px] ${
+              className={`toggle-btn font-bold cursor-pointer rounded-full px-4 py-2 ${
                 billingCycle === 'quarterly' ? 'active shadow-sm' : ''
               }`}
             >
@@ -120,12 +120,12 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
               <div key={groupName} className="p-6 sm:p-10 lg:p-14">
                 <div className="flex items-center justify-between pb-4 border-b border-hairline mb-6">
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-terra"></span>
+                    <span className="w-2 h-2 bg-terra rounded-full"></span>
                     <span className="font-mono text-xs uppercase tracking-widest text-espresso font-bold">
                       {groupName}
                     </span>
                   </div>
-                  <span className="font-mono text-[11px] uppercase tracking-wider text-terra font-bold px-2 py-0.5 bg-terra/10 border border-terra/30">
+                  <span className="font-mono text-[11px] uppercase tracking-wider text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full">
                     {billingCycle === 'monthly' ? 'MONTHLY CADENCE' : 'QUARTERLY UPFRONT (SAVE UP TO ₹1,900)'}
                   </span>
                 </div>
@@ -140,10 +140,10 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
                     return (
                       <div
                         key={plan.name}
-                        className={`p-6 border-2 flex flex-col justify-between transition-all bg-linen rounded-[10px] ${
+                        className={`p-6 border flex flex-col justify-between transition-all bg-linen rounded-2xl ${
                           isPopular || isBestValue
                             ? 'border-terra shadow-md bg-travertine/10'
-                            : 'border-hairline hover:border-espresso'
+                            : 'border-hairline hover:border-espresso shadow-xs'
                         }`}
                       >
                         <div>
@@ -151,7 +151,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
                           <div className="flex items-center justify-between min-h-[26px] mb-3">
                             {plan.tag ? (
                               <span
-                                className={`font-mono text-[9px] uppercase tracking-widest px-2.5 py-1 font-bold rounded-[4px] ${
+                                className={`font-mono text-[9px] uppercase tracking-widest px-3 py-1 font-bold rounded-full ${
                                   isPopular
                                     ? 'bg-terra text-linen'
                                     : 'bg-moss text-linen'
@@ -165,7 +165,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
                               </span>
                             )}
                             {billingCycle === 'quarterly' && plan.quarterlySave > 0 && (
-                              <span className="font-mono text-[10px] text-moss font-bold">
+                              <span className="font-mono text-[10px] text-moss font-bold px-2 py-0.5 bg-moss/10 rounded-full">
                                 Save ₹{plan.quarterlySave}
                               </span>
                             )}
@@ -223,7 +223,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
         <div className="p-6 sm:p-10 lg:p-14 border-t border-hairline bg-travertine/20">
           <div className="max-w-3xl">
             <div className="flex items-center gap-2">
-              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-2 py-0.5 bg-terra/10 border border-terra/30">
+              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full">
                 FAQ
               </span>
               <span className="font-mono text-xs uppercase tracking-widest text-espresso font-semibold">
@@ -248,7 +248,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
                     <span className="font-serif text-xl sm:text-2xl font-bold text-espresso group-hover:text-terra transition-colors">
                       {faq.q}
                     </span>
-                    <span className="font-mono text-sm text-espresso font-bold p-1 px-2 border-2 border-hairline shrink-0 mt-1">
+                    <span className="font-mono text-sm text-espresso font-bold w-8 h-8 flex items-center justify-center border border-hairline rounded-full shrink-0 mt-1 bg-linen group-hover:border-terra group-hover:text-terra transition-colors">
                       {isOpen ? '−' : '+'}
                     </span>
                   </button>

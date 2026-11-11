@@ -7,7 +7,7 @@ interface StickyConversionBarProps {
 
 export const StickyConversionBar: FC<StickyConversionBarProps> = ({ onOpenDrawer }) => {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 bg-linen/95 backdrop-blur-md border-t-2 border-hairline p-3 sm:p-4 lg:hidden shadow-lg transition-transform rounded-t-[12px]">
+    <div className="fixed bottom-0 left-0 right-0 z-40 bg-linen/95 backdrop-blur-md border-t border-hairline p-3 sm:p-4 lg:hidden shadow-lg transition-transform rounded-t-2xl">
       <div className="max-w-[500px] mx-auto flex items-center justify-between gap-3">
         {/* Status indicator */}
         <div className="flex flex-col">
@@ -28,7 +28,7 @@ export const StickyConversionBar: FC<StickyConversionBarProps> = ({ onOpenDrawer
             href="https://wa.me/918122751154?text=Hi%20Anupriya!%20I'd%20like%20to%20enquire%20about%20a%20class%20at%20Anohga%20Yoga%20Studio."
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2.5 bg-travertine border border-hairline text-espresso hover:text-terra font-mono text-xs font-bold rounded-[6px]"
+            className="p-2.5 px-3.5 bg-travertine border border-hairline text-espresso hover:text-terra font-mono text-xs font-bold rounded-full shadow-xs"
             title="Chat on WhatsApp"
             aria-label="Chat on WhatsApp"
           >
@@ -37,7 +37,7 @@ export const StickyConversionBar: FC<StickyConversionBarProps> = ({ onOpenDrawer
           <button
             type="button"
             onClick={() => onOpenDrawer({ source: 'trial' })}
-            className="btn-terra py-2.5 px-4 font-bold text-xs whitespace-nowrap shadow-sm rounded-[6px]"
+            className="btn-terra py-2.5 px-4 font-bold text-xs whitespace-nowrap shadow-sm"
           >
             <span>Claim Free Class</span>
             <span>↗</span>

@@ -16,7 +16,7 @@ export const Disciplines: FC<DisciplinesProps> = ({ onOpenDrawer }) => {
         <div className="p-6 sm:p-10 lg:p-14 border-b border-hairline flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div className="max-w-3xl">
             <div className="flex items-center gap-2">
-              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-2 py-0.5 bg-terra/10 border border-terra/30">
+              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full">
                 01
               </span>
               <span className="font-mono text-xs uppercase tracking-widest text-espresso font-semibold">
@@ -37,21 +37,21 @@ export const Disciplines: FC<DisciplinesProps> = ({ onOpenDrawer }) => {
             </p>
           </div>
 
-          {/* Quick Studio Visual Badges */}
+          {/* Quick Studio Visual Badges (Organic Pills) */}
           <div className="flex flex-wrap lg:flex-col items-start lg:items-end gap-2 font-mono text-xs text-espresso font-semibold">
-            <span className="px-3 py-1.5 bg-travertine border border-hairline rounded-[6px]">
+            <span className="px-3.5 py-1.5 bg-travertine border border-hairline rounded-full">
               ✓ CAPPED AT 8 PRACTITIONERS
             </span>
-            <span className="px-3 py-1.5 bg-travertine border border-hairline rounded-[6px]">
+            <span className="px-3.5 py-1.5 bg-travertine border border-hairline rounded-full">
               ✓ 100% PERSONAL TEACHING
             </span>
-            <span className="px-3 py-1.5 bg-travertine border border-hairline rounded-[6px]">
+            <span className="px-3.5 py-1.5 bg-travertine border border-hairline rounded-full">
               ✓ IN-STUDIO + VIRTUAL STREAMS
             </span>
           </div>
         </div>
 
-        {/* 6 Rich Visual Image Cards Grid - Soft Micro-Rounded Corners */}
+        {/* 6 Rich Visual Image Cards Grid - Generous Rounded Curves */}
         <div className="p-6 sm:p-10 lg:p-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 bg-travertine/10 border-b border-hairline">
           {DISCIPLINES.map((discipline, index) => {
             const isModalOpen = selectedDiscipline === index
@@ -59,11 +59,11 @@ export const Disciplines: FC<DisciplinesProps> = ({ onOpenDrawer }) => {
             return (
               <div
                 key={discipline.name}
-                className="group flex flex-col justify-between bg-linen hover:bg-travertine/30 transition-all border border-hairline hover:border-espresso rounded-[8px] overflow-hidden shadow-xs hover:shadow-md"
+                className="group flex flex-col justify-between bg-linen hover:bg-travertine/30 transition-all border border-hairline/80 hover:border-espresso rounded-2xl overflow-hidden shadow-sm hover:shadow-md"
               >
                 <div>
-                  {/* Photo Container with Visual Watermark & Roman Stamp */}
-                  <div className="relative aspect-[16/11] overflow-hidden bg-travertine border-b border-hairline">
+                  {/* Photo Container with Visual Watermark & Circular Roman Stamp */}
+                  <div className="relative aspect-[16/11] overflow-hidden bg-travertine border-b border-hairline rounded-t-2xl">
                     <img
                       src={discipline.image}
                       alt={discipline.name}
@@ -72,18 +72,18 @@ export const Disciplines: FC<DisciplinesProps> = ({ onOpenDrawer }) => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-bark/70 via-bark/20 to-transparent pointer-events-none" />
 
-                    {/* Top Roman Stamp */}
-                    <div className="absolute top-3 left-3 bg-linen/95 px-2.5 py-1 font-serif text-lg font-bold text-terra border border-hairline rounded-[4px]">
+                    {/* Top Circular Roman Stamp */}
+                    <div className="absolute top-3.5 left-3.5 bg-linen/95 w-9 h-9 flex items-center justify-center font-serif text-base font-bold text-terra border border-hairline rounded-full shadow-xs">
                       {discipline.roman}
                     </div>
 
                     {/* Top Discipline Category Badge */}
-                    <div className="absolute top-3 right-3 bg-bark/85 text-linen px-2.5 py-1 font-mono text-[9px] uppercase tracking-wider font-semibold border border-linen/20 rounded-[4px]">
+                    <div className="absolute top-3.5 right-3.5 bg-bark/85 text-linen px-3 py-1 font-mono text-[9px] uppercase tracking-wider font-semibold border border-linen/20 rounded-full shadow-xs">
                       {discipline.badge}
                     </div>
 
                     {/* Title over photo */}
-                    <div className="absolute bottom-3 left-3 right-3">
+                    <div className="absolute bottom-3.5 left-3.5 right-3.5">
                       <h3 className="font-serif text-2xl font-semibold text-linen leading-snug drop-shadow-sm">
                         {discipline.name}
                       </h3>
@@ -96,12 +96,12 @@ export const Disciplines: FC<DisciplinesProps> = ({ onOpenDrawer }) => {
                       {discipline.desc}
                     </p>
 
-                    {/* Visual Monospace Tags */}
+                    {/* Visual Monospace Tags - Pill Shaped */}
                     <div className="mt-4 flex flex-wrap gap-1.5">
                       {discipline.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 bg-travertine text-espresso border border-hairline font-bold rounded-[4px]"
+                          className="font-mono text-[9px] uppercase tracking-wider px-3 py-1 bg-travertine text-espresso border border-hairline font-bold rounded-full"
                         >
                           {tag}
                         </span>
@@ -137,7 +137,7 @@ export const Disciplines: FC<DisciplinesProps> = ({ onOpenDrawer }) => {
 
                 {/* Inline Expandable Details Panel if user clicks Info */}
                 {isModalOpen && (
-                  <div className="p-6 pt-3 bg-travertine/50 border-t border-hairline text-xs font-sans text-espresso font-medium leading-relaxed rounded-b-[8px]">
+                  <div className="p-6 pt-3 bg-travertine/50 border-t border-hairline text-xs font-sans text-espresso font-medium leading-relaxed rounded-b-2xl">
                     <p>{discipline.desc}</p>
                     <div className="mt-3 font-mono text-[10px] text-terra font-bold">
                       ✓ Conducted at ECR Studio · Equipment &amp; Silks Sanitized Before Every Class

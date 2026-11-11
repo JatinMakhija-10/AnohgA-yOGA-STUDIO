@@ -25,7 +25,7 @@ export const Gallery: FC = () => {
         <div className="p-6 sm:p-10 lg:p-14 border-b border-hairline flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-2 py-0.5 bg-terra/10 border border-terra/30">
+              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full">
                 04
               </span>
               <span className="font-mono text-xs uppercase tracking-widest text-espresso font-semibold">
@@ -69,9 +69,9 @@ export const Gallery: FC = () => {
               <figure
                 key={item.idx}
                 onClick={() => setActiveModalImage(item)}
-                className="group border-2 border-hairline bg-linen overflow-hidden flex flex-col justify-between hover:border-espresso transition-all shadow-sm cursor-pointer rounded-[8px]"
+                className="group border border-hairline/80 bg-linen overflow-hidden flex flex-col justify-between hover:border-espresso transition-all shadow-sm hover:shadow-md cursor-pointer rounded-2xl"
               >
-                <div className="relative aspect-[4/3] overflow-hidden bg-travertine">
+                <div className="relative aspect-[4/3] overflow-hidden bg-travertine rounded-t-2xl">
                   <img
                     src={item.src}
                     alt={item.label}
@@ -82,7 +82,7 @@ export const Gallery: FC = () => {
 
                   {item.category === 'choreo' && (
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-12 h-12 border-2 border-linen bg-bark/60 backdrop-blur-xs flex items-center justify-center group-hover:scale-110 transition-transform rounded-[6px]">
+                      <div className="w-12 h-12 border-2 border-linen bg-bark/60 backdrop-blur-xs flex items-center justify-center group-hover:scale-110 transition-transform rounded-full shadow-md">
                         {/* Architectural play trigger */}
                         <svg className="w-5 h-5 text-linen translate-x-0.5" viewBox="0 0 24 24" fill="currentColor">
                           <polygon points="5 3 19 12 5 21 5 3" />
@@ -92,7 +92,7 @@ export const Gallery: FC = () => {
                   )}
 
                   {/* Top Category Badge */}
-                  <div className="absolute top-3 right-3 bg-linen/95 px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-espresso font-bold border border-hairline rounded-[4px]">
+                  <div className="absolute top-3.5 right-3.5 bg-linen/95 backdrop-blur-xs px-3 py-1 font-mono text-[9px] uppercase tracking-wider text-espresso font-bold border border-hairline rounded-full shadow-xs">
                     {item.category}
                   </div>
 
@@ -119,8 +119,8 @@ export const Gallery: FC = () => {
         {/* Choreo Reel & Instagram Visual Callout Strip */}
         <div className="border-t border-hairline p-6 sm:p-10 bg-travertine/40 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 border-2 border-terra bg-terra/10 flex items-center justify-center shrink-0">
-              <span className="font-serif text-xl font-bold text-terra">▶</span>
+            <div className="w-11 h-11 border-2 border-terra bg-terra/10 flex items-center justify-center shrink-0 rounded-full shadow-xs">
+              <span className="font-serif text-lg font-bold text-terra translate-x-0.5">▶</span>
             </div>
             <div>
               <span className="font-serif text-2xl font-bold text-espresso block">
@@ -150,7 +150,7 @@ export const Gallery: FC = () => {
           onClick={() => setActiveModalImage(null)}
         >
           <div
-            className="bg-linen border-2 border-hairline max-w-2xl w-full p-4 relative rounded-[10px] shadow-2xl"
+            className="bg-linen border border-hairline max-w-2xl w-full p-4 relative rounded-2xl shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between pb-3 border-b border-hairline mb-3">
@@ -166,7 +166,7 @@ export const Gallery: FC = () => {
               </button>
             </div>
 
-            <div className="aspect-[4/3] overflow-hidden bg-travertine border border-hairline rounded-[8px]">
+            <div className="aspect-[4/3] overflow-hidden bg-travertine border border-hairline rounded-xl">
               <img
                 src={activeModalImage.src}
                 alt={activeModalImage.label}

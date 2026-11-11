@@ -6,7 +6,7 @@ export const TrustBlueprint: FC = () => {
       <div className="max-w-[1440px] mx-auto">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 border-b border-[#343E34] mb-8">
           <div>
-            <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-2 py-0.5 bg-terra/20 border border-terra/30">
+            <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/20 border border-terra/30 rounded-full inline-block">
               TRUST ARCHITECTURE &amp; RIGGING SAFETY
             </span>
             <h3 className="mt-3 font-serif text-3xl sm:text-4xl font-bold text-linen tracking-tight">
@@ -18,13 +18,13 @@ export const TrustBlueprint: FC = () => {
             </p>
           </div>
 
-          <div className="font-mono text-xs text-terra font-bold px-3 py-1.5 border border-terra/40 bg-terra/10 self-start lg:self-auto">
+          <div className="font-mono text-xs text-terra font-bold px-4 py-1.5 border border-terra/40 bg-terra/10 self-start lg:self-auto rounded-full">
             ● 100% PERSONAL SPOTTING BY ANUPRIYA
           </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="p-5 border border-[#343E34] bg-white/5 flex flex-col justify-between rounded-[8px]">
+          <div className="p-5 border border-[#343E34] bg-white/5 flex flex-col justify-between rounded-2xl">
             <div>
               <span className="font-mono text-xs text-terra font-bold block mb-2">01 / LOAD SPEC</span>
               <h4 className="font-serif text-2xl font-bold text-linen">500 kg Rated</h4>
@@ -37,7 +37,7 @@ export const TrustBlueprint: FC = () => {
             </span>
           </div>
 
-          <div className="p-5 border border-[#343E34] bg-white/5 flex flex-col justify-between rounded-[8px]">
+          <div className="p-5 border border-[#343E34] bg-white/5 flex flex-col justify-between rounded-2xl">
             <div>
               <span className="font-mono text-xs text-terra font-bold block mb-2">02 / FABRIC</span>
               <h4 className="font-serif text-2xl font-bold text-linen">Skin-Grade Silks</h4>
@@ -50,7 +50,7 @@ export const TrustBlueprint: FC = () => {
             </span>
           </div>
 
-          <div className="p-5 border border-[#343E34] bg-white/5 flex flex-col justify-between rounded-[8px]">
+          <div className="p-5 border border-[#343E34] bg-white/5 flex flex-col justify-between rounded-2xl">
             <div>
               <span className="font-mono text-xs text-terra font-bold block mb-2">03 / INTIMACY</span>
               <h4 className="font-serif text-2xl font-bold text-linen">Max 8 Hammocks</h4>
@@ -63,7 +63,7 @@ export const TrustBlueprint: FC = () => {
             </span>
           </div>
 
-          <div className="p-5 border border-[#343E34] bg-white/5 flex flex-col justify-between rounded-[8px]">
+          <div className="p-5 border border-[#343E34] bg-white/5 flex flex-col justify-between rounded-2xl">
             <div>
               <span className="font-mono text-xs text-terra font-bold block mb-2">04 / HEALTH CHECK</span>
               <h4 className="font-serif text-2xl font-bold text-linen">Pre-Class Intake</h4>

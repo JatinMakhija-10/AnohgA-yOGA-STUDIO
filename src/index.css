@@ -55,25 +55,26 @@ body {
 .border-r-hairline { border-right: 1px solid var(--hairline); }
 .border-l-hairline { border-left: 1px solid var(--hairline); }
 
-/* ── Buttons ────────────────────────────────────────────────────── */
+/* ── Buttons (Soft Organic Pill Shapes) ─────────────────────────── */
 .btn-terra {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   background: var(--terra);
   color: var(--linen);
-  padding: 0.65rem 1.4rem;
+  padding: 0.7rem 1.6rem;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   border: none;
-  border-radius: 6px;
+  border-radius: 9999px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
+  box-shadow: 0 2px 8px rgba(184, 90, 58, 0.2);
 }
-.btn-terra:hover { background: var(--terra-h); transform: translateY(-1px); }
+.btn-terra:hover { background: var(--terra-h); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(184, 90, 58, 0.3); }
 
 .btn-outline {
   display: inline-flex;
@@ -81,15 +82,15 @@ body {
   gap: 0.4rem;
   background: transparent;
   color: var(--espresso);
-  padding: 0.65rem 1.4rem;
+  padding: 0.7rem 1.6rem;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  border: 1px solid var(--espresso);
-  border-radius: 6px;
+  border: 1.5px solid var(--espresso);
+  border-radius: 9999px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
 }
 .btn-outline:hover { background: var(--espresso); color: var(--linen); transform: translateY(-1px); }
@@ -100,15 +101,15 @@ body {
   gap: 0.4rem;
   background: transparent;
   color: var(--linen);
-  padding: 0.65rem 1.4rem;
+  padding: 0.7rem 1.6rem;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  border: 1px solid var(--linen);
-  border-radius: 6px;
+  border: 1.5px solid var(--linen);
+  border-radius: 9999px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
 }
 .btn-outline-linen:hover { background: var(--linen); color: var(--bark); transform: translateY(-1px); }
@@ -154,12 +155,12 @@ body {
 .modal-box {
   background: var(--linen);
   border: 1px solid var(--hairline);
-  border-radius: 10px;
+  border-radius: 18px;
   max-width: 600px; width: 90%;
   max-height: 80vh; overflow-y: auto;
   padding: 2.5rem;
   position: relative;
-  box-shadow: 0 10px 30px rgba(24, 22, 20, 0.15);
+  box-shadow: 0 20px 40px rgba(24, 22, 20, 0.18);
 }
 
 /* ── Accordion ──────────────────────────────────────────────────── */
@@ -181,11 +182,11 @@ body {
   letter-spacing: 0.08em;
   padding: 0.9rem 2rem;
   border: 1px solid #343E34;
-  border-radius: 8px;
+  border-radius: 9999px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
 .toast.show { opacity: 1; pointer-events: all; }
 
@@ -195,7 +196,7 @@ body {
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  padding: 0.45rem 1.1rem;
+  padding: 0.5rem 1.2rem;
   border: 1px solid var(--hairline);
   border-radius: 9999px;
   background: transparent;
@@ -215,18 +216,18 @@ body {
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  padding: 0.5rem 1.2rem;
-  border: 1px solid var(--hairline);
-  border-radius: 6px;
+  padding: 0.5rem 1.4rem;
+  border: none;
+  border-radius: 9999px;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   background: transparent;
   color: var(--umber);
 }
 .toggle-btn.active {
   background: var(--espresso);
   color: var(--linen);
-  border-color: var(--espresso);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 /* ── Ticket card ────────────────────────────────────────────────── */
@@ -238,7 +239,7 @@ body {
 
 /* ── Input focus & soft corners ─────────────────────────────────── */
 input, select, textarea {
-  border-radius: 6px;
+  border-radius: 10px;
 }
 input:focus, select:focus, textarea:focus {
   outline: 1px solid var(--terra);

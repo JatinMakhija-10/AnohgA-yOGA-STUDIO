@@ -71,7 +71,7 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
 
       {/* Slide-over panel */}
       <aside
-        className={`drawer-panel p-6 sm:p-10 flex flex-col justify-between rounded-l-[12px] shadow-2xl ${
+        className={`drawer-panel p-6 sm:p-10 flex flex-col justify-between rounded-l-2xl shadow-2xl ${
           context.open ? 'open' : ''
         }`}
         aria-label="Class Reservation Drawer"
@@ -115,7 +115,7 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
 
           {/* Slot summary badge if triggered from Timetable */}
           {context.day && context.time && (
-            <div className="mt-6 p-4 bg-travertine border border-hairline rounded-[6px]">
+            <div className="mt-6 p-4 bg-travertine border border-hairline rounded-xl">
               <span className="font-mono text-[9px] uppercase tracking-wider text-umber block">
                 Selected Timetable Session
               </span>
@@ -152,7 +152,7 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="e.g. Maya Sundaram"
-                className="w-full bg-travertine/60 border border-hairline px-3.5 py-2.5 text-xs font-sans text-espresso placeholder:text-umber/50"
+                className="w-full bg-travertine/60 border border-hairline px-3.5 py-2.5 text-xs font-sans text-espresso placeholder:text-umber/50 rounded-lg"
               />
             </div>
 
@@ -166,7 +166,7 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="+91 98765 43210"
-                className="w-full bg-travertine/60 border border-hairline px-3.5 py-2.5 text-xs font-sans text-espresso placeholder:text-umber/50"
+                className="w-full bg-travertine/60 border border-hairline px-3.5 py-2.5 text-xs font-sans text-espresso placeholder:text-umber/50 rounded-lg"
               />
             </div>
 
@@ -177,7 +177,7 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
               <select
                 value={discipline}
                 onChange={(e) => setDiscipline(e.target.value)}
-                className="w-full bg-travertine/60 border border-hairline px-3.5 py-2.5 text-xs font-sans text-espresso"
+                className="w-full bg-travertine/60 border border-hairline px-3.5 py-2.5 text-xs font-sans text-espresso rounded-lg"
               >
                 <option value="">Any / Not sure yet</option>
                 <option value="Hatha Yoga &amp; Mudras">Hatha Yoga &amp; Mudras (Studio / Virtual)</option>
@@ -190,7 +190,7 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
             </div>
 
             {/* Live WhatsApp message preview */}
-            <div className="p-3 bg-travertine/60 border border-hairline font-mono text-[10px] text-espresso leading-relaxed rounded-[6px]">
+            <div className="p-3 bg-travertine/60 border border-hairline font-mono text-[10px] text-espresso leading-relaxed rounded-xl">
               <span className="text-umber font-bold uppercase block mb-1">
                 💬 LIVE WHATSAPP MESSAGE PREVIEW:
               </span>

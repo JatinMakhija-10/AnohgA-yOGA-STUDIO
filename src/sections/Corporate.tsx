@@ -69,7 +69,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
         {/* Section Header */}
         <div className="p-6 sm:p-10 lg:p-14 border-b border-[#343E34]">
           <div className="flex items-center gap-2">
-            <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-2 py-0.5 bg-terra/20 border border-terra/40">
+            <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/20 border border-terra/40 rounded-full">
               05
             </span>
             <span className="font-mono text-xs uppercase tracking-widest text-linen font-semibold">
@@ -93,13 +93,13 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
         {/* 3-Column Visual Programme Cards */}
         <div className="p-6 sm:p-10 lg:p-14 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 border-b border-[#343E34]">
           {/* Programme 01 */}
-          <div className="p-6 sm:p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border border-[#343E34] bg-white/[0.02] rounded-[8px]">
+          <div className="p-6 sm:p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border border-[#343E34] bg-white/[0.02] rounded-2xl shadow-sm">
             <div>
               <div className="flex items-center justify-between">
                 <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
                   01 / ON-SITE
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 px-2 py-0.5 border border-[#343E34] rounded-[4px]">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-linen/80 px-3 py-0.5 border border-[#343E34] rounded-full bg-white/5">
                   WEEKLY
                 </span>
               </div>
@@ -117,13 +117,13 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
           </div>
 
           {/* Programme 02 */}
-          <div className="p-6 sm:p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border border-[#343E34] bg-white/[0.02] rounded-[8px]">
+          <div className="p-6 sm:p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border border-[#343E34] bg-white/[0.02] rounded-2xl shadow-sm">
             <div>
               <div className="flex items-center justify-between">
                 <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
                   02 / OFFSITES
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 px-2 py-0.5 border border-[#343E34] rounded-[4px]">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-linen/80 px-3 py-0.5 border border-[#343E34] rounded-full bg-white/5">
                   INTENSIVE
                 </span>
               </div>
@@ -141,13 +141,13 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
           </div>
 
           {/* Programme 03 */}
-          <div className="p-6 sm:p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border border-[#343E34] bg-white/[0.02] rounded-[8px]">
+          <div className="p-6 sm:p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border border-[#343E34] bg-white/[0.02] rounded-2xl shadow-sm">
             <div>
               <div className="flex items-center justify-between">
                 <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
                   03 / HYBRID PASS
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 px-2 py-0.5 border border-[#343E34] rounded-[4px]">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-linen/80 px-3 py-0.5 border border-[#343E34] rounded-full bg-white/5">
                   FLEXIBLE
                 </span>
               </div>
@@ -225,7 +225,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
             </span>
 
             <div className="space-y-4">
-              <div className="p-4 border border-[#343E34] bg-white/5 flex items-start gap-4 rounded-[8px]">
+              <div className="p-4 border border-[#343E34] bg-white/5 flex items-start gap-4 rounded-xl">
                 <span className="font-mono text-lg text-terra font-bold">01</span>
                 <div>
                   <h4 className="font-serif text-lg font-bold text-linen">Assessment Call</h4>
@@ -235,7 +235,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                 </div>
               </div>
 
-              <div className="p-4 border border-[#343E34] bg-white/5 flex items-start gap-4 rounded-[8px]">
+              <div className="p-4 border border-[#343E34] bg-white/5 flex items-start gap-4 rounded-xl">
                 <span className="font-mono text-lg text-terra font-bold">02</span>
                 <div>
                   <h4 className="font-serif text-lg font-bold text-linen">Tailored Curriculum</h4>
@@ -245,7 +245,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                 </div>
               </div>
 
-              <div className="p-4 border border-[#343E34] bg-white/5 flex items-start gap-4 rounded-[8px]">
+              <div className="p-4 border border-[#343E34] bg-white/5 flex items-start gap-4 rounded-xl">
                 <span className="font-mono text-lg text-terra font-bold">03</span>
                 <div>
                   <h4 className="font-serif text-lg font-bold text-linen">On-Site Demonstration</h4>
@@ -255,7 +255,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                 </div>
               </div>
 
-              <div className="p-4 border border-[#343E34] bg-white/5 flex items-start gap-4 rounded-[8px]">
+              <div className="p-4 border border-[#343E34] bg-white/5 flex items-start gap-4 rounded-xl">
                 <span className="font-mono text-lg text-terra font-bold">04</span>
                 <div>
                   <h4 className="font-serif text-lg font-bold text-linen">Consistent Weekly Cadence</h4>
@@ -268,7 +268,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
           </div>
 
           {/* Right: Proposal Form */}
-          <div className="lg:col-span-7 p-6 sm:p-10 lg:p-14 bg-[#232B23]">
+          <div className="lg:col-span-7 p-6 sm:p-10 lg:p-14 bg-[#232B23] rounded-2xl m-2 lg:m-6 border border-[#343E34]">
             <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold block mb-2">
               REQUEST A CUSTOM PROPOSAL
             </span>
@@ -301,7 +301,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   value={formData.company}
                   onChange={handleChange}
                   placeholder="e.g. Zoho / Freshworks / OMR Tech"
-                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans placeholder:text-linen/30 focus:border-terra"
+                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans placeholder:text-linen/30 focus:border-terra rounded-lg"
                 />
               </div>
 
@@ -316,7 +316,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   value={formData.contactName}
                   onChange={handleChange}
                   placeholder="e.g. Vikram Sundaram"
-                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans placeholder:text-linen/30 focus:border-terra"
+                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans placeholder:text-linen/30 focus:border-terra rounded-lg"
                 />
               </div>
 
@@ -330,7 +330,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="vikram@company.com"
-                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans placeholder:text-linen/30 focus:border-terra"
+                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans placeholder:text-linen/30 focus:border-terra rounded-lg"
                 />
               </div>
 
@@ -345,7 +345,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="+91 98765 43210"
-                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans placeholder:text-linen/30 focus:border-terra"
+                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans placeholder:text-linen/30 focus:border-terra rounded-lg"
                 />
               </div>
 
@@ -357,7 +357,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   name="teamSize"
                   value={formData.teamSize}
                   onChange={handleChange}
-                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans focus:border-terra"
+                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans focus:border-terra rounded-lg"
                 >
                   <option value="1–10 employees">1–10 employees (Core Team)</option>
                   <option value="10–25 employees">10–25 employees (Department)</option>
@@ -374,7 +374,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   name="programme"
                   value={formData.programme}
                   onChange={handleChange}
-                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans focus:border-terra"
+                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans focus:border-terra rounded-lg"
                 >
                   <option value="Weekly On-Site Sessions">Weekly On-Site Sessions</option>
                   <option value="Executive Offsite Workshop">Executive Offsite Workshop</option>
@@ -393,7 +393,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   value={formData.notes}
                   onChange={handleChange}
                   placeholder="e.g. Ergonomic focus for software engineers, prefer Thursday afternoons..."
-                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans placeholder:text-linen/30 focus:border-terra"
+                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans placeholder:text-linen/30 focus:border-terra rounded-lg"
                 />
               </div>
 
