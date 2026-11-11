@@ -10,19 +10,19 @@ export const Hero: FC<HeroProps> = ({ onOpenDrawer }) => {
 
   const heroPhotos = [
     {
-      src: 'https://images.unsplash.com/photo-1517637382994-f02da38c6728?w=1200&q=85&auto=format&fit=crop',
+      src: '/images/hero_aerial.jpg',
       title: 'AERIAL SILKS SUSPENSION',
       caption: 'FIG 01. ZERO-COMPRESSION SPINAL TRACTION — ECR STUDIO',
       badge: 'SILK HAMMOCK',
     },
     {
-      src: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&q=85&auto=format&fit=crop',
+      src: '/images/hatha_floor.jpg',
       title: 'ANATOMICAL FLOOR HATHA',
       caption: 'FIG 02. ASANA ALIGNMENT & DEEP PRANAYAMA — THIRUVANMIYUR',
       badge: 'CLASSICAL FLOOR',
     },
     {
-      src: 'https://images.unsplash.com/photo-1570294646112-27ce4f174e21?w=1200&q=85&auto=format&fit=crop',
+      src: '/images/kids_aerial.jpg',
       title: 'KIDS SILK EXPLORATION',
       caption: 'FIG 03. PLAYFUL BALANCE FOR AGES 7–14 — TUE & THU 5 PM',
       badge: 'KIDS BATCH',
