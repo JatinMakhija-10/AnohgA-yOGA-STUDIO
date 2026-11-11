@@ -121,11 +121,11 @@ export const Schedule: FC<ScheduleProps> = ({ onOpenDrawer, onToast }) => {
             {WORKSHOPS.map((workshop) => (
               <div
                 key={workshop.index}
-                className="bg-linen border border-hairline/80 overflow-hidden flex flex-col justify-between group hover:border-espresso transition-all shadow-md rounded-2xl"
+                className="bg-linen border border-hairline/80 overflow-hidden flex flex-col justify-between group hover:border-espresso transition-all shadow-md rounded-3xl"
               >
                 <div>
                   {/* Photo Header with Visual Badges */}
-                  <div className="relative aspect-[16/9] overflow-hidden bg-travertine border-b border-hairline rounded-t-2xl">
+                  <div className="relative aspect-[16/9] overflow-hidden bg-travertine border-b border-hairline rounded-t-3xl">
                     <img
                       src={workshop.image}
                       alt={workshop.title}

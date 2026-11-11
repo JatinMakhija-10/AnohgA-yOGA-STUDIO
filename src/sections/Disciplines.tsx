@@ -59,7 +59,7 @@ export const Disciplines: FC<DisciplinesProps> = ({ onOpenDrawer }) => {
             return (
               <div
                 key={discipline.name}
-                className="group flex flex-col justify-between bg-linen hover:bg-travertine/30 transition-all border border-hairline/80 hover:border-espresso rounded-2xl overflow-hidden shadow-sm hover:shadow-md"
+                className="group flex flex-col justify-between bg-linen hover:bg-travertine/30 transition-all border border-hairline/80 hover:border-espresso rounded-3xl overflow-hidden shadow-sm hover:shadow-md"
               >
                 <div>
                   {/* Photo Container with Visual Watermark & Circular Roman Stamp */}

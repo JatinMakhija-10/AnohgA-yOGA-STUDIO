@@ -112,16 +112,16 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
           </div>
         </div>
 
-        {/* Dual Form Architectural Grid with High Contrast & Soft Edges */}
+        {/* Dual Form Architectural Grid with Harmonized Design & Soft Edges */}
         <div className="p-6 sm:p-10 lg:p-14 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
           {/* Form 01: Lock in Your Plan */}
-          <div className="p-6 sm:p-10 flex flex-col justify-between bg-linen border border-hairline/80 rounded-2xl shadow-sm">
+          <div className="p-8 sm:p-10 flex flex-col justify-between bg-linen border border-hairline/90 rounded-3xl shadow-sm hover:shadow-md transition-all">
             <div>
-              <div className="flex items-center justify-between pb-4 border-b border-hairline">
-                <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
+              <div className="flex items-center justify-between pb-5 border-b border-hairline">
+                <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full">
                   OPTION A
                 </span>
-                <span className="font-mono text-xs uppercase tracking-wider text-espresso font-semibold px-3 py-1 bg-travertine border border-hairline rounded-full">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-espresso font-bold px-3 py-1 bg-travertine border border-hairline rounded-full">
                   MEMBERSHIP LOCK-IN
                 </span>
               </div>
@@ -148,7 +148,7 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                 />
 
                 <div>
-                  <label className="block font-mono text-[10px] uppercase tracking-wider text-espresso font-bold mb-1">
+                  <label className="block font-mono text-[11px] uppercase tracking-wider text-espresso font-bold mb-1.5">
                     Your Full Name *
                   </label>
                   <input
@@ -157,12 +157,12 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     value={planName}
                     onChange={(e) => setPlanName(e.target.value)}
                     placeholder="e.g. Radhika Raman"
-                    className="w-full bg-travertine/50 border border-hairline/80 px-3.5 py-2.5 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 focus:border-terra rounded-xl"
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 rounded-xl transition-all outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block font-mono text-[10px] uppercase tracking-wider text-espresso font-bold mb-1">
+                  <label className="block font-mono text-[11px] uppercase tracking-wider text-espresso font-bold mb-1.5">
                     Phone or WhatsApp *
                   </label>
                   <input
@@ -171,12 +171,12 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     value={planPhone}
                     onChange={(e) => setPlanPhone(e.target.value)}
                     placeholder="+91 98765 43210"
-                    className="w-full bg-travertine/50 border border-hairline/80 px-3.5 py-2.5 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 focus:border-terra rounded-xl"
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 rounded-xl transition-all outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block font-mono text-[10px] uppercase tracking-wider text-espresso font-bold mb-1">
+                  <label className="block font-mono text-[11px] uppercase tracking-wider text-espresso font-bold mb-1.5">
                     Selected Tuition Tier *
                   </label>
                   <select
@@ -185,7 +185,7 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                       setPlanChoice(e.target.value)
                       onPlanChange(e.target.value)
                     }}
-                    className="w-full bg-travertine/50 border border-hairline/80 px-3.5 py-2.5 text-sm font-sans text-espresso font-semibold focus:border-terra rounded-xl"
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-semibold rounded-xl transition-all outline-none"
                   >
                     {PLAN_NAMES.map((p) => (
                       <option key={p} value={p}>
@@ -196,7 +196,7 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                 </div>
 
                 <div>
-                  <label className="block font-mono text-[10px] uppercase tracking-wider text-espresso font-bold mb-1">
+                  <label className="block font-mono text-[11px] uppercase tracking-wider text-espresso font-bold mb-1.5">
                     Notes or Schedule Preference (Optional)
                   </label>
                   <textarea
@@ -204,13 +204,13 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     value={planNotes}
                     onChange={(e) => setPlanNotes(e.target.value)}
                     placeholder="e.g. Prefer 07:30 AM slot, beginner in aerial silks..."
-                    className="w-full bg-travertine/50 border border-hairline/80 px-3.5 py-2.5 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 focus:border-terra rounded-xl"
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 rounded-xl transition-all outline-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="btn-terra w-full justify-center py-3.5 font-bold text-xs mt-2"
+                  className="btn-terra w-full justify-center py-3.5 font-bold text-xs mt-3 shadow-sm hover:shadow-md"
                 >
                   <span>Lock In Membership on WhatsApp</span>
                   <span>↗</span>
@@ -218,22 +218,30 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
               </form>
             </div>
 
-            <div className="pt-6 border-t border-hairline mt-8 flex items-center gap-2">
-              <span className="w-2 h-2 bg-moss rounded-full"></span>
-              <span className="font-mono text-[10px] uppercase tracking-wider text-espresso font-bold">
-                Payment settled after confirmation · UPI / Cash accepted
-              </span>
+            <div className="pt-6 border-t border-hairline mt-8 space-y-2">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-moss rounded-full"></span>
+                <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold">
+                  Payment settled after confirmation · UPI / Cash accepted
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-moss rounded-full"></span>
+                <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold">
+                  Direct personal communication with Anupriya · 2-hr response
+                </span>
+              </div>
             </div>
           </div>
 
           {/* Form 02: Book First Class Free */}
-          <div className="p-6 sm:p-10 flex flex-col justify-between bg-travertine/30 border border-hairline/80 rounded-2xl shadow-sm">
+          <div className="p-8 sm:p-10 flex flex-col justify-between bg-linen border border-hairline/90 rounded-3xl shadow-sm hover:shadow-md transition-all">
             <div>
-              <div className="flex items-center justify-between pb-4 border-b border-hairline">
-                <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
+              <div className="flex items-center justify-between pb-5 border-b border-hairline">
+                <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full">
                   OPTION B
                 </span>
-                <span className="font-mono text-xs uppercase tracking-wider text-espresso font-semibold px-3 py-1 bg-linen border border-hairline rounded-full shadow-xs">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-espresso font-bold px-3 py-1 bg-travertine border border-hairline rounded-full">
                   COMPLIMENTARY FIRST CLASS
                 </span>
               </div>
@@ -260,7 +268,7 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                 />
 
                 <div>
-                  <label className="block font-mono text-[10px] uppercase tracking-wider text-espresso font-bold mb-1">
+                  <label className="block font-mono text-[11px] uppercase tracking-wider text-espresso font-bold mb-1.5">
                     Your Full Name *
                   </label>
                   <input
@@ -269,12 +277,12 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     value={trialName}
                     onChange={(e) => setTrialName(e.target.value)}
                     placeholder="e.g. Siddharth Menon"
-                    className="w-full bg-linen border border-hairline/80 px-3.5 py-2.5 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 focus:border-terra rounded-xl"
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 rounded-xl transition-all outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block font-mono text-[10px] uppercase tracking-wider text-espresso font-bold mb-1">
+                  <label className="block font-mono text-[11px] uppercase tracking-wider text-espresso font-bold mb-1.5">
                     Phone or WhatsApp *
                   </label>
                   <input
@@ -283,18 +291,18 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     value={trialPhone}
                     onChange={(e) => setTrialPhone(e.target.value)}
                     placeholder="+91 98765 43210"
-                    className="w-full bg-linen border border-hairline/80 px-3.5 py-2.5 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 focus:border-terra rounded-xl"
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 rounded-xl transition-all outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block font-mono text-[10px] uppercase tracking-wider text-espresso font-bold mb-1">
+                  <label className="block font-mono text-[11px] uppercase tracking-wider text-espresso font-bold mb-1.5">
                     Preferred Practice *
                   </label>
                   <select
                     value={trialDiscipline}
                     onChange={(e) => setTrialDiscipline(e.target.value)}
-                    className="w-full bg-linen border border-hairline/80 px-3.5 py-2.5 text-sm font-sans text-espresso font-semibold focus:border-terra rounded-xl"
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-semibold rounded-xl transition-all outline-none"
                   >
                     <option value="Hatha Yoga (Free First Class)">
                       Hatha Yoga (Studio) — 100% Free First Class
@@ -318,7 +326,7 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                 </div>
 
                 <div>
-                  <label className="block font-mono text-[10px] uppercase tracking-wider text-espresso font-bold mb-1">
+                  <label className="block font-mono text-[11px] uppercase tracking-wider text-espresso font-bold mb-1.5">
                     Preferred Day / Time (Optional)
                   </label>
                   <input
@@ -326,15 +334,15 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     value={trialSlot}
                     onChange={(e) => setTrialSlot(e.target.value)}
                     placeholder="e.g. Tuesday morning 7:30 AM"
-                    className="w-full bg-linen border border-hairline/80 px-3.5 py-2.5 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 focus:border-terra rounded-xl"
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 rounded-xl transition-all outline-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="btn-terra w-full justify-center py-3.5 font-bold text-xs mt-2"
+                  className="btn-terra w-full justify-center py-3.5 font-bold text-xs mt-3 shadow-sm hover:shadow-md"
                 >
-                  <span>Claim Free Class Slot on WhatsApp</span>
+                  <span>Claim Complimentary Class on WhatsApp</span>
                   <span>↗</span>
                 </button>
               </form>
@@ -345,13 +353,13 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-moss rounded-full"></span>
                 <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold">
-                  Direct personal communication with Anupriya. No bots.
+                  100% complimentary trial · No credit card required
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-moss rounded-full"></span>
                 <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold">
-                  2-hour average response time during studio hours (6 AM – 8 PM).
+                  Direct personal communication with Anupriya · 2-hr response
                 </span>
               </div>
             </div>

@@ -78,7 +78,7 @@ export const Hero: FC<HeroProps> = ({ onOpenDrawer }) => {
                 onClick={() => onOpenDrawer({ source: 'trial' })}
                 className="btn-terra py-3.5 px-6 font-bold shadow-sm"
               >
-                <span>Book your first class free</span>
+                <span>Book Your First Class Free</span>
                 <span className="text-sm">↗</span>
               </button>
               <button
@@ -86,7 +86,7 @@ export const Hero: FC<HeroProps> = ({ onOpenDrawer }) => {
                 onClick={handleScrollToSchedule}
                 className="btn-outline py-3.5 px-6 font-bold"
               >
-                <span>Explore timetable</span>
+                <span>Explore Weekly Timetable</span>
                 <span>↓</span>
               </button>
             </div>
@@ -131,8 +131,8 @@ export const Hero: FC<HeroProps> = ({ onOpenDrawer }) => {
             </div>
           </div>
 
-          {/* Bottom Ledger Strip - Softened 2xl Rounded Container */}
-          <div className="mt-10 pt-6 border-t border-hairline grid grid-cols-3 divide-x divide-hairline bg-travertine/40 p-5 border border-hairline rounded-2xl shadow-xs">
+          {/* Bottom Ledger Strip - Softened 3xl Rounded Container */}
+          <div className="mt-10 pt-6 border-t border-hairline grid grid-cols-3 divide-x divide-hairline bg-travertine/40 p-6 border border-hairline rounded-3xl shadow-xs">
             <div className="pr-3 sm:pr-4">
               <div className="font-serif text-3xl sm:text-4xl font-semibold text-espresso leading-none">
                 10+ <span className="text-terra text-xl">yrs</span>
@@ -162,7 +162,7 @@ export const Hero: FC<HeroProps> = ({ onOpenDrawer }) => {
 
         {/* Right 5 Columns: Large Interactive Visual Hero Image */}
         <div className="lg:col-span-5 bg-travertine relative flex flex-col justify-between p-4 sm:p-6 lg:p-8">
-          <div className="relative aspect-[4/5] lg:aspect-auto lg:h-full w-full overflow-hidden group rounded-2xl border border-hairline shadow-md">
+          <div className="relative aspect-[4/5] lg:aspect-auto lg:h-full w-full overflow-hidden group rounded-3xl border border-hairline shadow-md">
             <img
               src={heroPhotos[activePhoto].src}
               alt={heroPhotos[activePhoto].title}

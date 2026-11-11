@@ -102,19 +102,19 @@ export const ClassMatcher: FC<ClassMatcherProps> = ({ onOpenDrawer, onToast }) =
                 / 15-SECOND CLASS FINDER
               </span>
             </div>
-            <h3 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-espresso tracking-tight">
+            <h2 className="mt-4 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium sm:font-semibold text-espresso leading-tight tracking-tight">
               Unsure Where to Start?{' '}
               <span className="italic text-terra underline decoration-terra/30 decoration-wavy underline-offset-8">
                 Find Your Practice
               </span>
-            </h3>
-            <p className="mt-3 text-sm sm:text-base text-espresso/90 font-sans font-medium max-w-[54ch]">
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-espresso/90 leading-relaxed font-sans font-medium max-w-[58ch]">
               Answer 3 quick questions to receive Anupriya&apos;s tailored studio recommendation.
             </p>
           </div>
 
           {step < 4 && (
-            <div className="font-mono text-xs font-bold text-espresso bg-linen px-3.5 py-1.5 border border-hairline self-start lg:self-auto rounded-full shadow-xs">
+            <div className="font-mono text-xs font-bold text-espresso bg-linen px-4 py-2 border border-hairline self-start lg:self-auto rounded-full shadow-xs">
               STEP {step} OF 3
             </div>
           )}
@@ -287,7 +287,7 @@ export const ClassMatcher: FC<ClassMatcherProps> = ({ onOpenDrawer, onToast }) =
 
         {/* Step 4: Result Card */}
         {step === 4 && (
-          <div className="border border-terra/60 bg-linen p-6 sm:p-10 shadow-lg rounded-2xl">
+          <div className="border border-terra/60 bg-linen p-8 sm:p-10 shadow-lg rounded-3xl">
             <div className="flex items-center justify-between pb-4 border-b border-hairline mb-6">
               <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
                 ✓ YOUR MATCHED PRACTICE RECOMMENDATION
@@ -354,7 +354,7 @@ export const ClassMatcher: FC<ClassMatcherProps> = ({ onOpenDrawer, onToast }) =
                     className="btn-outline py-3.5 px-6 font-bold text-xs"
                   >
                     <span>Book via Drawer Form</span>
-                    <span>→</span>
+                    <span>↗</span>
                   </button>
                 </div>
               </div>

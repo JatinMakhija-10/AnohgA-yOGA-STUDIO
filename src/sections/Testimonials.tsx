@@ -54,13 +54,13 @@ export const Testimonials: FC = () => {
                 / VERIFIED TRANSFORMATIONS
               </span>
             </div>
-            <h3 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-espresso tracking-tight">
+            <h2 className="mt-4 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium sm:font-semibold text-espresso leading-tight tracking-tight">
               Real Outcomes From the{' '}
               <span className="italic text-terra underline decoration-terra/30 decoration-wavy underline-offset-8">
                 Mat and Silks
               </span>
-            </h3>
-            <p className="mt-3 text-base text-espresso/90 font-sans font-medium max-w-[56ch]">
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-espresso/90 leading-relaxed font-sans font-medium max-w-[58ch]">
               How practitioners along East Coast Road and OMR overcome physical stiffness,
               rediscover spinal freedom, and build sustainable sadhana.
             </p>
@@ -77,7 +77,7 @@ export const Testimonials: FC = () => {
           {reviews.map((rev) => (
             <div
               key={rev.name}
-              className="bg-linen border border-hairline/80 p-6 sm:p-8 flex flex-col justify-between hover:border-espresso transition-all shadow-sm rounded-2xl overflow-hidden"
+              className="bg-linen border border-hairline/80 p-8 flex flex-col justify-between hover:border-espresso transition-all shadow-sm rounded-3xl overflow-hidden"
             >
               <div>
                 {/* Meta Header */}

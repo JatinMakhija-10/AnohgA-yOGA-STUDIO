@@ -140,7 +140,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
                     return (
                       <div
                         key={plan.name}
-                        className={`p-6 border flex flex-col justify-between transition-all bg-linen rounded-2xl ${
+                        className={`p-7 border flex flex-col justify-between transition-all bg-linen rounded-3xl ${
                           isPopular || isBestValue
                             ? 'border-terra shadow-md bg-travertine/10'
                             : 'border-hairline hover:border-espresso shadow-xs'
@@ -202,7 +202,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
                             }`}
                           >
                             <span>Reserve This Plan</span>
-                            <span>→</span>
+                            <span>↗</span>
                           </button>
                         </div>
                       </div>

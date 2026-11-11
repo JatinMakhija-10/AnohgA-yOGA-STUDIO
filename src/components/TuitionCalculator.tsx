@@ -81,7 +81,7 @@ export const TuitionCalculator: FC<TuitionCalculatorProps> = ({ onToast }) => {
   }
 
   return (
-    <div className="bg-linen border border-hairline/80 p-6 sm:p-10 my-8 shadow-sm rounded-2xl">
+    <div className="bg-linen border border-hairline/80 p-8 sm:p-10 my-8 shadow-sm rounded-3xl">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-hairline mb-6">
         <div>
           <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full inline-block mb-2">

@@ -69,9 +69,9 @@ export const Gallery: FC = () => {
               <figure
                 key={item.idx}
                 onClick={() => setActiveModalImage(item)}
-                className="group border border-hairline/80 bg-linen overflow-hidden flex flex-col justify-between hover:border-espresso transition-all shadow-sm hover:shadow-md cursor-pointer rounded-2xl"
+                className="group border border-hairline/80 bg-linen overflow-hidden flex flex-col justify-between hover:border-espresso transition-all shadow-sm hover:shadow-md cursor-pointer rounded-3xl"
               >
-                <div className="relative aspect-[4/3] overflow-hidden bg-travertine rounded-t-2xl">
+                <div className="relative aspect-[4/3] overflow-hidden bg-travertine rounded-t-3xl">
                   <img
                     src={item.src}
                     alt={item.label}

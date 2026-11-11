@@ -79,13 +79,13 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
         <div>
           {/* Header Row */}
           <div className="flex items-center justify-between pb-6 border-b border-hairline">
-            <span className="font-mono text-[10px] uppercase tracking-wider text-umber">
-              {context.day && context.time ? 'Timetable Slot Booking' : 'First Class Free · Claim Slot'}
+            <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full">
+              {context.day && context.time ? 'SLOT RESERVATION' : 'FIRST CLASS FREE'}
             </span>
             <button
               type="button"
               onClick={onClose}
-              className="p-1 text-espresso hover:text-terra transition-colors"
+              className="p-1.5 text-espresso hover:text-terra transition-colors rounded-full hover:bg-travertine/60 cursor-pointer"
               aria-label="Close drawer"
             >
               <svg
@@ -93,8 +93,8 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="0.75"
-                strokeLinecap="square"
+                strokeWidth="1.5"
+                strokeLinecap="round"
               >
                 <line x1="18" y1="6" x2="6" y2="18" />
                 <line x1="6" y1="6" x2="18" y2="18" />
@@ -107,7 +107,7 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
             <h2 className="font-serif text-3xl sm:text-4xl font-bold leading-tight text-espresso">
               Your first class <span className="italic font-bold text-terra">is free.</span>
             </h2>
-            <p className="mt-4 text-sm text-espresso font-medium leading-relaxed">
+            <p className="mt-3 text-sm text-espresso/90 font-sans font-medium leading-relaxed">
               No commitment. Drop in, meet Anupriya, and decide after. Leave your number and
               we&apos;ll confirm a slot within 2 hours.
             </p>
@@ -115,13 +115,13 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
 
           {/* Slot summary badge if triggered from Timetable */}
           {context.day && context.time && (
-            <div className="mt-6 p-4 bg-travertine border border-hairline rounded-xl">
-              <span className="font-mono text-[9px] uppercase tracking-wider text-umber block">
+            <div className="mt-6 p-4 bg-travertine/60 border border-hairline rounded-2xl">
+              <span className="font-mono text-[10px] uppercase tracking-wider text-umber font-bold block">
                 Selected Timetable Session
               </span>
               <div className="mt-1 flex items-baseline justify-between font-mono text-xs text-espresso">
-                <span className="font-medium">{context.cls || 'Practice Session'}</span>
-                <span className="text-umber">
+                <span className="font-bold text-sm">{context.cls || 'Practice Session'}</span>
+                <span className="text-terra font-bold">
                   {context.day} · {context.time}
                 </span>
               </div>
@@ -129,7 +129,7 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
           )}
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-5">
+          <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-4">
             {/* Honeypot field (hidden from genuine users) */}
             <input
               type="text"
@@ -143,8 +143,8 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
             />
 
             <div>
-              <label className="block font-mono text-[10px] uppercase tracking-wider text-umber mb-1.5">
-                Your name *
+              <label className="block font-mono text-[11px] uppercase tracking-wider text-espresso font-bold mb-1.5">
+                Your Full Name *
               </label>
               <input
                 type="text"
@@ -152,12 +152,12 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="e.g. Maya Sundaram"
-                className="w-full bg-travertine/60 border border-hairline px-3.5 py-2.5 text-xs font-sans text-espresso placeholder:text-umber/50 rounded-lg"
+                className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 rounded-xl transition-all outline-none"
               />
             </div>
 
             <div>
-              <label className="block font-mono text-[10px] uppercase tracking-wider text-umber mb-1.5">
+              <label className="block font-mono text-[11px] uppercase tracking-wider text-espresso font-bold mb-1.5">
                 Phone or WhatsApp *
               </label>
               <input
@@ -166,18 +166,18 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="+91 98765 43210"
-                className="w-full bg-travertine/60 border border-hairline px-3.5 py-2.5 text-xs font-sans text-espresso placeholder:text-umber/50 rounded-lg"
+                className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 rounded-xl transition-all outline-none"
               />
             </div>
 
             <div>
-              <label className="block font-mono text-[10px] uppercase tracking-wider text-umber mb-1.5">
-                Preferred discipline (optional)
+              <label className="block font-mono text-[11px] uppercase tracking-wider text-espresso font-bold mb-1.5">
+                Preferred Practice (Optional)
               </label>
               <select
                 value={discipline}
                 onChange={(e) => setDiscipline(e.target.value)}
-                className="w-full bg-travertine/60 border border-hairline px-3.5 py-2.5 text-xs font-sans text-espresso rounded-lg"
+                className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-semibold rounded-xl transition-all outline-none"
               >
                 <option value="">Any / Not sure yet</option>
                 <option value="Hatha Yoga &amp; Mudras">Hatha Yoga &amp; Mudras (Studio / Virtual)</option>
@@ -190,11 +190,11 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
             </div>
 
             {/* Live WhatsApp message preview */}
-            <div className="p-3 bg-travertine/60 border border-hairline font-mono text-[10px] text-espresso leading-relaxed rounded-xl">
-              <span className="text-umber font-bold uppercase block mb-1">
+            <div className="p-3.5 bg-travertine/50 border border-hairline font-mono text-[10px] text-espresso leading-relaxed rounded-2xl">
+              <span className="text-terra font-bold uppercase block mb-1">
                 💬 LIVE WHATSAPP MESSAGE PREVIEW:
               </span>
-              <p className="italic text-espresso/90">
+              <p className="italic text-espresso/90 font-sans text-xs">
                 &ldquo;Hi Anupriya! I&apos;d like to claim my FREE first class at Anohga Yoga Studio.{' '}
                 {name ? `Name: ${name}. ` : ''}
                 {discipline ? `Discipline: ${discipline}. ` : ''}
@@ -203,30 +203,33 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
             </div>
 
             {errorMessage && (
-              <p className="font-mono text-[11px] text-terra">{errorMessage}</p>
+              <p className="font-mono text-[11px] text-terra font-bold">{errorMessage}</p>
             )}
 
             <button
               type="submit"
-              className="btn-terra w-full justify-center mt-1 py-3.5 font-bold shadow-sm"
+              className="btn-terra w-full justify-center mt-2 py-3.5 font-bold text-xs shadow-md hover:shadow-lg"
             >
-              <span>Claim my free class on WhatsApp</span>
+              <span>Claim Complimentary Class on WhatsApp</span>
               <span>↗</span>
             </button>
           </form>
         </div>
 
         {/* Drawer Footer Assurance */}
-        <div className="pt-8 border-t border-hairline mt-8">
-          <div className="flex items-center gap-3">
-            <span className="w-1.5 h-1.5 bg-moss rounded-full"></span>
-            <span className="font-mono text-[10px] uppercase tracking-wider text-umber">
-              Direct connection with Anupriya · No automated bot
+        <div className="pt-6 border-t border-hairline mt-8 space-y-2">
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 bg-moss rounded-full"></span>
+            <span className="font-mono text-[10px] uppercase tracking-wider text-espresso font-bold">
+              Direct communication with founder Anupriya (No bots)
             </span>
           </div>
-          <p className="font-mono text-[9px] text-umber/80 mt-2">
-            ECR Thiruvanmiyur · Mon–Sat 6 AM – 7 PM · +91 81227 51154
-          </p>
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 bg-moss rounded-full"></span>
+            <span className="font-mono text-[10px] uppercase tracking-wider text-espresso font-bold">
+              2-hr average response time · Mon–Sat 6 AM – 8 PM
+            </span>
+          </div>
         </div>
       </aside>
     </>

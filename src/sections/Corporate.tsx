@@ -93,7 +93,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
         {/* 3-Column Visual Programme Cards */}
         <div className="p-6 sm:p-10 lg:p-14 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 border-b border-[#343E34]">
           {/* Programme 01 */}
-          <div className="p-6 sm:p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border border-[#343E34] bg-white/[0.02] rounded-2xl shadow-sm">
+          <div className="p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border border-[#343E34] bg-white/[0.02] rounded-3xl shadow-sm">
             <div>
               <div className="flex items-center justify-between">
                 <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
@@ -117,7 +117,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
           </div>
 
           {/* Programme 02 */}
-          <div className="p-6 sm:p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border border-[#343E34] bg-white/[0.02] rounded-2xl shadow-sm">
+          <div className="p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border border-[#343E34] bg-white/[0.02] rounded-3xl shadow-sm">
             <div>
               <div className="flex items-center justify-between">
                 <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
@@ -141,7 +141,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
           </div>
 
           {/* Programme 03 */}
-          <div className="p-6 sm:p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border border-[#343E34] bg-white/[0.02] rounded-2xl shadow-sm">
+          <div className="p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border border-[#343E34] bg-white/[0.02] rounded-3xl shadow-sm">
             <div>
               <div className="flex items-center justify-between">
                 <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
@@ -268,11 +268,11 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
           </div>
 
           {/* Right: Proposal Form */}
-          <div className="lg:col-span-7 p-6 sm:p-10 lg:p-14 bg-[#232B23] rounded-2xl m-2 lg:m-6 border border-[#343E34]">
-            <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold block mb-2">
+          <div className="lg:col-span-7 p-8 sm:p-10 lg:p-14 bg-[#232B23] rounded-3xl m-2 lg:m-6 border border-[#343E34] shadow-md">
+            <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/20 border border-terra/30 rounded-full inline-block mb-3">
               REQUEST A CUSTOM PROPOSAL
             </span>
-            <p className="text-xs font-sans text-linen/80 font-medium mb-6">
+            <p className="text-sm font-sans text-linen/90 font-medium mb-6 leading-relaxed">
               Routes directly to Anupriya on WhatsApp. We will evaluate your facility requirements
               and share a proposal within 24 hours.
             </p>
@@ -291,7 +291,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
               />
 
               <div>
-                <label className="block font-mono text-[10px] uppercase tracking-wider text-linen/80 font-bold mb-1">
+                <label className="block font-mono text-[11px] uppercase tracking-wider text-linen font-bold mb-1.5">
                   Company / Organization *
                 </label>
                 <input
@@ -301,12 +301,12 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   value={formData.company}
                   onChange={handleChange}
                   placeholder="e.g. Zoho / Freshworks / OMR Tech"
-                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans placeholder:text-linen/30 focus:border-terra rounded-lg"
+                  className="w-full bg-[#1A201A] border border-[#343E34] hover:border-terra/40 text-linen px-4 py-3 text-sm font-sans placeholder:text-linen/30 focus:border-terra rounded-xl transition-all outline-none"
                 />
               </div>
 
               <div>
-                <label className="block font-mono text-[10px] uppercase tracking-wider text-linen/80 font-bold mb-1">
+                <label className="block font-mono text-[11px] uppercase tracking-wider text-linen font-bold mb-1.5">
                   Contact Person *
                 </label>
                 <input
@@ -316,12 +316,12 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   value={formData.contactName}
                   onChange={handleChange}
                   placeholder="e.g. Vikram Sundaram"
-                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans placeholder:text-linen/30 focus:border-terra rounded-lg"
+                  className="w-full bg-[#1A201A] border border-[#343E34] hover:border-terra/40 text-linen px-4 py-3 text-sm font-sans placeholder:text-linen/30 focus:border-terra rounded-xl transition-all outline-none"
                 />
               </div>
 
               <div>
-                <label className="block font-mono text-[10px] uppercase tracking-wider text-linen/80 font-bold mb-1">
+                <label className="block font-mono text-[11px] uppercase tracking-wider text-linen font-bold mb-1.5">
                   Corporate Email
                 </label>
                 <input
@@ -330,12 +330,12 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="vikram@company.com"
-                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans placeholder:text-linen/30 focus:border-terra rounded-lg"
+                  className="w-full bg-[#1A201A] border border-[#343E34] hover:border-terra/40 text-linen px-4 py-3 text-sm font-sans placeholder:text-linen/30 focus:border-terra rounded-xl transition-all outline-none"
                 />
               </div>
 
               <div>
-                <label className="block font-mono text-[10px] uppercase tracking-wider text-linen/80 font-bold mb-1">
+                <label className="block font-mono text-[11px] uppercase tracking-wider text-linen font-bold mb-1.5">
                   Phone / WhatsApp *
                 </label>
                 <input
@@ -345,19 +345,19 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="+91 98765 43210"
-                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans placeholder:text-linen/30 focus:border-terra rounded-lg"
+                  className="w-full bg-[#1A201A] border border-[#343E34] hover:border-terra/40 text-linen px-4 py-3 text-sm font-sans placeholder:text-linen/30 focus:border-terra rounded-xl transition-all outline-none"
                 />
               </div>
 
               <div>
-                <label className="block font-mono text-[10px] uppercase tracking-wider text-linen/80 font-bold mb-1">
+                <label className="block font-mono text-[11px] uppercase tracking-wider text-linen font-bold mb-1.5">
                   Team Size
                 </label>
                 <select
                   name="teamSize"
                   value={formData.teamSize}
                   onChange={handleChange}
-                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans focus:border-terra rounded-lg"
+                  className="w-full bg-[#1A201A] border border-[#343E34] hover:border-terra/40 text-linen px-4 py-3 text-sm font-sans focus:border-terra rounded-xl transition-all outline-none"
                 >
                   <option value="1–10 employees">1–10 employees (Core Team)</option>
                   <option value="10–25 employees">10–25 employees (Department)</option>
@@ -367,14 +367,14 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
               </div>
 
               <div>
-                <label className="block font-mono text-[10px] uppercase tracking-wider text-linen/80 font-bold mb-1">
+                <label className="block font-mono text-[11px] uppercase tracking-wider text-linen font-bold mb-1.5">
                   Programme Focus
                 </label>
                 <select
                   name="programme"
                   value={formData.programme}
                   onChange={handleChange}
-                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans focus:border-terra rounded-lg"
+                  className="w-full bg-[#1A201A] border border-[#343E34] hover:border-terra/40 text-linen px-4 py-3 text-sm font-sans focus:border-terra rounded-xl transition-all outline-none"
                 >
                   <option value="Weekly On-Site Sessions">Weekly On-Site Sessions</option>
                   <option value="Executive Offsite Workshop">Executive Offsite Workshop</option>
@@ -384,7 +384,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
               </div>
 
               <div className="sm:col-span-2">
-                <label className="block font-mono text-[10px] uppercase tracking-wider text-linen/80 font-bold mb-1">
+                <label className="block font-mono text-[11px] uppercase tracking-wider text-linen font-bold mb-1.5">
                   Specific Physical Goals or Notes
                 </label>
                 <textarea
@@ -393,7 +393,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   value={formData.notes}
                   onChange={handleChange}
                   placeholder="e.g. Ergonomic focus for software engineers, prefer Thursday afternoons..."
-                  className="w-full bg-[#1A201A] border border-[#343E34] text-linen px-3.5 py-2.5 text-xs font-sans placeholder:text-linen/30 focus:border-terra rounded-lg"
+                  className="w-full bg-[#1A201A] border border-[#343E34] hover:border-terra/40 text-linen px-4 py-3 text-sm font-sans placeholder:text-linen/30 focus:border-terra rounded-xl transition-all outline-none"
                 />
               </div>
 

@@ -6,19 +6,27 @@ export const TrustBlueprint: FC = () => {
       <div className="max-w-[1440px] mx-auto">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 border-b border-[#343E34] mb-8">
           <div>
-            <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/20 border border-terra/30 rounded-full inline-block">
-              TRUST ARCHITECTURE &amp; RIGGING SAFETY
-            </span>
-            <h3 className="mt-3 font-serif text-3xl sm:text-4xl font-bold text-linen tracking-tight">
-              Engineered for Zero Fear &amp; Total Flight
-            </h3>
-            <p className="mt-2 text-sm text-linen/80 font-sans font-medium max-w-[56ch]">
+            <div className="flex items-center gap-2">
+              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/20 border border-terra/30 rounded-full inline-block">
+                TRUST ARCHITECTURE
+              </span>
+              <span className="font-mono text-xs uppercase tracking-widest text-linen font-semibold">
+                / RIGGING SAFETY SPECIFICATIONS
+              </span>
+            </div>
+            <h2 className="mt-4 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium sm:font-semibold text-linen leading-tight tracking-tight">
+              Engineered for Zero Fear &amp;{' '}
+              <span className="italic text-terra underline decoration-terra/30 decoration-wavy underline-offset-8">
+                Total Flight
+              </span>
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-linen/90 leading-relaxed font-sans font-medium max-w-[58ch]">
               Every aerial hammock point is engineered to industrial climbing standards so you can
               invert, suspend, and cocoon in absolute confidence.
             </p>
           </div>
 
-          <div className="font-mono text-xs text-terra font-bold px-4 py-1.5 border border-terra/40 bg-terra/10 self-start lg:self-auto rounded-full">
+          <div className="font-mono text-xs text-terra font-bold px-4 py-2 border border-terra/40 bg-terra/10 self-start lg:self-auto rounded-full">
             ● 100% PERSONAL SPOTTING BY ANUPRIYA
           </div>
         </div>
