@@ -47,7 +47,7 @@ export const Testimonials: FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-hairline mb-10">
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full">
+              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-md">
                 PRACTITIONER EXPERIENCES
               </span>
               <span className="font-mono text-xs uppercase tracking-widest text-espresso font-semibold">
@@ -66,7 +66,7 @@ export const Testimonials: FC = () => {
             </p>
           </div>
 
-          <div className="flex items-center gap-3 font-mono text-xs text-espresso font-bold bg-linen px-4 py-2 border border-hairline self-start md:self-auto rounded-full shadow-xs">
+          <div className="flex items-center gap-3 font-mono text-xs text-espresso font-bold bg-linen px-4 py-2 border border-hairline self-start md:self-auto rounded-md shadow-xs">
             <span className="w-2 h-2 bg-moss rounded-full"></span>
             <span>100% PERSONALIZED FEEDBACK</span>
           </div>
@@ -77,7 +77,7 @@ export const Testimonials: FC = () => {
           {reviews.map((rev) => (
             <div
               key={rev.name}
-              className="bg-linen border border-hairline/80 p-8 flex flex-col justify-between hover:border-espresso transition-all shadow-sm rounded-3xl overflow-hidden"
+              className="bg-linen border border-hairline/80 p-8 flex flex-col justify-between hover:border-espresso transition-all shadow-sm rounded-xl overflow-hidden"
             >
               <div>
                 {/* Meta Header */}
@@ -90,7 +90,7 @@ export const Testimonials: FC = () => {
                       {rev.role}
                     </span>
                   </div>
-                  <span className="font-mono text-[9px] uppercase tracking-wider text-terra font-bold px-3 py-0.5 bg-terra/10 border border-terra/20 rounded-full">
+                  <span className="font-mono text-[9px] uppercase tracking-wider text-terra font-bold px-2.5 py-0.5 bg-terra/10 border border-terra/20 rounded-md">
                     {rev.discipline}
                   </span>
                 </div>

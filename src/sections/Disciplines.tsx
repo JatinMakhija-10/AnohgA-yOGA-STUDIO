@@ -16,7 +16,7 @@ export const Disciplines: FC<DisciplinesProps> = ({ onOpenDrawer }) => {
         <div className="p-6 sm:p-10 lg:p-14 border-b border-hairline flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div className="max-w-3xl">
             <div className="flex items-center gap-2">
-              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full">
+              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-md">
                 01
               </span>
               <span className="font-mono text-xs uppercase tracking-widest text-espresso font-semibold">
@@ -37,21 +37,21 @@ export const Disciplines: FC<DisciplinesProps> = ({ onOpenDrawer }) => {
             </p>
           </div>
 
-          {/* Quick Studio Visual Badges (Organic Pills) */}
+          {/* Quick Studio Visual Badges (Tailored Architectural Radius) */}
           <div className="flex flex-wrap lg:flex-col items-start lg:items-end gap-2 font-mono text-xs text-espresso font-semibold">
-            <span className="px-3.5 py-1.5 bg-travertine border border-hairline rounded-full">
+            <span className="px-3.5 py-1.5 bg-travertine border border-hairline rounded-md">
               ✓ CAPPED AT 8 PRACTITIONERS
             </span>
-            <span className="px-3.5 py-1.5 bg-travertine border border-hairline rounded-full">
+            <span className="px-3.5 py-1.5 bg-travertine border border-hairline rounded-md">
               ✓ 100% PERSONAL TEACHING
             </span>
-            <span className="px-3.5 py-1.5 bg-travertine border border-hairline rounded-full">
+            <span className="px-3.5 py-1.5 bg-travertine border border-hairline rounded-md">
               ✓ IN-STUDIO + VIRTUAL STREAMS
             </span>
           </div>
         </div>
 
-        {/* 6 Rich Visual Image Cards Grid - Generous Rounded Curves */}
+        {/* 6 Rich Visual Image Cards Grid */}
         <div className="p-6 sm:p-10 lg:p-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 bg-travertine/10 border-b border-hairline">
           {DISCIPLINES.map((discipline, index) => {
             const isModalOpen = selectedDiscipline === index
@@ -59,11 +59,11 @@ export const Disciplines: FC<DisciplinesProps> = ({ onOpenDrawer }) => {
             return (
               <div
                 key={discipline.name}
-                className="group flex flex-col justify-between bg-linen hover:bg-travertine/30 transition-all border border-hairline/80 hover:border-espresso rounded-3xl overflow-hidden shadow-sm hover:shadow-md"
+                className="group flex flex-col justify-between bg-linen hover:bg-travertine/30 transition-all border border-hairline/80 hover:border-espresso rounded-xl overflow-hidden shadow-sm hover:shadow-md"
               >
                 <div>
-                  {/* Photo Container with Visual Watermark & Circular Roman Stamp */}
-                  <div className="relative aspect-[16/11] overflow-hidden bg-travertine border-b border-hairline rounded-t-2xl">
+                  {/* Photo Container with Visual Watermark & Roman Stamp */}
+                  <div className="relative aspect-[16/11] overflow-hidden bg-travertine border-b border-hairline rounded-t-xl">
                     <img
                       src={discipline.image}
                       alt={discipline.name}
@@ -78,7 +78,7 @@ export const Disciplines: FC<DisciplinesProps> = ({ onOpenDrawer }) => {
                     </div>
 
                     {/* Top Discipline Category Badge */}
-                    <div className="absolute top-3.5 right-3.5 bg-bark/85 text-linen px-3 py-1 font-mono text-[9px] uppercase tracking-wider font-semibold border border-linen/20 rounded-full shadow-xs">
+                    <div className="absolute top-3.5 right-3.5 bg-bark/85 text-linen px-2.5 py-1 font-mono text-[9px] uppercase tracking-wider font-semibold border border-linen/20 rounded-md shadow-xs">
                       {discipline.badge}
                     </div>
 
@@ -96,12 +96,12 @@ export const Disciplines: FC<DisciplinesProps> = ({ onOpenDrawer }) => {
                       {discipline.desc}
                     </p>
 
-                    {/* Visual Monospace Tags - Pill Shaped */}
+                    {/* Visual Monospace Tags */}
                     <div className="mt-4 flex flex-wrap gap-1.5">
                       {discipline.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="font-mono text-[9px] uppercase tracking-wider px-3 py-1 bg-travertine text-espresso border border-hairline font-bold rounded-full"
+                          className="font-mono text-[9px] uppercase tracking-wider px-2.5 py-1 bg-travertine text-espresso border border-hairline font-bold rounded-md"
                         >
                           {tag}
                         </span>

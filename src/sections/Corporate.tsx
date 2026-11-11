@@ -69,7 +69,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
         {/* Section Header */}
         <div className="p-6 sm:p-10 lg:p-14 border-b border-[#343E34]">
           <div className="flex items-center gap-2">
-            <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/20 border border-terra/40 rounded-full">
+            <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/20 border border-terra/40 rounded-md">
               05
             </span>
             <span className="font-mono text-xs uppercase tracking-widest text-linen font-semibold">
@@ -93,13 +93,13 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
         {/* 3-Column Visual Programme Cards */}
         <div className="p-6 sm:p-10 lg:p-14 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 border-b border-[#343E34]">
           {/* Programme 01 */}
-          <div className="p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border border-[#343E34] bg-white/[0.02] rounded-3xl shadow-sm">
+          <div className="p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border border-[#343E34] bg-white/[0.02] rounded-xl shadow-sm">
             <div>
               <div className="flex items-center justify-between">
                 <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
                   01 / ON-SITE
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-linen/80 px-3 py-0.5 border border-[#343E34] rounded-full bg-white/5">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-linen/80 px-2.5 py-0.5 border border-[#343E34] rounded-md bg-white/5">
                   WEEKLY
                 </span>
               </div>
@@ -117,13 +117,13 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
           </div>
 
           {/* Programme 02 */}
-          <div className="p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border border-[#343E34] bg-white/[0.02] rounded-3xl shadow-sm">
+          <div className="p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border border-[#343E34] bg-white/[0.02] rounded-xl shadow-sm">
             <div>
               <div className="flex items-center justify-between">
                 <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
                   02 / OFFSITES
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-linen/80 px-3 py-0.5 border border-[#343E34] rounded-full bg-white/5">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-linen/80 px-2.5 py-0.5 border border-[#343E34] rounded-md bg-white/5">
                   INTENSIVE
                 </span>
               </div>
@@ -141,13 +141,13 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
           </div>
 
           {/* Programme 03 */}
-          <div className="p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border border-[#343E34] bg-white/[0.02] rounded-3xl shadow-sm">
+          <div className="p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border border-[#343E34] bg-white/[0.02] rounded-xl shadow-sm">
             <div>
               <div className="flex items-center justify-between">
                 <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
                   03 / HYBRID PASS
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-linen/80 px-3 py-0.5 border border-[#343E34] rounded-full bg-white/5">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-linen/80 px-2.5 py-0.5 border border-[#343E34] rounded-md bg-white/5">
                   FLEXIBLE
                 </span>
               </div>
@@ -270,8 +270,8 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
           </div>
 
           {/* Right: Proposal Form */}
-          <div className="lg:col-span-7 p-8 sm:p-10 lg:p-14 bg-[#232B23] rounded-3xl m-2 lg:m-6 border border-[#343E34] shadow-md">
-            <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/20 border border-terra/30 rounded-full inline-block mb-3">
+          <div className="lg:col-span-7 p-8 sm:p-10 lg:p-14 bg-[#232B23] rounded-xl m-2 lg:m-6 border border-[#343E34] shadow-md">
+            <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/20 border border-terra/30 rounded-md inline-block mb-3">
               REQUEST A CUSTOM PROPOSAL
             </span>
             <p className="text-sm font-sans text-linen/90 font-medium mb-6 leading-relaxed">
@@ -303,7 +303,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   value={formData.company}
                   onChange={handleChange}
                   placeholder="Company or organization name"
-                  className="w-full bg-[#1A201A] border border-[#343E34] hover:border-terra/40 text-linen px-4 py-3 text-sm font-sans placeholder:text-linen/30 focus:border-terra rounded-xl transition-all outline-none"
+                  className="w-full bg-[#1A201A] border border-[#343E34] hover:border-terra/40 text-linen px-4 py-3 text-sm font-sans placeholder:text-linen/30 focus:border-terra rounded-md transition-all outline-none"
                 />
               </div>
 

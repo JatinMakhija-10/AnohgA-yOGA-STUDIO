@@ -43,15 +43,15 @@ export const Hero: FC<HeroProps> = ({ onOpenDrawer }) => {
         {/* Left 7 Columns: Punchy Editorial Typography + Visual Metrics */}
         <div className="lg:col-span-7 p-6 sm:p-10 lg:p-14 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-hairline bg-linen">
           <div>
-            {/* Top Monospace Metadata & Visual Chips (Pill Contours) */}
+            {/* Top Monospace Metadata & Visual Chips */}
             <div className="flex flex-wrap items-center gap-2">
-              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3.5 py-1 bg-terra/10 border border-terra/30 rounded-full">
+              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-md">
                 ● RYT-500 LED
               </span>
-              <span className="font-mono text-xs uppercase tracking-widest text-espresso font-semibold px-3.5 py-1 bg-travertine border border-hairline rounded-full">
+              <span className="font-mono text-xs uppercase tracking-widest text-espresso font-semibold px-3 py-1 bg-travertine border border-hairline rounded-md">
                 THIRUVANMIYUR, ECR
               </span>
-              <span className="font-mono text-xs uppercase tracking-widest text-moss font-semibold px-3.5 py-1 bg-moss/10 border border-moss/30 rounded-full hidden sm:inline-block">
+              <span className="font-mono text-xs uppercase tracking-widest text-moss font-semibold px-3 py-1 bg-moss/10 border border-moss/30 rounded-md hidden sm:inline-block">
                 MAX 8 MATS / BATCH
               </span>
             </div>
@@ -131,8 +131,8 @@ export const Hero: FC<HeroProps> = ({ onOpenDrawer }) => {
             </div>
           </div>
 
-          {/* Bottom Ledger Strip - Softened 3xl Rounded Container */}
-          <div className="mt-10 pt-6 border-t border-hairline grid grid-cols-3 divide-x divide-hairline bg-travertine/40 p-6 border border-hairline rounded-3xl shadow-xs">
+          {/* Bottom Ledger Strip - Architectural Container */}
+          <div className="mt-10 pt-6 border-t border-hairline grid grid-cols-3 divide-x divide-hairline bg-travertine/40 p-6 border border-hairline rounded-xl shadow-xs">
             <div className="pr-3 sm:pr-4">
               <div className="font-serif text-3xl sm:text-4xl font-semibold text-espresso leading-none">
                 10+ <span className="text-terra text-xl">yrs</span>
@@ -162,7 +162,7 @@ export const Hero: FC<HeroProps> = ({ onOpenDrawer }) => {
 
         {/* Right 5 Columns: Large Interactive Visual Hero Image */}
         <div className="lg:col-span-5 bg-travertine relative flex flex-col justify-between p-4 sm:p-6 lg:p-8">
-          <div className="relative aspect-[4/5] lg:aspect-auto lg:h-full w-full overflow-hidden group rounded-3xl border border-hairline shadow-md">
+          <div className="relative aspect-[4/5] lg:aspect-auto lg:h-full w-full overflow-hidden group rounded-xl border border-hairline shadow-md">
             <img
               src={heroPhotos[activePhoto].src}
               alt={heroPhotos[activePhoto].title}
@@ -170,15 +170,15 @@ export const Hero: FC<HeroProps> = ({ onOpenDrawer }) => {
               loading="eager"
             />
             {/* Visual studio badge watermark */}
-            <div className="absolute top-4 right-4 bg-linen/95 backdrop-blur-xs border border-hairline px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-widest text-espresso font-bold shadow-sm rounded-full">
+            <div className="absolute top-4 right-4 bg-linen/95 backdrop-blur-xs border border-hairline px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-espresso font-bold shadow-sm rounded-md">
               {heroPhotos[activePhoto].badge}
             </div>
 
-            {/* Playful Next Slide Floating Trigger */}
+            {/* Next Slide Floating Trigger */}
             <button
               type="button"
               onClick={() => setActivePhoto((prev) => (prev + 1) % heroPhotos.length)}
-              className="absolute bottom-6 right-4 bg-bark/85 text-linen hover:bg-terra transition-colors px-3.5 py-2 font-mono text-[10px] uppercase tracking-wider flex items-center gap-2 border border-linen/30 cursor-pointer rounded-full shadow-md"
+              className="absolute bottom-6 right-4 bg-bark/85 text-linen hover:bg-terra transition-colors px-3.5 py-2 font-mono text-[10px] uppercase tracking-wider flex items-center gap-2 border border-linen/30 cursor-pointer rounded-md shadow-md"
             >
               <span>Next Frame</span>
               <span>→</span>

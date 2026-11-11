@@ -55,7 +55,7 @@ body {
 .border-r-hairline { border-right: 1px solid var(--hairline); }
 .border-l-hairline { border-left: 1px solid var(--hairline); }
 
-/* ── Buttons (Soft Organic Pill Shapes) ─────────────────────────── */
+/* ── Buttons (Architectural Soft-Edged Corners, No AI Pills) ────── */
 .btn-terra {
   display: inline-flex;
   align-items: center;
@@ -68,7 +68,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.14em;
   border: none;
-  border-radius: 9999px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
@@ -88,7 +88,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.14em;
   border: 1.5px solid var(--espresso);
-  border-radius: 9999px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
@@ -107,7 +107,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.14em;
   border: 1.5px solid var(--linen);
-  border-radius: 9999px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
@@ -182,7 +182,7 @@ body {
   letter-spacing: 0.08em;
   padding: 0.9rem 2rem;
   border: 1px solid #343E34;
-  border-radius: 9999px;
+  border-radius: 6px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s;
@@ -198,7 +198,7 @@ body {
   letter-spacing: 0.14em;
   padding: 0.5rem 1.2rem;
   border: 1px solid var(--hairline);
-  border-radius: 9999px;
+  border-radius: 6px;
   background: transparent;
   color: var(--umber);
   cursor: pointer;
@@ -218,7 +218,7 @@ body {
   letter-spacing: 0.12em;
   padding: 0.5rem 1.4rem;
   border: none;
-  border-radius: 9999px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   background: transparent;
@@ -239,7 +239,7 @@ body {
 
 /* ── Input focus & soft corners ─────────────────────────────────── */
 input, select, textarea {
-  border-radius: 10px;
+  border-radius: 6px;
 }
 input:focus, select:focus, textarea:focus {
   outline: 1px solid var(--terra);

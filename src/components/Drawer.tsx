@@ -79,13 +79,13 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
         <div>
           {/* Header Row */}
           <div className="flex items-center justify-between pb-6 border-b border-hairline">
-            <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full">
+            <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-md">
               {context.day && context.time ? 'SLOT RESERVATION' : 'FIRST CLASS FREE'}
             </span>
             <button
               type="button"
               onClick={onClose}
-              className="p-1.5 text-espresso hover:text-terra transition-colors rounded-full hover:bg-travertine/60 cursor-pointer"
+              className="p-1.5 text-espresso hover:text-terra transition-colors rounded-md hover:bg-travertine/60 cursor-pointer"
               aria-label="Close drawer"
             >
               <svg
@@ -152,7 +152,7 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Enter your full name"
-                className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-xl transition-all outline-none"
+                className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-md transition-all outline-none"
               />
             </div>
 
@@ -166,7 +166,7 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="10-digit mobile number"
-                className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-xl transition-all outline-none"
+                className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-md transition-all outline-none"
               />
             </div>
 
@@ -177,7 +177,7 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
               <select
                 value={discipline}
                 onChange={(e) => setDiscipline(e.target.value)}
-                className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-semibold rounded-xl transition-all outline-none"
+                className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-semibold rounded-md transition-all outline-none"
               >
                 <option value="">Any / Not sure yet</option>
                 <option value="Hatha Yoga &amp; Mudras">Hatha Yoga &amp; Mudras (Studio / Virtual)</option>

@@ -25,7 +25,7 @@ export const Gallery: FC = () => {
         <div className="p-6 sm:p-10 lg:p-14 border-b border-hairline flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full">
+              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-md">
                 04
               </span>
               <span className="font-mono text-xs uppercase tracking-widest text-espresso font-semibold">
@@ -69,9 +69,9 @@ export const Gallery: FC = () => {
               <figure
                 key={item.idx}
                 onClick={() => setActiveModalImage(item)}
-                className="group border border-hairline/80 bg-linen overflow-hidden flex flex-col justify-between hover:border-espresso transition-all shadow-sm hover:shadow-md cursor-pointer rounded-3xl"
+                className="group border border-hairline/80 bg-linen overflow-hidden flex flex-col justify-between hover:border-espresso transition-all shadow-sm hover:shadow-md cursor-pointer rounded-xl"
               >
-                <div className="relative aspect-[4/3] overflow-hidden bg-travertine rounded-t-3xl">
+                <div className="relative aspect-[4/3] overflow-hidden bg-travertine rounded-t-xl">
                   <img
                     src={item.src}
                     alt={item.label}
@@ -92,7 +92,7 @@ export const Gallery: FC = () => {
                   )}
 
                   {/* Top Category Badge */}
-                  <div className="absolute top-3.5 right-3.5 bg-linen/95 backdrop-blur-xs px-3 py-1 font-mono text-[9px] uppercase tracking-wider text-espresso font-bold border border-hairline rounded-full shadow-xs">
+                  <div className="absolute top-3.5 right-3.5 bg-linen/95 backdrop-blur-xs px-2.5 py-1 font-mono text-[9px] uppercase tracking-wider text-espresso font-bold border border-hairline rounded-md shadow-xs">
                     {item.category}
                   </div>
 

@@ -10,7 +10,7 @@ export const Footer: FC<FooterProps> = ({ onOpenLegal }) => {
     <footer className="bg-linen pt-16 sm:pt-20 pb-16 text-espresso transition-colors">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8">
         {/* Main Architectural Pavilion Card */}
-        <div className="bg-travertine/40 border border-hairline/80 rounded-3xl p-8 sm:p-12 lg:p-14 shadow-sm">
+        <div className="bg-travertine/40 border border-hairline/80 rounded-2xl p-8 sm:p-12 lg:p-14 shadow-sm">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-10">
             {/* Brand & Studio Philosophy (Cols 1-4) */}
             <div className="lg:col-span-4 flex flex-col justify-between">
@@ -37,7 +37,7 @@ export const Footer: FC<FooterProps> = ({ onOpenLegal }) => {
                   href="https://wa.me/918122751154"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-terra py-2.5 px-5 font-bold text-xs rounded-full shadow-xs hover:shadow-md inline-flex items-center gap-2"
+                  className="btn-terra py-2.5 px-5 font-bold text-xs shadow-xs hover:shadow-md inline-flex items-center gap-2"
                 >
                   <span>Chat with Anupriya</span>
                   <span>+91 81227 51154 ↗</span>
@@ -47,7 +47,7 @@ export const Footer: FC<FooterProps> = ({ onOpenLegal }) => {
 
             {/* Location & Access (Cols 5-7) */}
             <div className="lg:col-span-3">
-              <span className="font-mono text-[11px] uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/20 rounded-full inline-block mb-4">
+              <span className="font-mono text-[11px] uppercase tracking-widest text-terra font-bold block mb-4">
                 LOCATION &amp; ACCESS
               </span>
               <div className="text-xs text-espresso space-y-2 font-sans leading-relaxed">
@@ -65,16 +65,16 @@ export const Footer: FC<FooterProps> = ({ onOpenLegal }) => {
                 </span>
                 <a
                   href="mailto:Anohgayoga@gmail.com"
-                  className="font-mono text-xs text-espresso hover:text-terra font-bold transition-colors inline-block px-3 py-1.5 bg-linen/80 rounded-full border border-hairline/60"
+                  className="font-mono text-xs text-espresso hover:text-terra font-bold transition-colors underline-offset-4 hover:underline"
                 >
-                  Anohgayoga@gmail.com
+                  Anohgayoga@gmail.com ↗
                 </a>
               </div>
             </div>
 
             {/* Quick Index Links (Cols 8-9) */}
             <div className="lg:col-span-2">
-              <span className="font-mono text-[11px] uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/20 rounded-full inline-block mb-4">
+              <span className="font-mono text-[11px] uppercase tracking-widest text-terra font-bold block mb-4">
                 STUDIO INDEX
               </span>
               <ul className="space-y-2.5 text-xs font-sans list-none p-0 m-0">
@@ -119,27 +119,27 @@ export const Footer: FC<FooterProps> = ({ onOpenLegal }) => {
 
             {/* Operating Hours (Cols 10-12) */}
             <div className="lg:col-span-3">
-              <span className="font-mono text-[11px] uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/20 rounded-full inline-block mb-4">
+              <span className="font-mono text-[11px] uppercase tracking-widest text-terra font-bold block mb-4">
                 PRACTICE HOURS
               </span>
               <div className="space-y-2 text-xs font-mono">
-                <div className="flex items-center justify-between p-2 px-3 rounded-xl bg-linen/80 border border-hairline/60">
+                <div className="flex items-center justify-between p-2.5 px-3 rounded-md bg-linen/80 border border-hairline/60">
                   <span className="font-semibold text-espresso">Mon – Fri Morning</span>
                   <span className="font-bold text-terra">06:00 – 11:30 AM</span>
                 </div>
-                <div className="flex items-center justify-between p-2 px-3 rounded-xl bg-linen/80 border border-hairline/60">
+                <div className="flex items-center justify-between p-2.5 px-3 rounded-md bg-linen/80 border border-hairline/60">
                   <span className="font-semibold text-espresso">Mon – Fri Evening</span>
                   <span className="font-bold text-terra">05:00 – 07:00 PM</span>
                 </div>
-                <div className="flex items-center justify-between p-2 px-3 rounded-xl bg-linen/80 border border-hairline/60">
+                <div className="flex items-center justify-between p-2.5 px-3 rounded-md bg-linen/80 border border-hairline/60">
                   <span className="font-semibold text-espresso">Saturday Studio</span>
                   <span className="font-bold text-terra">06:00 – 08:30 AM</span>
                 </div>
-                <div className="flex items-center justify-between p-2 px-3 rounded-xl bg-linen/80 border border-hairline/60">
+                <div className="flex items-center justify-between p-2.5 px-3 rounded-md bg-linen/80 border border-hairline/60">
                   <span className="font-semibold text-espresso">Sat &amp; Sun Virtual</span>
                   <span className="font-bold text-terra">10:00 – 11:15 AM</span>
                 </div>
-                <div className="flex items-center justify-between p-2 px-3 rounded-xl bg-linen/40 border border-hairline/40">
+                <div className="flex items-center justify-between p-2.5 px-3 rounded-md bg-linen/40 border border-hairline/40">
                   <span className="text-umber">Sunday Studio</span>
                   <span className="text-umber font-semibold">Rest / Private</span>
                 </div>
@@ -147,34 +147,37 @@ export const Footer: FC<FooterProps> = ({ onOpenLegal }) => {
             </div>
           </div>
 
-          {/* Bottom Bar: Legal Documents & Copyright */}
+          {/* Bottom Bar: Clean Editorial Text Links & Copyright */}
           <div className="pt-8 border-t border-hairline/70 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-            <div className="flex flex-wrap items-center justify-center gap-2 font-mono text-xs text-umber">
+            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 font-mono text-xs text-umber">
               <button
                 type="button"
                 onClick={() => onOpenLegal('privacy')}
-                className="px-3 py-1 bg-linen/70 hover:bg-linen border border-hairline/60 rounded-full transition-colors cursor-pointer text-espresso font-semibold"
+                className="hover:text-terra transition-colors cursor-pointer underline-offset-4 hover:underline"
               >
                 Privacy Policy
               </button>
+              <span className="text-hairline/80 select-none">/</span>
               <button
                 type="button"
                 onClick={() => onOpenLegal('terms')}
-                className="px-3 py-1 bg-linen/70 hover:bg-linen border border-hairline/60 rounded-full transition-colors cursor-pointer text-espresso font-semibold"
+                className="hover:text-terra transition-colors cursor-pointer underline-offset-4 hover:underline"
               >
                 Terms of Practice
               </button>
+              <span className="text-hairline/80 select-none">/</span>
               <button
                 type="button"
                 onClick={() => onOpenLegal('refund')}
-                className="px-3 py-1 bg-linen/70 hover:bg-linen border border-hairline/60 rounded-full transition-colors cursor-pointer text-espresso font-semibold"
+                className="hover:text-terra transition-colors cursor-pointer underline-offset-4 hover:underline"
               >
                 Refund Policy
               </button>
+              <span className="text-hairline/80 select-none">/</span>
               <button
                 type="button"
                 onClick={() => onOpenLegal('medical')}
-                className="px-3 py-1 bg-linen/70 hover:bg-linen border border-hairline/60 rounded-full transition-colors cursor-pointer text-espresso font-semibold"
+                className="hover:text-terra transition-colors cursor-pointer underline-offset-4 hover:underline"
               >
                 Medical Disclaimer
               </button>

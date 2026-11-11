@@ -84,7 +84,7 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
         <div className="p-6 sm:p-10 lg:p-14 border-b border-hairline flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full">
+              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-md">
                 06
               </span>
               <span className="font-mono text-xs uppercase tracking-widest text-espresso font-semibold">
@@ -106,7 +106,7 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
           </div>
 
           <div className="flex items-center gap-3 font-mono text-xs text-espresso font-bold">
-            <span className="px-4 py-2 bg-travertine border border-hairline rounded-full shadow-xs">
+            <span className="px-4 py-2 bg-travertine border border-hairline rounded-md shadow-xs">
               ⚡ 2-HOUR WHATSAPP CONFIRMATION
             </span>
           </div>
@@ -115,13 +115,13 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
         {/* Dual Form Architectural Grid with Harmonized Design & Soft Edges */}
         <div className="p-6 sm:p-10 lg:p-14 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
           {/* Form 01: Lock in Your Plan */}
-          <div className="p-8 sm:p-10 flex flex-col justify-between bg-linen border border-hairline/90 rounded-3xl shadow-sm hover:shadow-md transition-all">
+          <div className="p-8 sm:p-10 flex flex-col justify-between bg-linen border border-hairline/90 rounded-xl shadow-sm hover:shadow-md transition-all">
             <div>
               <div className="flex items-center justify-between pb-5 border-b border-hairline">
-                <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full">
+                <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-md">
                   OPTION A
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-espresso font-bold px-3 py-1 bg-travertine border border-hairline rounded-full">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-espresso font-bold px-2.5 py-1 bg-travertine border border-hairline rounded-md">
                   MEMBERSHIP LOCK-IN
                 </span>
               </div>
@@ -157,7 +157,7 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     value={planName}
                     onChange={(e) => setPlanName(e.target.value)}
                     placeholder="Enter your full name"
-                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-xl transition-all outline-none"
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-md transition-all outline-none"
                   />
                 </div>
 
@@ -171,7 +171,7 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     value={planPhone}
                     onChange={(e) => setPlanPhone(e.target.value)}
                     placeholder="10-digit mobile number"
-                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-xl transition-all outline-none"
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-md transition-all outline-none"
                   />
                 </div>
 
@@ -185,7 +185,7 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                       setPlanChoice(e.target.value)
                       onPlanChange(e.target.value)
                     }}
-                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-semibold rounded-xl transition-all outline-none"
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-semibold rounded-md transition-all outline-none"
                   >
                     {PLAN_NAMES.map((p) => (
                       <option key={p} value={p}>
@@ -204,7 +204,7 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     value={planNotes}
                     onChange={(e) => setPlanNotes(e.target.value)}
                     placeholder="Physical considerations, batch timing preferences, or goals..."
-                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-xl transition-all outline-none"
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-md transition-all outline-none"
                   />
                 </div>
 
@@ -235,13 +235,13 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
           </div>
 
           {/* Form 02: Book First Class Free */}
-          <div className="p-8 sm:p-10 flex flex-col justify-between bg-linen border border-hairline/90 rounded-3xl shadow-sm hover:shadow-md transition-all">
+          <div className="p-8 sm:p-10 flex flex-col justify-between bg-linen border border-hairline/90 rounded-xl shadow-sm hover:shadow-md transition-all">
             <div>
               <div className="flex items-center justify-between pb-5 border-b border-hairline">
-                <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full">
+                <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-md">
                   OPTION B
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-espresso font-bold px-3 py-1 bg-travertine border border-hairline rounded-full">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-espresso font-bold px-2.5 py-1 bg-travertine border border-hairline rounded-md">
                   COMPLIMENTARY FIRST CLASS
                 </span>
               </div>
@@ -277,7 +277,7 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     value={trialName}
                     onChange={(e) => setTrialName(e.target.value)}
                     placeholder="Enter your full name"
-                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-xl transition-all outline-none"
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-md transition-all outline-none"
                   />
                 </div>
 
@@ -291,7 +291,7 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     value={trialPhone}
                     onChange={(e) => setTrialPhone(e.target.value)}
                     placeholder="10-digit mobile number"
-                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-xl transition-all outline-none"
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-md transition-all outline-none"
                   />
                 </div>
 
@@ -302,7 +302,7 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                   <select
                     value={trialDiscipline}
                     onChange={(e) => setTrialDiscipline(e.target.value)}
-                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-semibold rounded-xl transition-all outline-none"
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-semibold rounded-md transition-all outline-none"
                   >
                     <option value="Hatha Yoga (Free First Class)">
                       Hatha Yoga (Studio) — 100% Free First Class
@@ -334,7 +334,7 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     value={trialSlot}
                     onChange={(e) => setTrialSlot(e.target.value)}
                     placeholder="Preferred batch time (e.g. 06:00 AM, 07:30 AM, or 06:00 PM)"
-                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-xl transition-all outline-none"
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-md transition-all outline-none"
                   />
                 </div>
 

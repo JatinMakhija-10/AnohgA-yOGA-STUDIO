@@ -28,7 +28,7 @@ export const StickyConversionBar: FC<StickyConversionBarProps> = ({ onOpenDrawer
             href="https://wa.me/918122751154?text=Hi%20Anupriya!%20I'd%20like%20to%20enquire%20about%20a%20class%20at%20Anohga%20Yoga%20Studio."
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2.5 px-3.5 bg-travertine border border-hairline text-espresso hover:text-terra font-mono text-xs font-bold rounded-full shadow-xs"
+            className="p-2.5 px-3.5 bg-travertine border border-hairline text-espresso hover:text-terra font-mono text-xs font-bold rounded-md shadow-xs"
             title="Chat on WhatsApp"
             aria-label="Chat on WhatsApp"
           >

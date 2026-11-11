@@ -34,7 +34,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
         <div className="p-6 sm:p-10 lg:p-14 border-b border-hairline flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full">
+              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-md">
                 03
               </span>
               <span className="font-mono text-xs uppercase tracking-widest text-espresso font-semibold">
@@ -53,12 +53,12 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
             </p>
           </div>
 
-          {/* Billing Cadence Toggle - Organic Pill Switcher */}
-          <div className="flex items-center gap-1.5 border border-hairline p-1 bg-travertine/80 self-start md:self-auto rounded-full shadow-inner">
+          {/* Billing Cadence Toggle - Architectural Switcher */}
+          <div className="flex items-center gap-1.5 border border-hairline p-1 bg-travertine/80 self-start md:self-auto rounded-md shadow-inner">
             <button
               type="button"
               onClick={() => setBillingCycle('monthly')}
-              className={`toggle-btn font-bold cursor-pointer rounded-full px-4 py-2 ${
+              className={`toggle-btn font-bold cursor-pointer rounded-md px-4 py-2 ${
                 billingCycle === 'monthly' ? 'active shadow-sm' : ''
               }`}
             >
@@ -67,7 +67,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
             <button
               type="button"
               onClick={() => setBillingCycle('quarterly')}
-              className={`toggle-btn font-bold cursor-pointer rounded-full px-4 py-2 ${
+              className={`toggle-btn font-bold cursor-pointer rounded-md px-4 py-2 ${
                 billingCycle === 'quarterly' ? 'active shadow-sm' : ''
               }`}
             >
@@ -79,7 +79,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
         {/* ── Visual Studio Tuition Guarantee Highlights ── */}
         <div className="p-6 sm:p-10 lg:p-12 bg-travertine/20 border-b border-hairline">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 text-center">
-            <div className="p-6 bg-linen rounded-2xl border border-hairline/80 shadow-xs">
+            <div className="p-6 bg-linen rounded-lg border border-hairline/80 shadow-xs">
               <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold block">
                 ₹0 ADMISSION FEE
               </span>
@@ -87,7 +87,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
                 Only class tuition applies
               </span>
             </div>
-            <div className="p-6 bg-linen rounded-2xl border border-hairline/80 shadow-xs">
+            <div className="p-6 bg-linen rounded-lg border border-hairline/80 shadow-xs">
               <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold block">
                 FLEXIBLE MAKE-UPS
               </span>
@@ -95,7 +95,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
                 Roll slots within the month
               </span>
             </div>
-            <div className="p-6 bg-linen rounded-2xl border border-hairline/80 shadow-xs">
+            <div className="p-6 bg-linen rounded-lg border border-hairline/80 shadow-xs">
               <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold block">
                 DIRECT UPI SETTLEMENT
               </span>
@@ -103,7 +103,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
                 GPay / PhonePe / Cash
               </span>
             </div>
-            <div className="p-6 bg-linen rounded-2xl border border-hairline/80 shadow-xs">
+            <div className="p-6 bg-linen rounded-lg border border-hairline/80 shadow-xs">
               <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold block">
                 AERIAL TRIAL REFUND
               </span>
@@ -127,7 +127,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
                       {groupName}
                     </span>
                   </div>
-                  <span className="font-mono text-[11px] uppercase tracking-wider text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full">
+                  <span className="font-mono text-[11px] uppercase tracking-wider text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-md">
                     {billingCycle === 'monthly' ? 'MONTHLY CADENCE' : 'QUARTERLY UPFRONT (SAVE UP TO ₹1,900)'}
                   </span>
                 </div>
@@ -142,7 +142,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
                     return (
                       <div
                         key={plan.name}
-                        className={`p-7 border flex flex-col justify-between transition-all bg-linen rounded-3xl ${
+                        className={`p-7 border flex flex-col justify-between transition-all bg-linen rounded-xl ${
                           isPopular || isBestValue
                             ? 'border-terra shadow-md bg-travertine/10'
                             : 'border-hairline hover:border-espresso shadow-xs'
@@ -153,7 +153,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
                           <div className="flex items-center justify-between min-h-[26px] mb-3">
                             {plan.tag ? (
                               <span
-                                className={`font-mono text-[9px] uppercase tracking-widest px-3 py-1 font-bold rounded-full ${
+                                className={`font-mono text-[9px] uppercase tracking-widest px-2.5 py-1 font-bold rounded-md ${
                                   isPopular
                                     ? 'bg-terra text-linen'
                                     : 'bg-moss text-linen'
@@ -167,7 +167,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
                               </span>
                             )}
                             {billingCycle === 'quarterly' && plan.quarterlySave > 0 && (
-                              <span className="font-mono text-[10px] text-moss font-bold px-2 py-0.5 bg-moss/10 rounded-full">
+                              <span className="font-mono text-[10px] text-moss font-bold px-2 py-0.5 bg-moss/10 rounded-md">
                                 Save ₹{plan.quarterlySave}
                               </span>
                             )}
@@ -225,7 +225,7 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
         <div className="p-6 sm:p-10 lg:p-14 border-t border-hairline bg-travertine/20">
           <div className="max-w-3xl">
             <div className="flex items-center gap-2">
-              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full">
+              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-md">
                 FAQ
               </span>
               <span className="font-mono text-xs uppercase tracking-widest text-espresso font-semibold">

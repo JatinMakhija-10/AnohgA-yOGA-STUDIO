@@ -81,10 +81,10 @@ export const TuitionCalculator: FC<TuitionCalculatorProps> = ({ onToast }) => {
   }
 
   return (
-    <div className="bg-linen border border-hairline/80 p-8 sm:p-10 my-8 shadow-sm rounded-3xl">
+    <div className="bg-linen border border-hairline/80 p-8 sm:p-10 my-8 shadow-sm rounded-xl">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-hairline mb-6">
         <div>
-          <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full inline-block mb-2">
+          <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-md inline-block mb-2">
             CUSTOM PACKAGE CALCULATOR
           </span>
           <h4 className="font-serif text-3xl font-bold text-espresso mt-1">
@@ -96,11 +96,11 @@ export const TuitionCalculator: FC<TuitionCalculatorProps> = ({ onToast }) => {
         </div>
 
         {/* Cadence switch */}
-        <div className="flex items-center gap-1.5 border border-hairline p-1 bg-travertine self-start md:self-auto font-mono text-xs rounded-full shadow-inner">
+        <div className="flex items-center gap-1.5 border border-hairline p-1 bg-travertine self-start md:self-auto font-mono text-xs rounded-md shadow-inner">
           <button
             type="button"
             onClick={() => setIsQuarterly(false)}
-            className={`px-4 py-1.5 font-bold cursor-pointer transition-all rounded-full ${
+            className={`px-4 py-1.5 font-bold cursor-pointer transition-all rounded-md ${
               !isQuarterly ? 'bg-espresso text-linen shadow-xs' : 'text-umber hover:text-espresso'
             }`}
           >
@@ -109,7 +109,7 @@ export const TuitionCalculator: FC<TuitionCalculatorProps> = ({ onToast }) => {
           <button
             type="button"
             onClick={() => setIsQuarterly(true)}
-            className={`px-4 py-1.5 font-bold cursor-pointer transition-all rounded-full ${
+            className={`px-4 py-1.5 font-bold cursor-pointer transition-all rounded-md ${
               isQuarterly ? 'bg-terra text-linen shadow-xs' : 'text-umber hover:text-espresso'
             }`}
           >
@@ -133,7 +133,7 @@ export const TuitionCalculator: FC<TuitionCalculatorProps> = ({ onToast }) => {
                   key={num}
                   type="button"
                   onClick={() => setHathaDays(num)}
-                  className={`py-2.5 border transition-all cursor-pointer rounded-xl ${
+                  className={`py-2.5 border transition-all cursor-pointer rounded-md ${
                     hathaDays === num
                       ? 'bg-espresso text-linen border-espresso shadow-xs'
                       : 'bg-travertine/40 text-espresso border-hairline hover:bg-travertine'
@@ -157,7 +157,7 @@ export const TuitionCalculator: FC<TuitionCalculatorProps> = ({ onToast }) => {
                   key={num}
                   type="button"
                   onClick={() => setAerialDays(num)}
-                  className={`py-2.5 border transition-all cursor-pointer rounded-xl ${
+                  className={`py-2.5 border transition-all cursor-pointer rounded-md ${
                     aerialDays === num
                       ? 'bg-espresso text-linen border-espresso shadow-xs'
                       : 'bg-travertine/40 text-espresso border-hairline hover:bg-travertine'
@@ -169,14 +169,14 @@ export const TuitionCalculator: FC<TuitionCalculatorProps> = ({ onToast }) => {
             </div>
           </div>
 
-          <div className="p-3.5 bg-travertine/40 border border-hairline font-mono text-[11px] text-espresso font-semibold flex items-center justify-between rounded-xl">
+          <div className="p-3.5 bg-travertine/40 border border-hairline font-mono text-[11px] text-espresso font-semibold flex items-center justify-between rounded-md">
             <span>SELECTED: {calc.name}</span>
             <span className="text-terra font-bold">~{calc.totalClassesPerMonth} classes/mo</span>
           </div>
         </div>
 
         {/* Price Output & CTA */}
-        <div className="lg:col-span-5 bg-travertine/60 border border-hairline p-6 sm:p-8 flex flex-col justify-between rounded-2xl shadow-sm">
+        <div className="lg:col-span-5 bg-travertine/60 border border-hairline p-6 sm:p-8 flex flex-col justify-between rounded-lg shadow-sm">
           <div>
             <span className="font-mono text-[10px] uppercase tracking-wider text-umber font-bold block">
               TOTAL ESTIMATED TUITION
@@ -191,7 +191,7 @@ export const TuitionCalculator: FC<TuitionCalculatorProps> = ({ onToast }) => {
             </div>
 
             {isQuarterly && calc.savings > 0 && (
-              <div className="mt-2 inline-flex items-center gap-1.5 font-mono text-xs text-moss font-bold bg-moss/10 px-3 py-1 border border-moss/20 rounded-full">
+              <div className="mt-2 inline-flex items-center gap-1.5 font-mono text-xs text-moss font-bold bg-moss/10 px-3 py-1 border border-moss/20 rounded-md">
                 <span>✓ Includes ₹{calc.savings.toLocaleString('en-IN')} upfront quarterly savings</span>
               </div>
             )}

@@ -95,7 +95,7 @@ export const ClassMatcher: FC<ClassMatcherProps> = ({ onOpenDrawer, onToast }) =
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-hairline mb-8">
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full">
+              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-md">
                 RECOMMENDATION ENGINE
               </span>
               <span className="font-mono text-xs uppercase tracking-widest text-espresso font-semibold">
@@ -114,7 +114,7 @@ export const ClassMatcher: FC<ClassMatcherProps> = ({ onOpenDrawer, onToast }) =
           </div>
 
           {step < 4 && (
-            <div className="font-mono text-xs font-bold text-espresso bg-linen px-4 py-2 border border-hairline self-start lg:self-auto rounded-full shadow-xs">
+            <div className="font-mono text-xs font-bold text-espresso bg-linen px-4 py-2 border border-hairline self-start lg:self-auto rounded-md shadow-xs">
               STEP {step} OF 3
             </div>
           )}
@@ -153,10 +153,10 @@ export const ClassMatcher: FC<ClassMatcherProps> = ({ onOpenDrawer, onToast }) =
                   key={item.label}
                   type="button"
                   onClick={() => handleSelectGoal(item.label)}
-                  className="p-5 border border-hairline bg-linen hover:border-terra hover:shadow-md text-left transition-all cursor-pointer group flex flex-col justify-between rounded-2xl"
+                  className="p-5 border border-hairline bg-linen hover:border-terra hover:shadow-md text-left transition-all cursor-pointer group flex flex-col justify-between rounded-lg"
                 >
                   <div>
-                    <span className="font-mono text-[9px] uppercase tracking-wider text-terra font-bold px-3 py-0.5 bg-terra/10 border border-terra/20 inline-block mb-3 rounded-full">
+                    <span className="font-mono text-[9px] uppercase tracking-wider text-terra font-bold px-2.5 py-0.5 bg-terra/10 border border-terra/20 inline-block mb-3 rounded-md">
                       {item.badge}
                     </span>
                     <h4 className="font-serif text-xl font-bold text-espresso group-hover:text-terra transition-colors leading-snug">
@@ -209,7 +209,7 @@ export const ClassMatcher: FC<ClassMatcherProps> = ({ onOpenDrawer, onToast }) =
                   key={item.label}
                   type="button"
                   onClick={() => handleSelectExperience(item.label)}
-                  className="p-6 border border-hairline bg-linen hover:border-terra hover:shadow-md text-left transition-all cursor-pointer group flex flex-col justify-between rounded-2xl"
+                  className="p-6 border border-hairline bg-linen hover:border-terra hover:shadow-md text-left transition-all cursor-pointer group flex flex-col justify-between rounded-lg"
                 >
                   <div>
                     <h4 className="font-serif text-2xl font-bold text-espresso group-hover:text-terra transition-colors">
@@ -266,7 +266,7 @@ export const ClassMatcher: FC<ClassMatcherProps> = ({ onOpenDrawer, onToast }) =
                   key={item.label}
                   type="button"
                   onClick={() => handleSelectTiming(item.label)}
-                  className="p-5 border border-hairline bg-linen hover:border-terra hover:shadow-md text-left transition-all cursor-pointer group flex flex-col justify-between rounded-2xl"
+                  className="p-5 border border-hairline bg-linen hover:border-terra hover:shadow-md text-left transition-all cursor-pointer group flex flex-col justify-between rounded-lg"
                 >
                   <div>
                     <h4 className="font-serif text-xl font-bold text-espresso group-hover:text-terra transition-colors">
@@ -287,7 +287,7 @@ export const ClassMatcher: FC<ClassMatcherProps> = ({ onOpenDrawer, onToast }) =
 
         {/* Step 4: Result Card */}
         {step === 4 && (
-          <div className="border border-terra/60 bg-linen p-8 sm:p-10 shadow-lg rounded-3xl">
+          <div className="border border-terra/60 bg-linen p-8 sm:p-10 shadow-lg rounded-xl">
             <div className="flex items-center justify-between pb-4 border-b border-hairline mb-6">
               <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold">
                 ✓ YOUR MATCHED PRACTICE RECOMMENDATION
@@ -302,7 +302,7 @@ export const ClassMatcher: FC<ClassMatcherProps> = ({ onOpenDrawer, onToast }) =
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-5 aspect-[16/11] overflow-hidden border border-hairline bg-travertine rounded-2xl shadow-sm">
+              <div className="lg:col-span-5 aspect-[16/11] overflow-hidden border border-hairline bg-travertine rounded-lg shadow-sm">
                 <img
                   src={rec.image}
                   alt={rec.title}
