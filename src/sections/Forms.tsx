@@ -156,8 +156,8 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     required
                     value={planName}
                     onChange={(e) => setPlanName(e.target.value)}
-                    placeholder="e.g. Radhika Raman"
-                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 rounded-xl transition-all outline-none"
+                    placeholder="Enter your full name"
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-xl transition-all outline-none"
                   />
                 </div>
 
@@ -170,8 +170,8 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     required
                     value={planPhone}
                     onChange={(e) => setPlanPhone(e.target.value)}
-                    placeholder="+91 98765 43210"
-                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 rounded-xl transition-all outline-none"
+                    placeholder="10-digit mobile number"
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-xl transition-all outline-none"
                   />
                 </div>
 
@@ -203,8 +203,8 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     rows={2}
                     value={planNotes}
                     onChange={(e) => setPlanNotes(e.target.value)}
-                    placeholder="e.g. Prefer 07:30 AM slot, beginner in aerial silks..."
-                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 rounded-xl transition-all outline-none"
+                    placeholder="Physical considerations, batch timing preferences, or goals..."
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-xl transition-all outline-none"
                   />
                 </div>
 
@@ -276,8 +276,8 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     required
                     value={trialName}
                     onChange={(e) => setTrialName(e.target.value)}
-                    placeholder="e.g. Siddharth Menon"
-                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 rounded-xl transition-all outline-none"
+                    placeholder="Enter your full name"
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-xl transition-all outline-none"
                   />
                 </div>
 
@@ -290,8 +290,8 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     required
                     value={trialPhone}
                     onChange={(e) => setTrialPhone(e.target.value)}
-                    placeholder="+91 98765 43210"
-                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 rounded-xl transition-all outline-none"
+                    placeholder="10-digit mobile number"
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-xl transition-all outline-none"
                   />
                 </div>
 
@@ -333,8 +333,8 @@ export const Forms: FC<FormsProps> = ({ selectedPlan, onPlanChange, onToast }) =
                     type="text"
                     value={trialSlot}
                     onChange={(e) => setTrialSlot(e.target.value)}
-                    placeholder="e.g. Tuesday morning 7:30 AM"
-                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 rounded-xl transition-all outline-none"
+                    placeholder="Preferred batch time (e.g. 06:00 AM, 07:30 AM, or 06:00 PM)"
+                    className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-xl transition-all outline-none"
                   />
                 </div>
 

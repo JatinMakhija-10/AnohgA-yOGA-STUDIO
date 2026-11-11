@@ -149,31 +149,33 @@ export const Disciplines: FC<DisciplinesProps> = ({ onOpenDrawer }) => {
           })}
         </div>
 
-        {/* Visual Studio Equipment & Atmosphere Banner Strip */}
-        <div className="p-6 sm:p-10 bg-travertine/40 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center divide-x divide-hairline">
-          <div className="px-2">
-            <span className="font-serif text-2xl font-bold text-espresso block">100% Cotton</span>
-            <span className="font-mono text-[10px] uppercase tracking-wider text-umber font-semibold mt-1 block">
-              Tested Aerial Silks
-            </span>
-          </div>
-          <div className="px-2">
-            <span className="font-serif text-2xl font-bold text-espresso block">Natural Air</span>
-            <span className="font-mono text-[10px] uppercase tracking-wider text-umber font-semibold mt-1 block">
-              Cross-Ventilated ECR Breeze
-            </span>
-          </div>
-          <div className="px-2">
-            <span className="font-serif text-2xl font-bold text-espresso block">Non-Slip</span>
-            <span className="font-mono text-[10px] uppercase tracking-wider text-umber font-semibold mt-1 block">
-              Cork &amp; Rubber Mats
-            </span>
-          </div>
-          <div className="px-2">
-            <span className="font-serif text-2xl font-bold text-espresso block">2-Hr Slot</span>
-            <span className="font-mono text-[10px] uppercase tracking-wider text-umber font-semibold mt-1 block">
-              WhatsApp Confirmation
-            </span>
+        {/* Visual Studio Equipment & Atmosphere Highlights */}
+        <div className="p-6 sm:p-10 lg:p-12 bg-travertine/20">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 text-center">
+            <div className="p-6 bg-linen rounded-2xl border border-hairline/80 shadow-xs">
+              <span className="font-serif text-2xl font-bold text-espresso block">100% Cotton</span>
+              <span className="font-mono text-[10px] uppercase tracking-wider text-umber font-semibold mt-1.5 block">
+                Tested Aerial Silks
+              </span>
+            </div>
+            <div className="p-6 bg-linen rounded-2xl border border-hairline/80 shadow-xs">
+              <span className="font-serif text-2xl font-bold text-espresso block">Natural Air</span>
+              <span className="font-mono text-[10px] uppercase tracking-wider text-umber font-semibold mt-1.5 block">
+                Cross-Ventilated ECR Breeze
+              </span>
+            </div>
+            <div className="p-6 bg-linen rounded-2xl border border-hairline/80 shadow-xs">
+              <span className="font-serif text-2xl font-bold text-espresso block">Non-Slip</span>
+              <span className="font-mono text-[10px] uppercase tracking-wider text-umber font-semibold mt-1.5 block">
+                Cork &amp; Rubber Mats
+              </span>
+            </div>
+            <div className="p-6 bg-linen rounded-2xl border border-hairline/80 shadow-xs">
+              <span className="font-serif text-2xl font-bold text-espresso block">2-Hr Slot</span>
+              <span className="font-mono text-[10px] uppercase tracking-wider text-umber font-semibold mt-1.5 block">
+                WhatsApp Confirmation
+              </span>
+            </div>
           </div>
         </div>
       </div>

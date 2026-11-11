@@ -76,39 +76,41 @@ export const Pricing: FC<PricingProps> = ({ onSelectPlan, onToast }) => {
           </div>
         </div>
 
-        {/* ── Visual Studio Tuition Guarantee Banner ── */}
-        <div className="p-6 sm:p-8 bg-travertine/40 border-b border-hairline grid grid-cols-2 sm:grid-cols-4 gap-4 text-center divide-x divide-hairline">
-          <div>
-            <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold block">
-              ₹0 ADMISSION FEE
-            </span>
-            <span className="font-mono text-[10px] text-umber block mt-0.5">
-              Only class tuition applies
-            </span>
-          </div>
-          <div>
-            <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold block">
-              FLEXIBLE MAKE-UPS
-            </span>
-            <span className="font-mono text-[10px] text-umber block mt-0.5">
-              Roll slots within the month
-            </span>
-          </div>
-          <div>
-            <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold block">
-              DIRECT UPI SETTLEMENT
-            </span>
-            <span className="font-mono text-[10px] text-umber block mt-0.5">
-              GPay / PhonePe / Cash
-            </span>
-          </div>
-          <div>
-            <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold block">
-              AERIAL TRIAL REFUND
-            </span>
-            <span className="font-mono text-[10px] text-umber block mt-0.5">
-              ₹700 credited on sign-up
-            </span>
+        {/* ── Visual Studio Tuition Guarantee Highlights ── */}
+        <div className="p-6 sm:p-10 lg:p-12 bg-travertine/20 border-b border-hairline">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 text-center">
+            <div className="p-6 bg-linen rounded-2xl border border-hairline/80 shadow-xs">
+              <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold block">
+                ₹0 ADMISSION FEE
+              </span>
+              <span className="font-mono text-[10px] text-umber font-semibold block mt-1">
+                Only class tuition applies
+              </span>
+            </div>
+            <div className="p-6 bg-linen rounded-2xl border border-hairline/80 shadow-xs">
+              <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold block">
+                FLEXIBLE MAKE-UPS
+              </span>
+              <span className="font-mono text-[10px] text-umber font-semibold block mt-1">
+                Roll slots within the month
+              </span>
+            </div>
+            <div className="p-6 bg-linen rounded-2xl border border-hairline/80 shadow-xs">
+              <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold block">
+                DIRECT UPI SETTLEMENT
+              </span>
+              <span className="font-mono text-[10px] text-umber font-semibold block mt-1">
+                GPay / PhonePe / Cash
+              </span>
+            </div>
+            <div className="p-6 bg-linen rounded-2xl border border-hairline/80 shadow-xs">
+              <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold block">
+                AERIAL TRIAL REFUND
+              </span>
+              <span className="font-mono text-[10px] text-umber font-semibold block mt-1">
+                ₹700 credited on sign-up
+              </span>
+            </div>
           </div>
         </div>
 

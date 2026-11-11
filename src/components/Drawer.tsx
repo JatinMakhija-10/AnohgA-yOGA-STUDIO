@@ -151,8 +151,8 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                placeholder="e.g. Maya Sundaram"
-                className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 rounded-xl transition-all outline-none"
+                placeholder="Enter your full name"
+                className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-xl transition-all outline-none"
               />
             </div>
 
@@ -165,8 +165,8 @@ export const Drawer: FC<DrawerProps> = ({ context, onClose, onToast }) => {
                 required
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                placeholder="+91 98765 43210"
-                className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/50 rounded-xl transition-all outline-none"
+                placeholder="10-digit mobile number"
+                className="w-full bg-travertine/40 border border-hairline hover:border-espresso/40 focus:border-terra focus:bg-linen px-4 py-3 text-sm font-sans text-espresso font-medium placeholder:text-umber/40 rounded-xl transition-all outline-none"
               />
             </div>
 

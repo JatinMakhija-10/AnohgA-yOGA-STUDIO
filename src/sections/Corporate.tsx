@@ -165,54 +165,56 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
           </div>
         </div>
 
-        {/* Logistics & Benchmark Strip with Bold Visual Highlights */}
-        <div className="p-6 sm:p-10 border-b border-[#343E34] bg-white/5 grid grid-cols-2 sm:grid-cols-4 gap-6">
-          <div>
-            <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 block font-semibold">
-              Tuition Benchmark
-            </span>
-            <span className="font-serif text-2xl font-bold text-terra mt-1 block">
-              ₹8,000 – ₹25,000 / mo
-            </span>
-            <span className="font-mono text-[10px] text-linen/70 mt-1 block">
-              Customized by cadence
-            </span>
-          </div>
+        {/* Logistics & Benchmark Highlights */}
+        <div className="p-6 sm:p-10 border-b border-[#343E34] bg-white/[0.02]">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+            <div className="p-5 border border-[#343E34] bg-white/[0.03] rounded-2xl shadow-xs">
+              <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 block font-semibold">
+                Tuition Benchmark
+              </span>
+              <span className="font-serif text-2xl font-bold text-terra mt-1 block">
+                ₹8,000 – ₹25,000 / mo
+              </span>
+              <span className="font-mono text-[10px] text-linen/70 mt-1 block">
+                Customized by cadence
+              </span>
+            </div>
 
-          <div>
-            <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 block font-semibold">
-              Instructor Integrity
-            </span>
-            <span className="font-serif text-2xl font-bold text-linen mt-1 block">
-              Anupriya (RYT-500)
-            </span>
-            <span className="font-mono text-[10px] text-linen/70 mt-1 block">
-              100% direct instruction
-            </span>
-          </div>
+            <div className="p-5 border border-[#343E34] bg-white/[0.03] rounded-2xl shadow-xs">
+              <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 block font-semibold">
+                Instructor Integrity
+              </span>
+              <span className="font-serif text-2xl font-bold text-linen mt-1 block">
+                Anupriya (RYT-500)
+              </span>
+              <span className="font-mono text-[10px] text-linen/70 mt-1 block">
+                100% direct instruction
+              </span>
+            </div>
 
-          <div>
-            <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 block font-semibold">
-              Coverage Range
-            </span>
-            <span className="font-serif text-2xl font-bold text-linen mt-1 block">
-              ECR, OMR &amp; City
-            </span>
-            <span className="font-mono text-[10px] text-linen/70 mt-1 block">
-              Equipment brought on-site
-            </span>
-          </div>
+            <div className="p-5 border border-[#343E34] bg-white/[0.03] rounded-2xl shadow-xs">
+              <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 block font-semibold">
+                Coverage Range
+              </span>
+              <span className="font-serif text-2xl font-bold text-linen mt-1 block">
+                ECR, OMR &amp; City
+              </span>
+              <span className="font-mono text-[10px] text-linen/70 mt-1 block">
+                Equipment brought on-site
+              </span>
+            </div>
 
-          <div>
-            <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 block font-semibold">
-              Trial Demonstration
-            </span>
-            <span className="font-serif text-2xl font-bold text-terra mt-1 block">
-              1-Session Pilot
-            </span>
-            <span className="font-mono text-[10px] text-linen/70 mt-1 block">
-              Test team engagement
-            </span>
+            <div className="p-5 border border-[#343E34] bg-white/[0.03] rounded-2xl shadow-xs">
+              <span className="font-mono text-[10px] uppercase tracking-wider text-linen/60 block font-semibold">
+                Trial Demonstration
+              </span>
+              <span className="font-serif text-2xl font-bold text-terra mt-1 block">
+                1-Session Pilot
+              </span>
+              <span className="font-mono text-[10px] text-linen/70 mt-1 block">
+                Test team engagement
+              </span>
+            </div>
           </div>
         </div>
 
@@ -300,7 +302,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   required
                   value={formData.company}
                   onChange={handleChange}
-                  placeholder="e.g. Zoho / Freshworks / OMR Tech"
+                  placeholder="Company or organization name"
                   className="w-full bg-[#1A201A] border border-[#343E34] hover:border-terra/40 text-linen px-4 py-3 text-sm font-sans placeholder:text-linen/30 focus:border-terra rounded-xl transition-all outline-none"
                 />
               </div>
@@ -315,7 +317,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   required
                   value={formData.contactName}
                   onChange={handleChange}
-                  placeholder="e.g. Vikram Sundaram"
+                  placeholder="Contact person full name"
                   className="w-full bg-[#1A201A] border border-[#343E34] hover:border-terra/40 text-linen px-4 py-3 text-sm font-sans placeholder:text-linen/30 focus:border-terra rounded-xl transition-all outline-none"
                 />
               </div>
@@ -329,7 +331,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="vikram@company.com"
+                  placeholder="corporate@company.com"
                   className="w-full bg-[#1A201A] border border-[#343E34] hover:border-terra/40 text-linen px-4 py-3 text-sm font-sans placeholder:text-linen/30 focus:border-terra rounded-xl transition-all outline-none"
                 />
               </div>
@@ -344,7 +346,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="+91 98765 43210"
+                  placeholder="10-digit phone or WhatsApp"
                   className="w-full bg-[#1A201A] border border-[#343E34] hover:border-terra/40 text-linen px-4 py-3 text-sm font-sans placeholder:text-linen/30 focus:border-terra rounded-xl transition-all outline-none"
                 />
               </div>
@@ -392,7 +394,7 @@ export const Corporate: FC<CorporateProps> = ({ onToast }) => {
                   rows={2}
                   value={formData.notes}
                   onChange={handleChange}
-                  placeholder="e.g. Ergonomic focus for software engineers, prefer Thursday afternoons..."
+                  placeholder="Team requirements, desk strain patterns, preferred weekly schedule..."
                   className="w-full bg-[#1A201A] border border-[#343E34] hover:border-terra/40 text-linen px-4 py-3 text-sm font-sans placeholder:text-linen/30 focus:border-terra rounded-xl transition-all outline-none"
                 />
               </div>

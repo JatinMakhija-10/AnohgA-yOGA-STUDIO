@@ -326,11 +326,12 @@ export const Schedule: FC<ScheduleProps> = ({ onOpenDrawer, onToast }) => {
             </div>
           </div>
         ) : (
-          /* ── Full Grid Timetable View ── */
-          <div className="overflow-x-auto border-b border-hairline bg-linen">
-            <table className="w-full min-w-[780px] border-collapse text-left">
-              <thead>
-                <tr className="border-b-2 border-hairline bg-travertine/80">
+          /* ── Full Grid Timetable View (Contained in Rounded 3xl Pavilion) ── */
+          <div className="p-6 sm:p-10 lg:p-14 bg-linen">
+            <div className="overflow-x-auto rounded-3xl border border-hairline/80 shadow-sm bg-linen">
+              <table className="w-full min-w-[780px] border-collapse text-left">
+                <thead>
+                  <tr className="border-b-2 border-hairline bg-travertine/80">
                   <th className="p-4 font-mono text-xs uppercase tracking-wider text-espresso border-r border-hairline w-32 text-center font-bold">
                     TIME SLOT
                   </th>
@@ -397,6 +398,7 @@ export const Schedule: FC<ScheduleProps> = ({ onOpenDrawer, onToast }) => {
                 ))}
               </tbody>
             </table>
+            </div>
           </div>
         )}
 
