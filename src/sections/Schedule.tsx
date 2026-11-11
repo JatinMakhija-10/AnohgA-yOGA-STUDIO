@@ -57,7 +57,7 @@ export const Schedule: FC<ScheduleProps> = ({ onOpenDrawer, onToast }) => {
         <div className="p-6 sm:p-10 lg:p-14 border-b border-hairline flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-2 py-0.5 bg-terra/10 border border-terra/30">
+              <span className="font-mono text-xs uppercase tracking-widest text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/30 rounded-full">
                 02
               </span>
               <span className="font-mono text-xs uppercase tracking-widest text-espresso font-semibold">
@@ -210,81 +210,119 @@ export const Schedule: FC<ScheduleProps> = ({ onOpenDrawer, onToast }) => {
 
         {/* ── PART 3: View Mode Content ── */}
         {viewMode === 'cards' ? (
-          /* ── Day Cards View (Visual, playful, interactive) ── */
+          /* ── Day Cards View (Visual, playful, interactive, organic curves) ── */
           <div className="p-6 sm:p-10 lg:p-14 bg-linen">
             {/* Day Selector Tabs (Organic Pill Contours) */}
-            <div className="flex items-center gap-2 overflow-x-auto pb-4 border-b border-hairline mb-8">
-              {DAYS.map((day) => (
-                <button
-                  key={day}
-                  type="button"
-                  onClick={() => setSelectedDayTab(day)}
-                  className={`font-mono text-xs font-bold px-5 py-2.5 border transition-all cursor-pointer whitespace-nowrap rounded-full ${
-                    selectedDayTab === day
-                      ? 'bg-espresso text-linen border-espresso shadow-sm'
-                      : 'bg-travertine/50 text-espresso border-hairline hover:bg-travertine'
-                  }`}
-                >
-                  {day} SCHEDULE
-                </button>
-              ))}
+            <div className="flex items-center gap-2.5 overflow-x-auto pb-4 border-b border-hairline mb-8">
+              {DAYS.map((day) => {
+                const fullDayNames: Record<string, string> = {
+                  MON: 'Monday',
+                  TUE: 'Tuesday',
+                  WED: 'Wednesday',
+                  THU: 'Thursday',
+                  FRI: 'Friday',
+                  SAT: 'Saturday',
+                  SUN: 'Sunday',
+                }
+                const isSelected = selectedDayTab === day
+
+                return (
+                  <button
+                    key={day}
+                    type="button"
+                    onClick={() => setSelectedDayTab(day)}
+                    className={`font-mono text-xs font-bold px-5 py-2.5 border transition-all cursor-pointer whitespace-nowrap rounded-full ${
+                      isSelected
+                        ? 'bg-espresso text-linen border-espresso shadow-md scale-[1.02]'
+                        : 'bg-travertine/60 text-espresso border-hairline hover:bg-travertine hover:border-espresso/40'
+                    }`}
+                  >
+                    <span className="hidden sm:inline">{fullDayNames[day] || day}</span>
+                    <span className="sm:hidden">{day}</span>
+                  </button>
+                )
+              })}
             </div>
 
             {/* Visual Class Cards for the selected day */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {dayClasses.map((item, idx) => (
-                <div
-                  key={idx}
-                  className={`border p-6 flex flex-col justify-between transition-all rounded-2xl ${
-                    item.highlighted
-                      ? 'bg-travertine/25 border-hairline hover:border-espresso shadow-xs'
-                      : 'opacity-40 bg-travertine/5 border-hairline/40'
-                  }`}
-                >
-                  <div>
-                    <div className="flex items-center justify-between border-b border-hairline pb-3 mb-4">
-                      <span className="font-mono text-xs uppercase tracking-wider text-espresso font-bold bg-linen px-3 py-1 border border-hairline rounded-full">
-                        ⏰ {item.time}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              {dayClasses.map((item, idx) => {
+                // Determine discipline badge style
+                let disciplineBadge = { text: 'CLASSICAL FLOOR · PRANAYAMA', style: 'bg-travertine text-espresso border-hairline' }
+                if (item.cls?.includes('Aerial')) {
+                  disciplineBadge = { text: 'AERIAL SILKS · SUSPENSION', style: 'bg-terra/10 text-terra border-terra/30' }
+                } else if (item.cls?.includes('Therapy')) {
+                  disciplineBadge = { text: 'CLINICAL 1-ON-1 THERAPY', style: 'bg-moss/10 text-moss border-moss/30' }
+                } else if (item.cls?.includes('Kids')) {
+                  disciplineBadge = { text: 'AGES 7–14 · KIDS SILKS', style: 'bg-terra/10 text-terra border-terra/30' }
+                } else if (item.cls?.includes('Prenatal')) {
+                  disciplineBadge = { text: 'PRENATAL · MATERNAL', style: 'bg-moss/10 text-moss border-moss/30' }
+                }
+
+                return (
+                  <div
+                    key={idx}
+                    className={`p-6 sm:p-7 flex flex-col justify-between transition-all rounded-3xl group border ${
+                      item.highlighted
+                        ? 'bg-linen border-hairline/90 hover:border-terra/60 shadow-sm hover:shadow-lg'
+                        : 'opacity-40 bg-travertine/10 border-hairline/40'
+                    }`}
+                  >
+                    <div>
+                      {/* Top Row: Time Pill & Day Pill */}
+                      <div className="flex items-center justify-between pb-4 border-b border-hairline/60 mb-4">
+                        <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-travertine/80 border border-hairline text-espresso font-mono text-xs font-bold shadow-2xs">
+                          <span className="text-terra">⏰</span>
+                          <span>{item.time}</span>
+                        </div>
+                        <span className="font-mono text-xs uppercase tracking-wider text-terra font-bold px-3 py-1 bg-terra/10 border border-terra/20 rounded-full">
+                          {selectedDayTab}
+                        </span>
+                      </div>
+
+                      {/* Discipline Pill Badge */}
+                      <span className={`inline-block font-mono text-[9px] uppercase tracking-wider font-bold px-3 py-1 rounded-full border mb-2.5 ${disciplineBadge.style}`}>
+                        {disciplineBadge.text}
                       </span>
-                      <span className="font-mono text-[10px] uppercase tracking-wider text-terra font-bold">
-                        {selectedDayTab}
-                      </span>
+
+                      {/* Main Class Title */}
+                      <h4 className="font-serif text-2xl sm:text-[26px] font-bold text-espresso group-hover:text-terra transition-colors leading-snug">
+                        {item.cls}
+                      </h4>
+
+                      {/* Location & Format */}
+                      <div className="mt-3 flex items-center gap-2">
+                        <span className="w-2 h-2 bg-moss rounded-full animate-pulse"></span>
+                        <span className="font-mono text-[11px] uppercase tracking-wider text-umber font-semibold">
+                          {item.cls?.includes('Virtual') ? 'Live Virtual Stream / Zoom' : 'In-Studio · ECR Thiruvanmiyur'}
+                        </span>
+                      </div>
                     </div>
 
-                    <h4 className="font-serif text-2xl font-bold text-espresso">
-                      {item.cls}
-                    </h4>
-
-                    <div className="mt-2 flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-moss rounded-full"></span>
-                      <span className="font-mono text-[10px] uppercase tracking-wider text-umber font-semibold">
-                        In-Studio / ECR Thiruvanmiyur
+                    {/* Bottom Action Row with Soft Perforation */}
+                    <div className="mt-7 pt-4 border-t border-dashed border-hairline/80 flex items-center justify-between gap-3">
+                      <span className="font-mono text-[10px] uppercase tracking-wider text-umber font-bold px-3 py-1 bg-travertine/60 rounded-full border border-hairline/60">
+                        Max 8 Mats
                       </span>
+                      <button
+                        type="button"
+                        onClick={() =>
+                          onOpenDrawer({
+                            day: selectedDayTab,
+                            time: item.time,
+                            cls: item.cls || '',
+                            source: 'book',
+                          })
+                        }
+                        className="btn-terra text-xs py-2.5 px-4 font-bold shadow-xs hover:shadow-md"
+                      >
+                        <span>Reserve Slot</span>
+                        <span>↗</span>
+                      </button>
                     </div>
                   </div>
-
-                  <div className="mt-6 pt-4 border-t border-hairline/60 flex items-center justify-between gap-3">
-                    <span className="font-mono text-[9px] uppercase tracking-wider text-umber font-semibold">
-                      Max 8 slots
-                    </span>
-                    <button
-                      type="button"
-                      onClick={() =>
-                        onOpenDrawer({
-                          day: selectedDayTab,
-                          time: item.time,
-                          cls: item.cls || '',
-                          source: 'book',
-                        })
-                      }
-                      className="btn-terra text-[10px] py-2 px-3 font-bold"
-                    >
-                      <span>Reserve Slot</span>
-                      <span>↗</span>
-                    </button>
-                  </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
           </div>
         ) : (
